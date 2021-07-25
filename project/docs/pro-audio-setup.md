@@ -11,24 +11,32 @@ For your system & the music applications make sure you run them all in a solid s
 *Let us get started in tuning the system then!*
 ___
 # Get the codecs:
-Make sure your system is up to date first & installfrom & add <b>Packman Repository</b>:
-  > `# zypper dup`  
-  > `# zypper in opi`  
-  > `opi codecs`  
+Make sure your system is up to date first & installfrom & add <b>Packman Repository</b>:  
+   `# zypper dup`  
+   `# zypper in opi`  
+   `opi codecs`  
 # Add the Geekos DAW Repo (I use the priority of 90, which favours the packages from GeekosDAW repo)
-- This is a crucial step in getting your audio workstation up to speed with plugins and scripts.
-> `# zypper ar -fp90 https://download.opensuse.org/repositories/home:/geekositalia:/daw/openSUSE_Tumbleweed/ Geekosdaw`  
+- This is a crucial step in getting your audio workstation up to speed with plugins and scripts.  
+ `# zypper ar -fp90 https://download.opensuse.org/repositories/home:/geekositalia:/daw/openSUSE_Tumbleweed/ Geekosdaw`  
 # PulseAudio / Jack sync
 - Make sure you install the required packages in order to use jack via pulseaudio
-- **Note** that some packages here are a suggestion, but depending on your audio device, this may vary. 
-> `# zypper in jack pulseaudio-module-jack alsa-plugins-pulse alsa-utils` 
+- **Note** that some packages here are a suggestion, but depending on your audio device, this may vary.   
+ `# zypper in jack pulseaudio-module-jack alsa-plugins-pulse alsa-utils` 
 - edit /etc/pulse/default.pa
 1. find the lines that contain (do not uncomment, leave as is.):
 > `#load-module module-alsa-sink`  
 > `#load-module module-alsa-source device=hw:1,0`
-2. underneath said line add:
-> `load-module module-jack-sink`  
-> `load-module module-jack-source`
+2. underneath said line add:  
+> **load-module module-jack-sink**  
+ **load-module module-jack-source**
+___
+# Advanced tweaks:
+This is where the fun begins, in here we will edit some of your system files for audio production using a text editor. You can use whatever editor you desire, in this case I'll use `nano` for example. 
+**Required changes are in bold text.**
 
+- Setup the system limits/priorities.  
+`nano /etc/security/limits.conf`  
+> output/partial output here  
+**bolden changes**  
 ______
 **[To be continued..]**
