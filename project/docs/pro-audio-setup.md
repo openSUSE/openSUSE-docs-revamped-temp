@@ -11,7 +11,7 @@ For your system & the music applications make sure you run them all in a solid s
 *Let us get started in tuning the system then!*
 ___
 # Get the codecs:
-Make sure your system is up to date first & installfrom & add <b>Packman Repository</b>:  
+- Make sure your system is up to date first & installfrom & add <b>Packman Repository</b>:  
    `# zypper dup`  
    `# zypper in opi`  
    `opi codecs`  
