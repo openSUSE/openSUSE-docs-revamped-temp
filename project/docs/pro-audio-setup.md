@@ -1,5 +1,10 @@
 # OpenSUSE: Pro Audio
-Setting up Pro Audio can be tricky, it takes understanding your hardware and workflow but, in this guide ill show you how I setup using OpenSUSE Tumbleweed, a few tools, and a common understanding of what I will be doing.
+
+Pro Audio generally refers to the art of recording, editing, and mixing high quality audio for the purpose of publication. Whether you are producing an album, a symphony, or a podcast, you will need to be familiar with *some* Pro Audio techniques.
+
+Most users will not need to know or use more than a couple software programs to make simple edits or adjustments to voice recordings and music. This guide will cover these use cases and provide system hardware and software recommendations.
+
+For more advanced users, setting up a Linux system for Pro Audio use is considered more difficult than on alternate Operating Systems. This guide will show you how to setup OpenSUSE Tumbleweed for advanced use cases.
   
 # Hardware Recommendations:
 - First and foremost if you are planning to do low latency audio/voice recording, it is **imperative** that you get a sound interface be it an USB, Firewire, or PCI card; your performance will be miles better for that as opposed to using your motherboard's audio. 
