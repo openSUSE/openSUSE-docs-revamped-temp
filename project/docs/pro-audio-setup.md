@@ -7,16 +7,16 @@ Most users will not need to know or use more than a couple software programs to 
 For more advanced users, setting up a Linux system for Pro Audio use is considered more difficult than on alternate Operating Systems. This guide will show you how to setup OpenSUSE Tumbleweed for advanced use cases.
   
 # Hardware Recommendations:
-- First and foremost if you are planning to do low latency audio/voice recording, it is **imperative** that you get a sound interface be it an USB, Firewire, or PCI card; your performance will be miles better for that as opposed to using your motherboard's audio. 
+- First and foremost if you are planning do achieve low latency while recording we recommend that you get a sound interface be it an USB, Firewire, or PCI card; your performance will be a lot better for that as opposed to using your motherboard's audio which its resources are shared by the system. 
 # RAM
-First, let us make sure that before we engage in setting up, our system is up to par. I recommend you to have 16gb of ram or more simply because it will give you the liberty of trying out certain plugins that require more memory and it will mostlikely save you from low memory scenarios, though not common, its best to be safe than sorry.
+First, let us make sure that before we engage in setting up, our system is up to par. we recommend you have 16gb of ram or more  because it will give you the liberty of trying out more plugins that require more memory and it will mostlikely save you from low memory scenarios, though not common, its best to be safe than sorry.
 # SSD
 For your system & the music applications make sure you run them all in a solid state drive to reap the performance benefits. Also in your applictaions make sure to make use of other drives you are not using for "scratch" purposes; for volatile data; data that's temporary for the sake of space and performance; spread your workload.
 
 *Let us get started in tuning the system then!*
 ___
 # Get the codecs:
-- Make sure your system is up to date first & installfrom & add <b>Packman Repository</b>:  
+- Make sure your system is up to date first & install from & add <b>Packman Repository</b>:  
    `# zypper dup`  
    `# zypper in opi`  
    `opi codecs`  
