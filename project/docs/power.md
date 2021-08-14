@@ -21,7 +21,7 @@ An openSUSE operating system is ready for hibernation only when:
 Swap space can be created while partioning the disk while installating or after installing.
 
 __During installation__ 
-This is adapted from [the installation documentation](yast_installer#about-partition-scheme) and repeated here for convenience.
+This is adapted from [the installation documentation](/yast_installer#about-partition-schemes) and repeated here for convenience.
 
 <u>Step by step: Expert partitioning</u>
 
@@ -52,17 +52,16 @@ Finally, to fulfill condition (Resume referenced), in _Yast2_:
 2. Switch to the __Kernel Parameters__ tab.
 3. In the first text-field, labelled _Optional Kernel Parameters_, simply add the following text:
 ```
-resume=/dev/sda<number> # replace '<number<' by the number of the partition you want to resume to
+resume=/dev/sda<number> # replace '<number>' by the number of the partition you want to resume to
+
 ```
-
 or
-
 ```
 resume=UUID=<UUID> # replace '<UUID>' with the UUID of the partition you want to resume to.
 ```
 
 !!! warning
-    It's preferable to use the UUID over any other identifier for referencing partitions as UUID identifiers are not ambiguous. However, should you recreate a resume or swap partition referenced via UUID, the reference will be broken and you will need to register it again where appropriate (kernel parameters if resume partition, `/etc/fstab` if swap space.) 
+    It's preferable to use the UUID over any other identifier for referencing partitions as UUID identifiers are not ambiguous. However, should you recreate a resume or swap partition referenced via UUID, the reference will break and you will need to register it again where appropriate (kernel parameters if resume partition, `/etc/fstab` if swap space.) 
 
 You can finally lay back and admire your configuration. On my machine it looks like this:
 
@@ -70,9 +69,7 @@ You can finally lay back and admire your configuration. On my machine it looks l
 # kernel parameter
 `resume=UUID=19bd024f-76bd-4162-ac37-4d0d51e02c25`
 ```
-
 and 
-
 ```
 # /etc/fstab
 UUID=e0bac415-cbde-4c9b-8178-7874ac9de70a swap defaults 0 0
