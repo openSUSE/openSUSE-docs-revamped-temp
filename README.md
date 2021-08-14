@@ -2,9 +2,7 @@
 Our latest build is live at https://opensuse.github.io/openSUSE-docs-revamped-temp/.
 
 ## /!\ Disclaimer
-This is the construction site for the upcoming Leap and Tumbleweed documentation. Please do not consider any of this as official documentation *for now*. Use instead:
-- Generic documentation based on Leap: https://doc.opensuse.org/
-- Tumbleweed specific knowledge-base: https://en.opensuse.org/Portal:Tumbleweed
+This repository is the workbench for the upcoming Tumbleweed/Leap community user guides and documentation, designed to complement the Leap documentation available at https://doc.opensuse.org.
 
 ## About
 Take a look at the "About" section (right panel). You can also check [this](https://news.opensuse.org/2020/10/12/join-our-team-and-help-us-imporove-the-openSUSE-learning-experience/) out for context. If you wonder why we are doing this when there is already an official documentation along with wikis, the answer is two-fold:
