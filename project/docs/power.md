@@ -5,7 +5,7 @@ On modern hardware Linux-based desktop environments favour a combination of the 
 
 1. monitor dimming
 2. monitor suspension
-3. session / system suspension to RAM (so-called _suspension_)
+3. session / system suspension to RAM (sp called _suspension_)
 4. session / system suspension to disk (so-called _hibernation_)
 
 _Monitor dimming_ (1), _Monitor suspension_ (2) and _Session suspesion_ (3) should be easy to find: open your desktop environment's settings and search for `power management`. By contrast the last of these methods may require a few helpers.
@@ -14,14 +14,14 @@ _Monitor dimming_ (1), _Monitor suspension_ (2) and _Session suspesion_ (3) shou
 
 An openSUSE operating system is ready for hibernation only when:
 
-(__Swap exists__) A swap space on the disk must exist (see below for details)
-(__Swap referenced__) The swap space must be referenced in `/etc/fstab`, the configuration file read on every boot and used to mount and integrate the different spaces listed on the file into a proper file structure
-(__Resume referenced__) The partition to which the user wants the hibernation to resume to must be made known to the kernel, usually as the value of a kernel parameter
+(Swap exists) A swap space on the disk must exist (see below for details)
+(Swap referenced) The swap space must referenced in `/etc/fstab`, the configuration file read on every boot and used to mount and integrate the different spaces listed on the file into a proper file structure
+(Resume referenced) The partition to which the user wants the hibernation to resume to must be made known to the kernel, usually as the value of a kernel parameter
 
 Swap space can be created while partioning the disk while installating or after installing.
 
 __During installation__ 
-This is adapted from [the installation documentation](/yast_installer#about-partition-schemes) and repeated here for convenience.
+This is adapted from [the installation documentation](yast_installer#about-partition-scheme) and repeated here for convenience.
 
 <u>Step by step: Expert partitioning</u>
 
@@ -38,13 +38,13 @@ From _Yast2_:
 3. Add a `swap` partition with a size equal to your current RAM + 1 GB, making sure to format it as `swap`
 4. Confirm to apply the changes.
 
-Whether or not you have followed the method before, by now Yast2 should have edited your `/etc/fstab`, and the two conditions (Swap exists; Swap referenced) should be met. You can check that this is the case with:
+No matter if you have followed the method before or By now Yast2 should have edited your `/etc/fstab` to reference the freshly create swap partition, which means that conditions (Swap exists) and (Swap referenced) above should be met. You can double check that this is the case with
 
 ```
 $ blkid | grep "swap"
 ```
 
-This command should return a line referencing various identifiers for your swap partition. You can compare the UUID visible from this context with the UUID lised in _Yast2_ for good measure (see. step 2 above). If you have created the swap space during installation, don't forget to search for the UUID and the `/dev/sda<number>` identifiers referencing the partition to which you will want to resume.
+This command should return a line referencing various identifiers for your swap partition. You can compare the UUID visible from this context with the UUID lised in _Yast2_ for good measure (see. step 2 above). If you have created the swap space during installation, don't forget to search for the UUID and the `/dev/sda<number>` identifiers referencing the partition to which you will want to resume to.
 
 Finally, to fulfill condition (Resume referenced), in _Yast2_:
 
@@ -52,16 +52,17 @@ Finally, to fulfill condition (Resume referenced), in _Yast2_:
 2. Switch to the __Kernel Parameters__ tab.
 3. In the first text-field, labelled _Optional Kernel Parameters_, simply add the following text:
 ```
-resume=/dev/sda<number> # replace '<number>' by the number of the partition you want to resume to
-
+resume=/dev/sda<number> # replace '<number<' by the number of the partition you want to resume to
 ```
+
 or
+
 ```
 resume=UUID=<UUID> # replace '<UUID>' with the UUID of the partition you want to resume to.
 ```
 
 !!! warning
-    It's preferable to use the UUID over any other identifier for referencing partitions as UUID identifiers are not ambiguous. However, should you recreate a resume or swap partition referenced via UUID, the reference will break and you will need to register it again where appropriate (kernel parameters if resume partition, `/etc/fstab` if swap space.) 
+    It's preferable to use the UUID over any other identifier for referencing partitions as UUID identifiers are not ambiguous. However, should you recreate a resume or swap partition referenced via UUID, the reference will be broken and you will need to register it again where appropriate (kernel parameters if resume partition, `/etc/fstab` if swap space.) 
 
 You can finally lay back and admire your configuration. On my machine it looks like this:
 
@@ -69,8 +70,10 @@ You can finally lay back and admire your configuration. On my machine it looks l
 # kernel parameter
 `resume=UUID=19bd024f-76bd-4162-ac37-4d0d51e02c25`
 ```
+
 and 
+
 ```
 # /etc/fstab
-UUID=e0bac415-cbde-4c9b-8178-7874ac9de70a swap defaults 0 0
+UUID=e0bac415-cbde-4c9b-8178-7874ac9de70a none swap defaults 0 0
 ```
