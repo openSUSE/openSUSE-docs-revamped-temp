@@ -91,7 +91,7 @@ nav:
             - Getting started: install_proprietary.md
             - Dual GPUs ("Optimus"): hybrid_graphics.md
         - Setting up a containerized environment: install_podman.md
-        - Power management: ""
+        - Power management: power.md
         - Pairing, syncing, sharing:
             - Bluetooth: bluetooth.md
             - KDE Connect: kdeconnect.md
