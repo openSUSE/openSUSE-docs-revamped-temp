@@ -66,10 +66,7 @@ nav:
     - Before installing:
         - Choosing a distribution: pick_an_image.md
         - Preparing the installation media: image_choice.md
-    - Installing:
-        - Step by step guide: yast_installer.md
-        - Quick install for experienced users:
-            - microOS specials: microos_getting_started.md
+    - Installing: yast_installer.md
     - Distro basics:
         - Post-installation best-of: best_of_post.md
         - KDE Plasma basics: kde.md
