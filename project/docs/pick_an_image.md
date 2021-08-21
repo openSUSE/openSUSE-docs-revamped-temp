@@ -38,7 +38,7 @@ Pick Tumbleweed if you intend to use your machine as a desktop machine unless:
 The more conditions apply to your use case, the stronger we recommend you to install Leap instead of Tumbleweed.
 
 ???+ info
-    It is not recommended for new users, however, it is possible to use microOS on a desktop computer, taking advantage of transactional updates. This might appeal to advanced users who want to provide friends or relatives with an operating system that will require little to no maintenance. You might be interested in [our microOS documentation](microos_getting_started.md) for more about this use case.
+    It is not recommended for new users, however, it is possible to use microOS on a desktop computer, taking advantage of transactional updates. This might appeal to advanced users who want to provide friends or relatives with an operating system that will require little to no maintenance. You might be interested in [the microOs documentation](https://microos.opensuse.org/) for more about this use case.
 
 ## Desktop Environments
 Leap offers the __GNOME__ and __KDE Plasma__ desktop environments by default. Tumbleweed offers __GNOME__, __KDE Plasma__, and __XFCE__. These options are chosen during the __System Role__ section of the installation. Additional options are available in the __Software__ selection of the installer. These desktop environment patterns may also be viewed and modified with the [YaST](/yast/) __Software Management__ module.
