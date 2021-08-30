@@ -5,13 +5,18 @@
 * [Tumbleweed-specific knowledgebase](https://en.opensuse.org/Portal:Tumbleweed)
 
 ## Foreword
-This documentation is curated and maintained by openSUSE volunteers. The contents offered here should be sharply distinguished from the Leap documentation also available at https://doc.opensuse.org. Leap manuals inherit the contents from, and closely follow the presentation of, SLE manuals -- a commercial product offered by SUSE Software Solutions Germany GmbH. Three key differences should always be borne in mind:
 
-1. The present documentation is the work of volunteers working according to the Free and Open Source Software tradition. This means that our best efforts notwithstanding, inaccuracies and oversights are possible. When this happens the best course of action is to report them to us, and ideally to submit proposals of improvements.
+This documentation is created and scoped differently than the [documentation for openSUSE Leap](https://doc.opensuse.org/#opensuse-leap-153) which primarily inherits contents from documentation for commercial SUSE distributions. This means:
 
-2. The present documentation describes procedures with software present in Factory -- the QA target & production line of the openSUSE Tumbleweed distribution. Even though Factory is thoroughly scrutinized by maintainers and engineers, not every combination of software present in Factory and procedures can be supported by SUSE employees or openSUSE volunteers. This means that the reader is expected to take at face value the disclaimers and admonitions provided in this documentation. They have been placed to provide as safe as possible a path to walk along.
+* This documentation is curated and maintained by openSUSE volunteers.
 
-3. As a consequence of Tumbleweed's following a 'rolling' release model, software and procedures evolve significantly faster than their Leap equivalents. Even though we try to respond as quick as possible to recent changes, the reader is expected to have some tolerance in cases parts of ours contents do not yet reflect the most recent updates to Factory.
+* Despite our best efforts, inaccuracies and oversights are possible. Please [report them to us](https://github.com/openSUSE/openSUSE-docs-revamped-temp/issues), ideally along with suggested improvements.
+
+* Adhere to disclaimers and admonitions in this documentation. They have been placed to provide a safe path (or at least a safer path). Be aware that openSUSE contributors cannot support every software feature and every combination of software.
+
+* openSUSE Tumbleweed follows a rolling release model. Software and procedures evolve significantly faster than their equivalents for openSUSE Leap. We try to respond quickly to changes, but in some cases, contents may not reflect the most recent updates to openSUSE Factory.
+This documentation may also describe procedures using software from openSUSE Factory, representing a state before automated QA and full integration.
+
 
 ## Audience
 ### New users
