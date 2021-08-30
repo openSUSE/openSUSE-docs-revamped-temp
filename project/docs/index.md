@@ -76,4 +76,4 @@ __Giving back to the community__
 - Resources
 - Other sources of documentation
 - Contribute to this docs
-- A contributor's checkli
+- A contributor's checklist
