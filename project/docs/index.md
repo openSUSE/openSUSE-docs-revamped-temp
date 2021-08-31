@@ -8,14 +8,15 @@
 
 This documentation is created and scoped differently than the [documentation for openSUSE Leap](https://doc.opensuse.org/#opensuse-leap-153) which primarily inherits contents from documentation for commercial SUSE distributions. This means:
 
-* This documentation is curated and maintained by openSUSE volunteers.
+* This documentation is curated and maintained by openSUSE volunteers, not SUSE employees.
+
+* This documentation is not derivative of the openSUSE Leap documentation and should be viewed as complementary to it.
 
 * Despite our best efforts, inaccuracies and oversights are possible. Please [report them to us](https://github.com/openSUSE/openSUSE-docs-revamped-temp/issues), ideally along with suggested improvements.
 
 * Adhere to disclaimers and admonitions in this documentation. They have been placed to provide a safe path (or at least a safer path). Be aware that openSUSE contributors cannot support every software feature and every combination of software.
 
-* openSUSE Tumbleweed follows a rolling release model. Software and procedures evolve significantly faster than their equivalents for openSUSE Leap. We try to respond quickly to changes, but in some cases, contents may not reflect the most recent updates to openSUSE Factory.
-This documentation may also describe procedures using software from openSUSE Factory, representing a state before automated QA and full integration.
+* openSUSE Tumbleweed follows a rolling release model. Software and procedures evolve significantly faster than their equivalents for openSUSE Leap. We try to respond quickly to changes, but in some cases, contents may not reflect the most recent updates to openSUSE Factory. This documentation may also describe procedures using software from openSUSE Factory, representing a state before automated QA and full integration.
 
 
 ## Audience
