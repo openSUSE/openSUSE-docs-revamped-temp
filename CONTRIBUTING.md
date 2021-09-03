@@ -1,7 +1,7 @@
 ## Get in touch?
-We often hang out on [this Telegram chat](https://t.me/opensuse_docs), which by the way is bridged to the IRC `#docs:opensuse.org` and to `#docs` on [this Discord channel](https://discord.gg/opensuse).
+We often hang out on [this Telegram chat](https://t.me/opensuse_docs), which is bridged to the IRC `#docs:opensuse.org` and to `#docs` on [this Discord channel](https://discord.gg/opensuse).
 
-## Reviewing process
+## Review process
 ```
 new document ------> review on structure and contents #1 ------> review on language, style and punctuation #1
                                                                                         |
@@ -24,7 +24,7 @@ project/    <<< 'cd' in here to run mkdocs commands (pipenv commands are to be r
 ```
 `.gitignore` should not let you commit any `build` directory. Please make sure that is the case.
 
-### Setup your work environment
+### Set up your work environment
 You can either install mkdocs from pip or from a virtual environment.
 
 It's highly recommended to use a virtual environment manager and not `pip`, so that the dependencies of this project won't mess with your system-wide python packages / modules. You still need to run pip once to install your favorite virtual environment manager.
@@ -36,14 +36,14 @@ We like using pipenv, which you install on openSUSE distributions with: `pip3 in
 * for `fish` run the following command once from a fish shell: `set -Ua fish_user_paths /home/your-user-name/.local/bin`; start a fresh shell with `exec fish`
 * for `zsh` add `export PATH=$PATH/home/your-user-name/.local/bin` to `~/.zshrc`; reload to apply changes with `source ~/.zshrc`
 
-## Poetry installation (requires python3.5+)
+## Poetry installation (requires Python 3.5+)
 
 Install via poetry installer : `curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`
 
-After installation command complete you will find your poetry install under `$HOME/.poetry/bin`
-This directory will be automatically added to your $PATH environment variable, by appending a statement to your $HOME/.profile configuration (or equivalent files). If you do not feel comfortable with this, please pass the --no-modify-path flag to the installer and manually add the Poetry's bin directory to your path.
+After the installation command completes, you will find your Poetry install under `$HOME/.poetry/bin`
+This directory will be automatically added to your $PATH environment variable, by appending a statement to your $HOME/.profile configuration (or equivalent files). If you do not feel comfortable with this, pass the `--no-modify-path` flag to the installer and manually add the Poetry's bin directory to your path.
 
-Another ways to install poetry are via openSUSE repository `zypper install python38-poetry` for python 3.8 and `zypper install python36-poetry` for python 3.6.
+Another ways to install poetry are via openSUSE repository `zypper install python38-poetry` for Python 3.8 and `zypper install python36-poetry` for Python 3.6.
 
 ### Enable tab completion for `poetry`
 ```
@@ -70,16 +70,15 @@ poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
 poetry completions zsh > ~/.zprezto/modules/completion/external/src/_poetry
 ```
 
-### Clone, edit, test
-1. clone this repo where you want in your home folder
+## Clone, edit, test
+1. Clone this repo where you want in your home folder.
 2. `cd` to it and run `pipenv install` or `poetry install` to install the dependencies, and then `pipenv shell` or `poetry shell` to run the environment. 
 3. finally `cd` to `project` and run you `mkdocs` commands from there.
+4. To generate the website from the source files and serve it, run `mkdocs serve`.
+5. View the generated documents in your browser on http://127.0.0.1:8000/.
 
-The only important command is `mkdocs serve`; it generates the website from the source files and service it on http://127.0.0.1:8000/. 
-
-Use it now to make sure you can build and display the website. 
-
-Now you are read to work on the docs. You can either shut down the server with `CTRL + c` or let it run. It will auto-reload and refresh your browser whenever you save your changes.
+You can now work on the docs. Whenever you save your changes, the site will be regenerated and your browser will update the current page.
+To shut down the server, press `Ctrl + C`.
 
 ### Get ready to open a Pull Request
 If you are new to `git` and GitHub, read https://jarv.is/notes/how-to-pull-request-fork-github/. 
@@ -87,7 +86,7 @@ If you are new to `git` and GitHub, read https://jarv.is/notes/how-to-pull-reque
 When you are done working, go through the checklist before opening a Pull Request against our repository.
 
 __Checklist__:
-- [x] When doing `git checkout -b <meaningful name> <...>`, did you make sure that `meaningful name` satisfied the schema described under __Branches__ below? If not, you can still rename it using `git branch -m <new name that satsfies the schema> `.
+- [x] When doing `git checkout -b <meaningful name> <...>`, did you make sure that `meaningful name` satisfied the schema described under __Branches__ below? If not, you can still rename it using `git branch -m <new name that satisfies the schema> `.
 - [x] Have you followed the style guidelines below under __Style__?
 - [x] If you have added a new article:
   - a) did it land in `/project/docs`? If not, move it there.
@@ -107,7 +106,7 @@ __Checklist__:
 ### Style
 _Structure_. Each document should start with an intro stating the end goal, the important presuppositions (typically about pre-requirements) that the document is making, and an outline of the main steps on the path to the goal.
 
-_Technical jargon_. Important and unavoidable jargon should be defined (typically inlined, with info boxes). Overall the document should be understanble by a teenager (think secondary school textbook).
+_Technical jargon_. Important and unavoidable jargon should be defined (typically inlined, with info boxes). Overall the document should be understandable by a teenager (think secondary school textbook).
 
 _Format_:
 * reference points and path items in italics, ex: "_Settings_ > _Energy Saving_"
