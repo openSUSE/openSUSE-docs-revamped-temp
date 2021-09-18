@@ -18,14 +18,12 @@
 6. On the _Configured Software Repositories_ &gt; Click __Ok__
 7. Back to _Software Management Windows_" &gt; __View__ &gt; __Repositories__ &gt; Select __nVidia Graphics Drivers__.
 8. Select __x11-video-nvidiaG05__ &gt; __Accept__ (Some graphic cards need _G04_, see the first section above)
-9. After the installation of the nvidia drivers the user have to be added to the video group gpasswd -a $USER video or usermod -aG video $USER
-10. Reboot.
+9. Reboot.
 
 #### Using the command line
 1. Add the Nvidia Repository. If using Tumbleweed for example, you would run `sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA`. For Leap, you can run `sudo zypper addrepo --refresh 'https://download.nvidia.com/opensuse/leap/$releasever' NVIDIA`.
 2. Install the appropriate driver by running `sudo zypper in x11-video-nvidiaG05` or `sudo zypper in x11-video-nvidiaG04`
-3. After the installation of the nvidia drivers the user have to be added to the video group gpasswd -a $USER video or usermod -aG video $USER
-4. Reboot.
+3. Reboot.
 
 #### CUDA
 1. CUDA can be installed with the __Nvidia-ComputeG05__ or __Nvidia-ComputeG04__ package.
