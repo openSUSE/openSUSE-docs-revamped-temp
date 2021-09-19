@@ -88,11 +88,13 @@ nav:
         - Graphic Drivers: 
             - Getting started: install_proprietary.md
             - Dual GPUs ("Optimus"): hybrid_graphics.md
-        - Setting up a containerized environment: install_podman.md
-        - Power management: power.md
-        - Pairing, syncing, sharing:
+        - Peripherals:
             - Bluetooth: bluetooth.md
             - KDE Connect: kdeconnect.md
+            - Printers & scanners:
+                - Printers: printersetc.md
+        - Setting up a containerized environment: install_podman.md
+        - Power management: power.md
         - Advanced fine-tunings:
             - Transparent compression (zstd): zstd.md
     - Giving back to the community:
