@@ -2,21 +2,21 @@
 ## openSUSE distributions
 If you are a desktop user, openSUSE offers the choice between two Linux distributions designed to meet your needs:
 
-* [Tumbleweed](https://software.opensuse.org/distributions/tumbleweed)
-* [Leap](https://software.opensuse.org/distributions/leap)
+* [Tumbleweed](https://get.opensuse.org/tumbleweed)
+* [Leap](https://get.opensuse.org/leap)
 
 ### Tumbleweed
-Tumbleweed is a _rolling-release_ distribution: instead of having fixed points where you will be offered to perform a system upgrade (think of Windows, Ubuntu, or macOS, where each numbered version leads to the next), you will be frequently offered to upgrade multiple components of your system.
+Tumbleweed is a _rolling-release_ distribution: instead of having fixed points where you will be offered to perform a system upgrade (think of Windows, Ubuntu, or macOS), you will be frequently offered to upgrade multiple components of your system.
 
 ???+ info
     Those components are called _packages_, because they "pack" the programs and resources making up most of your system, along with tools to install them). "Upgrading" means "Upgrading packages" (such as those that constitute your Linux distribution).
 
-Even though Tumbleweed uses a rolling-release model, it is very stable: openSUSE thoroughly tests every package before going into an update, ensuring the stability of your system. Moreover you can always revert back to the previous state of Tumbleweed (in jargon: "switch to the previous snapshot". Snapshots are explained [here](snapper.md)).
+Even though Tumbleweed follows a rolling-release model, it is very stable: openSUSE thoroughly tests every package before release, ensuring the stability of your system. Moreover you can always revert back to the previous state of Tumbleweed (in jargon: "switch to the previous snapshot". Snapshots are explained [here](snapper.md)).
 
-What you have to bear in mind, however, is that Tumbleweed requires a reliable internet connection and a healthy hard drive to work as designed. It also requires that you sometimes take interest in the updating process.
+However, keep in mind that Tumbleweed requires a reliable internet connection and a healthy hard drive to work as designed. It also requires that you sometimes take interest in the updating process.
 
 ### Leap
-Leap is a more traditional distribution: it uses a fixed-points release model, just like Windows, Ubuntu, or macOS. Leap is a very battle-hardened operating system, mostly made up of packages brought over from SUSE Linux Enterprise, a commercial Linux operating system for servers, and of packages from Tumbleweed after they were tested, tried and used by the community.
+Leap is a more traditional distribution: it uses a fixed-points release model, just like Windows, Ubuntu, or macOS. Leap is a very battle-hardened operating system, mostly made up of packages brought over from SUSE Linux Enterprise, a commercial Linux operating system, and of packages from Tumbleweed after they were tested, tried and used by the community.
 
 It is worth noting that Leap provides a Linux kernel that is several years behind the version offered by Tumbleweed. 
 
@@ -26,16 +26,16 @@ It is worth noting that Leap provides a Linux kernel that is several years behin
 This means that you might be better served by Tumbleweed if you have a recent computer or rely extensively on "exotic" hardware.
 
 ### Our recommendation
-Pick Tumbleweed if you intend to use your machine as a desktop machine unless:
+Tumbleweed is a great choice if you want to use your machine as a desktop PC. Unlike Leap, it also supports 32-bit hardware.
 
-* You have a very limited bandwidth or an unreliable access to the Internet.
-* You have an old (7+ years old mechanical hard drive that will struggle with frequent, numerous updates.
-* You cannot afford to reboot your computer frequently to install updates.
-* You don't want to use, or switch between, different snapshots.
-* Your rely on specific versions of important packages, including hardware drivers, and generally speaking you don't want or cannot take advantage of recent packages, including recent kernels.
-* You would rather not do package management manually and more generally, you would rather avoid using the command line.
+Nevertheless, Leap is to be preferred if you:
 
-The more conditions apply to your use case, the stronger we recommend you to install Leap instead of Tumbleweed.
+* have a very limited bandwidth or an unreliable access to the Internet;
+* have an old (7+ years old) mechanical hard drive that will struggle with frequent, numerous updates;
+* cannot afford to reboot your computer frequently to install updates;
+* don't want to use, or switch between, different snapshots;
+* rely on specific versions of important packages, including hardware drivers;
+* would rather not do package management manually and, more generally, would rather avoid using the command line.
 
 ???+ info
     It is not recommended for new users, however, it is possible to use microOS on a desktop computer, taking advantage of transactional updates. This might appeal to advanced users who want to provide friends or relatives with an operating system that will require little to no maintenance. You might be interested in [the microOs documentation](https://microos.opensuse.org/) for more about this use case.
@@ -45,7 +45,7 @@ Leap offers the __GNOME__ and __KDE Plasma__ desktop environments by default. Tu
 
 Modern desktop environments have evolved into highly consistent and productive computing experiences. Choosing the right desktop environment for you can be a deeply personal experience; many people feel as passionately about their desktop environment as they do their distribution. 
 
-One of the distinguishing options of openSUSE, during the installation, is the ability to choose a desktop environment. This provides a certain level of assurance that you will have a well-supported desktop experience for that desktop environment, no derivatives or spin-offs needed.
+One of the distinguishing features of openSUSE, during the installation, is the ability to choose a desktop environment. This provides a certain level of assurance that you will have a well-supported desktop experience for that desktop environment, no derivatives or spin-offs needed.
 
 ## Installation
 
@@ -80,7 +80,7 @@ The descriptions below are as provided by the respective projects.
 >
 > Another priority of XFCE is adherence to standards, specifically those defined at [freedesktop.org](https://www.freedesktop.org).
 >
-> [XFCE.org](https://www.xfce.org)
+> [XFCE.org](https://xfce.org)
 
 ???+ info "Install XFCE"
     Tumbleweed:
@@ -131,7 +131,7 @@ If you prefer one of these desktop environments, de-select the __A very basic de
 #### LXDE
 > LXDE, which stands for Lightweight X11 Desktop Environment, is a desktop environment which is lightweight and fast. It is designed to be user friendly and slim, while keeping the resource usage low. LXDE uses less RAM and less CPU while being a feature rich desktop environment. Unlike other tightly integrated desktops LXDE strives to be modular, so each component can be used independently with few dependencies. This makes porting LXDE to different distributions and platforms easier. 
 >
-> [LXDE.org](http://www.lxde.org/)
+> [LXDE.org](http://www.lxde.org)
 
 ???+ info "Install LXDE"
 
@@ -164,7 +164,7 @@ If you prefer one of these desktop environments, de-select the __A very basic de
 >
 > MATE is under active development to add support for new technologies while preserving a traditional desktop experience.
 >
-> [Mate-Desktop.org](https://mate-desktop.org/)
+> [Mate-Desktop.org](https://mate-desktop.org)
 
 ???+ info "Install MATE"
 
@@ -179,7 +179,7 @@ If you prefer one of these desktop environments, de-select the __A very basic de
 #### Sway
 > Sway allows you to arrange your application windows logically, rather than spatially. Windows are arranged into a grid by default which maximizes the efficiency of your screen and can be quickly manipulated using only the keyboard. 
 >
-> [SwayWM.org](https://swaywm.org/)
+> [SwayWM.org](https://swaywm.org)
 
 ???+ info "Install Sway"
 
