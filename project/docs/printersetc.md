@@ -12,7 +12,7 @@ In that case the software responsible for securing your computer against malicio
 
 ## Configuring your printer
 
-Getting your (likely networked) printer to show up in the detected printers box in `YaST Printer` is _not necessarily_ the whole story. Here are some issues and recommendations:
+Getting your (likely networked) printer to show up in the detected printers box in `YaST Printer` is likely not the whole story. Here are some issues and recommendations:
 
 1. The same printer may show up on multiple lines, with different "URI"s corresponding to different protocols for accessing it. Here's how to choose:
     * if one of the URIs starts with `ipp:` -- for "internet printing protocol," more or less the "native tongue" of the printing system _CUPS_ that _openSUSE_ uses, try that first.
