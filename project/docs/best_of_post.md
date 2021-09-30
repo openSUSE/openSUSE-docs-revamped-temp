@@ -4,7 +4,7 @@ Some of the material covered below is presented and discussed in more details el
 
 The order in which you carry out these recommendations is not crucial, but we advise you to follow our order, as certain steps feel more natural if you have followed previous ones on the list. 
 
-The list takes the point of view of a user who has just rebooted and logged in to an openSUSE distribution.
+The list takes the point of view of a user who has just rebooted and logged in to an openSUSE distribution. Also, if you are Tumbleweed users, checkout out our [safety and usability](/safety_usability) rules of thumbs.
 
 
 ### Update
