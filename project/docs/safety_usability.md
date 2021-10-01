@@ -47,4 +47,4 @@ Although it is not recommended for new users, it is possible to use MicroOS on a
 
 This might appeal to advanced users who agree to spend more time configuring their system in exchange for a system that will require little to no maintenance (especially suited for friends and relatives with little to no experience of Linux or openSUSE). 
 
-The reader might also be interested in [the MicroOS documentation](https://microos.opensuse.org/) for more the reference document about this use case.
+The reader might also be interested in [the MicroOS documentation](https://microos.opensuse.org/) for the official documentation about this use case.
