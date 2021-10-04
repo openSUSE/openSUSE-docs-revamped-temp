@@ -27,11 +27,25 @@ This is a workflow where the user minimizes the need for manual interventions on
 
 Here are some rules of thumb for following this approach:
 
-1. _User application_. When installing user applications, favour containerized versions (ideally _flatpaks_, see [here](/alternative_procurement#flatpaks)). Use software from the official repositories only when no containerized version is available.
-2. _System dependencies_. Do not manually install important system libraries or codecs directly from _zypper_ or _Yast2_. Instead prefer flatpaks or at least software that ship with their own static libraries and codecs (certain web browsers do). When you don't have the choice you can use `.rpm` from the official repositories but in this case, install them from [opi](/best-of-post#codecs) to simplify maintenance. 
-3. _Update pace and method_. When updating, aim for least every other week or about twice a month. More or less frequently might create issues. Use `sudo zypper dup`, plus if that applies to you, `flatpak update` (see this [systemd unit](/alternative_procurement#flatpaks) for automatic daily flatpak updates). Never update with `gnome-software` (GNOME) or `discover` (KDE Plasma), as they create unnecessary risks for your system.
-4. _Crucially fresh software with a set workflow_. If you need fresh updates for essential parts of your toolchain (typically when working with a programming language stack), always favour the language's official, remote installer.
-5. _Kernels_. If you don't need to always be running the latest kernel (and that's likely your case), use the multiversion zypp setting described [here](/updating_upgrading_reverting#reverting-to-a-previous-kernel-image).
+_User application_
+
+When installing user applications, favour containerized versions (ideally _flatpaks_, see [here](/alternative_procurement#flatpaks)). Use software from the official repositories only when no containerized version is available.
+
+_System dependencies_
+
+Do not manually install important system libraries or codecs directly from _zypper_ or _Yast2_. Instead prefer flatpaks or at least software that ship with their own static libraries and codecs (certain web browsers do). When you don't have the choice you can use `.rpm` from the official repositories but in this case, install them from [opi](/best-of-post#codecs) to simplify maintenance. 
+
+_Update pace and method_
+
+When updating, aim for least every other week or about twice a month. More or less frequently might create issues. Use `sudo zypper dup`, plus if that applies to you, `flatpak update` (see this [systemd unit](/alternative_procurement#flatpaks) for automatic daily flatpak updates). Never update with `gnome-software` (GNOME) or `discover` (KDE Plasma), as they create unnecessary risks for your system.
+
+_Crucially fresh software with a set workflow_
+
+If you need fresh updates for essential parts of your toolchain (typically when working with a programming language stack), always favour the language's official, remote installer.
+
+ _Kernels_
+ 
+ If you don't need to always be running the latest kernel (and that's likely your case), use the multiversion zypp setting described [here](/updating_upgrading_reverting#reverting-to-a-previous-kernel-image).
 
 ### Start lazy, get busy!
 
