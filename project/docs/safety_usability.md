@@ -27,11 +27,11 @@ This is a workflow where the user minimizes the need for manual interventions on
 
 Here are some rules of thumb for following this approach:
 
-1. When installing user applications, favour containerized versions (ideally _flatpaks_, see [here](/alternative_procurement#flatpaks)). Use software from the official repositories only when no containerized version is available.
-2. Do not manually install important system libraries or codecs directly from _zypper_ or _Yast2_. Use [opi](/best-of-post#codecs) if you must, but prefer software that ship with their own static libraries and codecs when possible (or flatpaks).
-3. Update every other week or twice a month, not more often. Use `sudo zypper dup`, plus if that applies to you, `flatpak update`.
-4. If you need fresh updates for essential parts of your toolchain (typically when working with a programming language stack), always favour the language's official, remote installer.
-5. If you don't need to always be running the latest kernel (and that's likely your case), use the multiversion zypp setting described [here](/updating_upgrading_reverting#reverting-to-a-previous-kernel-image).
+1. _User application_. When installing user applications, favour containerized versions (ideally _flatpaks_, see [here](/alternative_procurement#flatpaks)). Use software from the official repositories only when no containerized version is available.
+2. _System dependencies_. Do not manually install important system libraries or codecs directly from _zypper_ or _Yast2_. Instead prefer flatpaks or at least software that ship with their own static libraries and codecs (certain web browsers do). When you don't have the choice you can use `.rpm` from the official repositories but in this case, install them from [opi](/best-of-post#codecs) to simplify maintenance. 
+3. _Update pace and method_. When updating, aim for least every other week or about twice a month. More or less frequently might create issues. Use `sudo zypper dup`, plus if that applies to you, `flatpak update` (see this [systemd unit](/alternative_procurement#flatpaks) for automatic daily flatpak updates). Never update with `gnome-software` (GNOME) or `discover` (KDE Plasma), as they create unnecessary risks for your system.
+4. _Crucially fresh software with a set workflow_. If you need fresh updates for essential parts of your toolchain (typically when working with a programming language stack), always favour the language's official, remote installer.
+5. _Kernels_. If you don't need to always be running the latest kernel (and that's likely your case), use the multiversion zypp setting described [here](/updating_upgrading_reverting#reverting-to-a-previous-kernel-image).
 
 ### Start lazy, get busy!
 
@@ -45,6 +45,6 @@ At scale the openSUSE Project benefits more from users in position to report bug
 
 Although it is not recommended for new users, it is possible to use MicroOS on a desktop computer, taking advantage of transactional updates. Consider our [guide to get started](/microos_getting_started).
 
-This might appeal to advanced users who agree to spend more time configuring their system in exchange for a system that will require little to no maintenance (especially suited for friends and relatives with little to no experience of Linux or openSUSE). 
+MicroOS might appeal to advanced users familiar with the command line and willing to configure the system in a fine-grained manner. The tradeoff of this extra bit of learning at start means that users get a tailor-fit system requiring little to no maintenance. This latter advantage makes the system especially suited for friends and relatives with little to no experience of Linux or openSUSE, provided the configuration is done by someone knowledgeable.
 
 The reader might also be interested in [the MicroOS documentation](https://microos.opensuse.org/) for the official documentation about this use case.
