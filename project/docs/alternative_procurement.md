@@ -10,7 +10,7 @@ When it comes at getting software, modern Linux operating systems have access to
 * _Snapcraft_ is Ubuntu's equivalent to Flatpal, and similarly, it provides apps in single files, containerized with their dependencies. You typically install from the `snapd` command line utility.
 * _AppImages_ are a vendor-neutral cross-distro app format. Apps are delivered as a single files, which you manually download from websites and various hosts. No supporting tools are needed; it is enough to mark the file as executable with `chmod +x <filename>`, then your computer will treat it as an application, much like what you would see in a macOS environment.
 
-The goal of this document is to help you understand these various formats and methods, as well as their strengths and weaknesses, so that you can include them in your daily usage. We will also make a few openSUSE-specific recommendationsalong the way.
+The goal of this document is to help you understand these various formats and methods, as well as their strengths and weaknesses, so that you can include them in your daily usage. We will also make a few openSUSE-specific recommendations along the way.
 
 ## Official and third-party RPM repositories
 
