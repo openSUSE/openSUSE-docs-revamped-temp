@@ -73,7 +73,7 @@ $   sudo nano /etc/zypp/zypp.conf
 
 Make sure that the line `multiversion = provides:multiversion(kernel)` is not commented out (make sure there is no `#` prepended to `multiversion = provides:multiversion(kernel)`). If the line is commented out, use the arrow keys to bring the cursor near the `#` and delete it.
 
-Then look at the line reading `multiversion.kernels = <...>`. It encodes the policy the system uses for keeping kernels. By default, what fills the `<...>` is `latest,latest-1,running`. This means that zypper should not remove:
+Then look at the line reading `multiversion.kernels = <version>`. It encodes the policy the system uses for keeping kernels. By default, what fills the `<...>` is `latest,latest-1,running`. This means that zypper should not remove:
 
 - the kernel available from the latest Tumbleweed snapshot installed on the system; nor
 - the one before; nor
@@ -82,14 +82,17 @@ Then look at the line reading `multiversion.kernels = <...>`. It encodes the pol
 Once you have identified the exact kernel version you want to keep using for some time, simply add it as:
 
 ```
-multiversion.kernels = latest,latest-1,5.13.12-2-default,running    # new: 5.13.12-2-default
+multiversion.kernels = latest,latest-1,5.13.12-2,running    # new: 5.13.12-2
 ```
+
+!!! info
+    Developers recommend specifying kernel versions in the format shown here, the _version_ proper i.e. `5.13.12-2`, instead of the longer `kernel-default-5.13.12-2` format, as the former is the standard format used by the `libzypp` library (the backend to zypper utilities).
 
 Now the system should not remove:
 
 - the kernel available from the latest Tumbleweed snapshot installed on the system; nor
 - the one before; nor
-- the kernel image named `5.13.12-2-default` (new)
+- the kernel image named `5.13.12-2` (new)
 - the current, running kernel
 
 If you have followed through, you system now will _accept_ to use an old kernel __name__. Now you need to install and expose to the bootloader the __actual__ kernel image bearing the name.
