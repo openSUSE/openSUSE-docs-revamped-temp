@@ -64,3 +64,7 @@ To offload anything to the AMD GPU, simply use the special enviroment variable t
     DRI_PRIME=1 supertuxkart
 
 The same applies to users with the open source _nouveau_ driver for NVIDIA cards.
+
+### Troubleshooting 
+
+In the event that the nvidia driver installation doesn't enable the driver, and you end up with messages in the kernel with: "nvidia: Loading of module with unavailable key is rejected", which in turn gives you a "ERROR: Unable to query GPU information" when calling prime-select, try disabling Secure boot.
