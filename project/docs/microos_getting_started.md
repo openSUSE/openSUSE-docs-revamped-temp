@@ -301,7 +301,10 @@ $ sudo reboot
 ### Graphical applications in the toolbox are missing fonts/icons
 They need to be installed inside the toolbox:
 ```
-sudo zypper install xorg-x11-fonts-core adwaita-icon-theme
+toolbox enter
+sudo zypper ref && sudo zypper dup
+sudo zypper install adwaita-icon-theme xorg-x11-fonts libX11-xcb1 gsettings-desktop-schemas
+sudo gdk-pixbuf-query-loaders-64 --update-cache
 ```
 
 ## Alternative for Gnome Extensions
@@ -319,21 +322,6 @@ You can then open the application _Get Extensions_ that is available from your l
 To uninstall:
 ```pip3 uninstall getextensions```
 
-
-Old items:
-It is recommended to disable both automatic updating and automatic rebooting. They are handy features for servers running 24/7), but the developers are thinking about a different and better integration with desktop usage. For now it is recommended to do the same, at least until you have become more familiar with MicroOS. Then you will be able to come up with the best automatic updating & rebooting strategy for your workflow and use case. So:
-```
-$ sudo systemctl disable --now transactional-update.timer
-$ sudo systemctl disable --now rebootmgr.service
-```
-And then let’s check:
-```
-$ sudo rebootmgrctl is-active
-*RebootMgr is dead*
-$ sudo rebootmgrctl status
-*Error: The name org.opensuse.RebootMgr was not provided by any .service files*
-```
-For GNOME you have to use one of the two options below (also possible for a terminal prompt if you don't like Discover):
 
 If you want to install flathub for only your user (in `/home/~ folder`):
 ```
