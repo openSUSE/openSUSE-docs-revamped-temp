@@ -321,15 +321,3 @@ You can then open the application _Get Extensions_ that is available from your l
 
 To uninstall:
 ```pip3 uninstall getextensions```
-
-
-If you want to install flathub for only your user (in `/home/~ folder`):
-```
-$ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
-Updating flatpaks via the terminal are done with the command `flatpak update`
-
-If you want to install flathub for all users (in `/var folder`):
-```
-$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-``` 
