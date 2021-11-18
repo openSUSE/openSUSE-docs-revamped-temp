@@ -7,7 +7,7 @@ plugins:
         prebuild_index: true
     - git-revision-date
     #- mkdocs-versioning:
-    #    version: 0.3.1
+    #    version: 0.4.0
     - pdf-export:
         verbose: true
         media_type: print
