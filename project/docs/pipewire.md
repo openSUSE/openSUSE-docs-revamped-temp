@@ -1,21 +1,25 @@
 ### What is pipewire?
 
 ### Installing
+
+Warning: This removes the package `pulseaudio`
+
 Install the package:
+
 ```
 sudo zypper in pipewire pipewire-pulseaudio
 ```
-Then enable the pipwire audio socket: 
+
+Then enable the pipwire audio socket:
+
 ```
-systemctl --user enable --now pipewire.{service,socket} pipewire-pulse.{service,socket}
-```
-Finally reboot your system:
-```
-systemctl reboot
+systemctl --user enable --now pipewire.{service,socket}
+systemctl --user enable --now pipewire-pulse.{service,socket}
+systemctl --user enable --now pipewire-media-session.service
 ```
 
-### For KDE Plasma users
-After rebooting, enable pipewire service making pipewire available to Plasma:
+Finally reboot your system:
+
 ```
-systemctl --user enable --now pipewire-media-session.service
+systemctl reboot
 ```
