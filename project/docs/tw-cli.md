@@ -7,7 +7,7 @@
     
     - the advantages of rolling back to a previous Tumbleweed snapshot comes with the drawback that the user is no longer in sync with possible upcoming security fixes, which are shipped to target only the latest available snapshot.
 
-This tool is an _unsupported_ community-made tool exclusively designed for _Tumbleweed_. If you have not already, please read the short [introduction](/updating_upgrading_reverting#introduction).
+This tool is an _unsupported_ community-made tool exclusively designed for _Tumbleweed_. If you have not already, please read the short [introduction](updating_upgrading_reverting.md#introduction).
 
 `tumbleweed-cli` enables the user to control finely the update process by making explicit which Tumbleweed snapshot one is upgrading to. It also allows the user to select and rollback (or fast-forward) to any Tumbleweed snapshot comprised in a collection of recently released snapshots.
 

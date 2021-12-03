@@ -48,7 +48,7 @@ which is a compact instance of
 
 ## Rolling back
 
-On Tumbleweed _rolling back_ means changing the on-disk state of your system to a previous iteration. This is documented in details [there](/snapper#rolling-back). In a nutshell:
+On Tumbleweed _rolling back_ means changing the on-disk state of your system to a previous iteration. This is documented in details [there](snapper.md#rolling-back). In a nutshell:
 
 1. Reboot your system. From the GRUB2 screen (bootloader), select __Start Bootloader from a read-only snapshot__.
 2. Select the snapshot you want to boot to.

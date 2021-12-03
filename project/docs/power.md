@@ -21,7 +21,7 @@ Swap space can be created while partioning the disk while installating or after 
 
 __During installation__
 
-This is adapted from [the installation documentation](/yast_installer#about-partition-schemes) and repeated here for convenience.
+This is adapted from [the installation documentation](yast_installer.md#about-partition-schemes) and repeated here for convenience.
 
 <u>Step by step: Expert partitioning</u>
 

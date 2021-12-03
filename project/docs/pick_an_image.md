@@ -37,10 +37,10 @@ Nevertheless, Leap is to be preferred if you:
 * rely on specific versions of important packages, including hardware drivers;
 * would rather not do package management manually and, more generally, would rather avoid using the command line.
 
-If you are interested in Tumbleweed and want to know more about what typical use-cases and workflows look like, head over to [this page](/safety_usability).
+If you are interested in Tumbleweed and want to know more about what typical use-cases and workflows look like, head over to [this page](safety_usability.md).
 
 ## Desktop Environments
-Leap offers the __GNOME__ and __KDE Plasma__ desktop environments by default. Tumbleweed offers __GNOME__, __KDE Plasma__, and __XFCE__. These options are chosen during the __System Role__ section of the installation. Additional options are available in the __Software__ selection of the installer. These desktop environment patterns may also be viewed and modified with the [YaST](/yast/) __Software Management__ module.
+Leap offers the __GNOME__ and __KDE Plasma__ desktop environments by default. Tumbleweed offers __GNOME__, __KDE Plasma__, and __XFCE__. These options are chosen during the __System Role__ section of the installation. Additional options are available in the __Software__ selection of the installer. These desktop environment patterns may also be viewed and modified with the [YaST](yast.md) __Software Management__ module.
 
 Modern desktop environments have evolved into highly consistent and productive computing experiences. Choosing the right desktop environment for you can be a deeply personal experience; many people feel as passionately about their desktop environment as they do their distribution. 
 

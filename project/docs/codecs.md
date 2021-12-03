@@ -10,7 +10,7 @@ You need to play online or offline multimedia content but the content does not p
 - vlc-codecs
 
 !!! info
-    Tumbleweed users who only occasionally use codecs (for example through a web browser or a handful of dedicated applications such as _VLC_ or _OBS Studio_) might find it convenient _to avoid_ the addition of external repositories by using a version of these applications shipping with their own codecs. On Tumbleweed the advantage of this approach is more salient as codecs will be kept separate from system libraries, securing extra stability for the user. Interested readers may refer to [this page](/alternative_procurement#flatpaks) for explanations.
+    Tumbleweed users who only occasionally use codecs (for example through a web browser or a handful of dedicated applications such as _VLC_ or _OBS Studio_) might find it convenient _to avoid_ the addition of external repositories by using a version of these applications shipping with their own codecs. On Tumbleweed the advantage of this approach is more salient as codecs will be kept separate from system libraries, securing extra stability for the user. Interested readers may refer to [this page](alternative_procurement.md#flatpaks) for explanations.
 
 You could get codecs using `Zypper` or `YaST` but you _should_ get them with _OBS Package Installer_ (`opi`) as there are complications and risks associated with the alternative methods.
 
