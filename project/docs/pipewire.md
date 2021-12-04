@@ -8,7 +8,8 @@ TLDR; Pipewire is a new multimedia framework that aims for minimal latency and i
 
 ### Installing
 
-Warning: This removes the package `pulseaudio`
+!!! warning 
+	This removes the package `pulseaudio`.
 
 Install the package:
 
@@ -16,7 +17,7 @@ Install the package:
 sudo zypper in pipewire pipewire-pulseaudio
 ```
 
-Then enable the pipwire audio socket:
+Then enable the pipewire audio socket:
 
 ```
 systemctl --user enable --now pipewire.{service,socket}
