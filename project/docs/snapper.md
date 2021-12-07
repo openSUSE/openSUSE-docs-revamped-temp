@@ -8,7 +8,7 @@ Snapper is deeply integrated with the Btrfs filesystem, serving as an easy to us
 Tumbleweed users should note that understanding how to use Snapper is an important step in maintaining a stable, functional system. As a rolling release, Tumbleweed, is subjected to less testing overall and the occasional system breaking update can be installed. Such problems are quickly and easily resolved with Snapper.
 
 !!! info
-    Even though Snapper is key to a healthy Tumbleweed experience, it also benefits Leap as it allows you to quickly recover from breakages occuring before login, typically involving the GRUB bootloader or the loading of the kernel with unhealthy parameter values.
+    Even though Snapper is key to a healthy Tumbleweed experience, it also benefits Leap as it allows you to quickly recover from breakages occurring before login, typically involving the GRUB bootloader or the loading of the kernel with unhealthy parameter values.
 
 ### Snapper capabilities
 - Undo system changes made by `zypper` and YaST.
@@ -199,7 +199,7 @@ Once your system has booted, make sure you're satisfied with the current state o
 
 Your system should then be rebooted and the recovered snapshot will be the new default boot option.
 
-In rare cases rolling back with fail as snapper is not able to find the default sub-volume (this may happen if snapper's configuration and the state of your system have diverged in a problematic way, typically if you've made a mistake by accident). To perform a rollack nonetheless you can use the following command: 
+In rare cases rolling back with fail as snapper is not able to find the default sub-volume (this may happen if snapper's configuration and the state of your system have diverged in a problematic way, typically if you've made a mistake by accident). To perform a rollback nonetheless you can use the following command: 
 
 `$  sudo snapper --ambit classic rollback <id>`
 

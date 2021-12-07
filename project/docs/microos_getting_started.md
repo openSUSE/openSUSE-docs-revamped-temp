@@ -1,7 +1,7 @@
 ## Setting up MicroOS as a desktop OS
 
 !!! warning 
-    Parts of this documentation is not in line with the _official_ intent of the developers such as the use of _snap_ packages which are considered a security risk as proper _snap_ to _system_ separation is not possible. You can also visit the [official documentation](https://en.opensuse.org/Portal:MicroOS) for _upstream_ recommendations. Also the use of _MicroOS Desktop_ with _KDE Plasma_ is discouraged as it is not being actively maintained.
+    Parts of this documentation are not in line with the _official_ intent of the developers such as the use of _snap_ packages which are considered a security risk as proper _snap_ to _system_ separation is not possible. You can also visit the [official documentation](https://en.opensuse.org/Portal:MicroOS) for _upstream_ recommendations. Also the use of _MicroOS Desktop_ with _KDE Plasma_ is discouraged as it is not being actively maintained.
 
 ### Audience and context
 This document is meant for users interested in using the openSUSE MicroOS as a desktop. Although this operating system is offered in two flavours (one based on Leap, the other on Tumbleweed), we will only be concerned with the Tumbleweed base, as the Leap base does not provide the required patterns for desktop usage.
@@ -79,7 +79,7 @@ Alternatively, the second decrypt can be performed automatically; instructions a
 ### Installation: GNOME
 _Gnome is currently in a beta stage._
 
-At first boot flatpaks are enabled and some flatpaks are installed by default (MozillaFirefox, Gedit and Gnome Calculator).
+At first boot flatpaks are enabled and some flatpaks are installed by default (Mozilla Firefox, Gedit and Gnome Calculator).
 
 Make sure to install a browser via transactional-updates if you want to use GNOME extensions. The easiest way to install GNOME extensions is via the website provided by the [GNOME project](https://extensions.gnome.org/). For this to work however, you will need a browser installed on the system via transactional-update, as it will not work inside a containerized environment (like flatpaks, snaps, AppImages or in a toolbox). The browser will need to have the plugin mentioned on the top of the page when you first open it. 
 
@@ -308,7 +308,7 @@ sudo gdk-pixbuf-query-loaders-64 --update-cache
 ```
 
 ## Alternative for Gnome Extensions
-There is an alternative to installing GNOME Extensions, such that no RPM installed browser is necessary. It's currently under development at [Github](https://github.com/ekistece/GetExtensions). You can install it via `toolbox`; the commands are as follows:
+There is an alternative to installing GNOME Extensions, such that no RPM installed browser is necessary. It's currently under development at [GitHub](https://github.com/ekistece/GetExtensions). You can install it via `toolbox`; the commands are as follows:
 ```
 $ toolbox -u
 $ sudo zypper in git python38-pip

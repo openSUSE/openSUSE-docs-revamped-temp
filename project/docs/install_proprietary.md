@@ -9,8 +9,8 @@
 
 ### Setup the driver
 
-#### With Yast
-1. Go to _YAsT2_.
+#### With YaST
+1. Go to _YaST2_.
 2. Then _Software Management_.
 3. On the menu, click __Configuration__ &gt; __Repositories__... (or do `Ctrl + R`).
 4. Click __Add__ &gt; __Community Repositories__.

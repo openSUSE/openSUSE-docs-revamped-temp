@@ -3,7 +3,7 @@
 Tumbleweed is a rolling-release distribution. It gets updates on a continuous basis, usually several times a week. However, to bring some order and make it easier to manage producing and consuming updates, Tumbleweed fetches updates in batches. A single batch of updates is called a _snapshot_.
 
 !!! info
-    Tumbleweed snapshots ought not to be confused with _Btrfs snapshots_, a completely different kind of snapshots. The latter make up the different filesystem states that allow _Btrfs_ users, using tools like YaST2 and `snapper`, to control which state they want to actualize).
+    Tumbleweed snapshots ought not to be confused with _Btrfs snapshots_, a completely different kind of snapshots. The latter make up the different filesystem states that allow _Btrfs_ users, using tools like YaST2 and `snapper`, to control which state they want to actualize.
 
 Tumbleweed snapshots are thus batches of updates which are tested in openQA -- openSUSE's very best testing pipeline. The tests are thorough and check not only that each upgraded package is healthy, but also that all updates in the same snapshot play nice with one another. A snapshot is thus as healthy as the individual updates it holds, and as the compatibility between one another.
 
@@ -56,7 +56,7 @@ On Tumbleweed _rolling back_ means changing the on-disk state of your system to 
 
 ## Reverting to a previous kernel image
 
-As it happens, the Linux kernel sometimes undergoes regressions. For the end user this often translates into issues where the system has trouble communicating with the hardware. The user could rollback to a previous _Btrfs_ snapshot (see previous section), but this would move the entire system -- not just the kernel -- to a previous state. However there are situations where only the kernel is the culprit. When that is the case you are often better off _reverting_ to an older kernel instead of clinging on a old Tumbleweed snapshot through a snapper rollback.
+As it happens, the Linux kernel sometimes undergoes regressions. For the end user this often translates into issues where the system has trouble communicating with the hardware. The user could rollback to a previous _Btrfs_ snapshot (see previous section), but this would move the entire system -- not just the kernel -- to a previous state. However there are situations where only the kernel is the culprit. When that is the case you are often better off _reverting_ to an older kernel instead of clinging on an old Tumbleweed snapshot through a snapper rollback.
 
 Here we will look at two likely scenarios:
 
@@ -95,7 +95,7 @@ Now the system should not remove:
 - the kernel image named `5.13.12-2` (new)
 - the current, running kernel
 
-If you have followed through, you system now will _accept_ to use an old kernel __name__. Now you need to install and expose to the bootloader the __actual__ kernel image bearing the name.
+If you have followed through, your system now will _accept_ to use an old kernel __name__. Now you need to install and expose to the bootloader the __actual__ kernel image bearing the name.
 
 ### Reverting to an old but recent kernel still in the official repositories
 
@@ -134,6 +134,6 @@ $   sudo zypper in -f --oldpackage <path/to/kernel package.rpm>
 
 `zypper` will take care of writing a new GRUB entry for the newly installed old kernel, but it is likely to place the new entry _below_ the entries for the more recent kernel entry or entries you are staying away from. If you want to set the new entry as default, follow the path below and select the entry listed at the end:
 
-* _Yast_ > _Bootloader_ > _Bootloader Options_ > _Default Boot Section_ > __`<new kernel entry>`__ (select it)
+* _YaST_ > _Bootloader_ > _Bootloader Options_ > _Default Boot Section_ > __`<new kernel entry>`__ (select it)
 
 You can now reboot and select the new entry and press `Enter` to start using the newly installed kernel.

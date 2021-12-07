@@ -71,9 +71,9 @@ poetry completions zsh > ~/.zprezto/modules/completion/external/src/_poetry
 ```
 
 ## Clone, edit, test
-1. Clone this repo where you want in your home folder.
+1. Clone this repo to where you want in your home folder by running `git clone https://github.com/openSUSE/openSUSE-docs-revamped-temp.git`.
 2. `cd` to it and run `pipenv install` or `poetry install` to install the dependencies, and then `pipenv shell` or `poetry shell` to run the environment. 
-3. finally `cd` to `project` and run you `mkdocs` commands from there.
+3. finally `cd` to `project` and run the `mkdocs` commands from there.
 4. To generate the website from the source files and serve it, run `mkdocs serve`.
 5. View the generated documents in your browser on http://127.0.0.1:8000/.
 
@@ -92,7 +92,7 @@ __Checklist__:
   - a) did it land in `/project/docs`? If not, move it there.
   - b) have you added it to [table of contents](https://github.com/openSUSE/openSUSE-docs-revamped-temp/blob/dev/ToC.md)? Just follow the examples already there. The urls look like `https://github.com/openSUSE/openSUSE-docs-revamped-temp/blob/dev/<some file.md>`
 - [x] Have you tested your work? If not consider the __Clone, edit, test__ section above.
-- [x] Are you going to make your PR editabled for us? If you don't know how, you will have to check the `Allow edits from maintainers` checkbox on the Pull Request screen, in GitHub. Otherwise we won't be able to work with you on your PR.
+- [x] Are you going to make your PR editable for us? If you don't know how, you will have to check the `Allow edits from maintainers` checkbox on the Pull Request screen, in GitHub. Otherwise we won't be able to work with you on your PR.
 
 ## Formal constraints
 ### Branches

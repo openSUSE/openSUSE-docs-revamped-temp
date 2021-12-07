@@ -14,10 +14,10 @@ _Monitor dimming_ (1), _Monitor suspension_ (2) and _Session suspension_ (3) sho
 An openSUSE operating system is ready for hibernation only when:
 
 - _Swap exists_: A swap space on the disk must exist (see below for details)
-- _Swap referenced_: The swap space must referenced in `/etc/fstab`, the configuration file read on every boot and used to mount and integrate the different spaces listed on the file into a proper file structure
+- _Swap referenced_: The swap space must be referenced in `/etc/fstab`, the configuration file read on every boot and used to mount and integrate the different spaces listed on the file into a proper file structure
 - _Resume referenced_: The partition to which the user wants the hibernation to resume to must be made known to the kernel, usually as the value of a kernel parameter
 
-Swap space can be created while partioning the disk while installating or after installing.
+Swap space can be created while partitioning the disk during installation or after installation.
 
 __During installation__
 
@@ -31,7 +31,7 @@ This is adapted from [the installation documentation](yast_installer.md#about-pa
 
 __After installing__
 
-From _Yast2_:
+From _YaST2_:
 
 1. Click on, or search and then open, the _Partitioner_ module.
 2. Select __Disks__ from the list on your left-hand side, and take note of the identifier of the partition you will want to resume to. Note both the UUID and the `/dev/sda<number>` identifiers.
@@ -39,15 +39,15 @@ From _Yast2_:
 3. Add a `swap` partition with a size equal to your current RAM + 1 GB, making sure to format it as `swap`
 4. Confirm to apply the changes.
 
-Whichever method was used, by now Yast2 should have edited your `/etc/fstab` to reference the freshly create swap partition, which means that conditions (Swap exists) and (Swap referenced) above should be met. You can double check that this is the case with
+Whichever method was used, by now YaST2 should have edited your `/etc/fstab` to reference the freshly created swap partition, which means that the conditions (Swap exists) and (Swap referenced) above should be met. You can double check that this is the case with
 
 ```
 $ blkid | grep "swap"
 ```
 
-This command should return a line referencing various identifiers for your swap partition. You can compare the UUID visible from this context with the UUID lised in _Yast2_ for good measure (see step 2 above). If you have created the swap space during installation, don't forget to search for the UUID and the `/dev/sda<number>` identifiers referencing the partition you are resuming to.
+This command should return a line referencing various identifiers for your swap partition. You can compare the UUID visible from this context with the UUID listed in _YaST2_ for good measure (see step 2 above). If you have created the swap space during installation, don't forget to search for the UUID and the `/dev/sda<number>` identifiers referencing the partition you are resuming to.
 
-Finally, to fulfill condition (Resume referenced), in _Yast2_:
+Finally, to fulfill condition (Resume referenced), in _YaST2_:
 
 1. Click on, or search and then open, the _Bootloader_ module.
 2. Switch to the __Kernel Parameters__ tab.

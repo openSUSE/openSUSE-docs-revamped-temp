@@ -83,7 +83,7 @@ Note that it does not matter where exactly you put the files as long as they are
 2. Then browse to https://www.gnupg.org/download/index.html and download and install the Windows installer for GnuPG.
 
 !!! info
-    For the purposes of this guide it does not matter whether you install the program as administrator or not, so just click yes to install to install without administrator rights if it asks you.
+    For the purposes of this guide it does not matter whether you install the program as administrator or not, so just click yes to install, to install without administrator rights if it asks you.
 
 3. Find the folder containing the files you downloaded in the first step, hold Shift while right-clicking it (the folder, not the files in it). Select it to open a command window.
 
@@ -134,8 +134,8 @@ You can ignore the warning that comes after that, it is expected and perfectly n
 In this section you will learn how to get to a running installer for _Tumbleweed_ or _Leap_. This involves:
 
 - Using a program to write an installation image -- see [Choosing an installation image above](#choosing-an-installation-media) -- to an external device, usually a USB pen drive or some other external storage medium.
-- Having the media adequately partioned to host the image, and making it bootable
-- Booting on the external media and run the installer.
+- Having the media adequately partitioned to host the image, and making it bootable
+- Booting on the external media and running the installer.
 
 We will assume that you have downloaded an installation image and optionally, have performed an authenticity check on it -- see the above sections for details. The next section also assumes that you will be using a USB flash drive as the installation media. The section after that handles external hard drives.
 
@@ -147,7 +147,7 @@ For _Fedora Image Writer_:
 
 1. Make sure your USB flash drive has enough storage to hold the image (either ~1 GB or ~5 GB) and plug it in.
 2. Run _Fedora Image Writer_. From the main menu pick __Custom image__ and then select the `.iso` image to write to the USB flash drive. Make sure that both the image and flash drive have been correctly selected, as in: ![this screenshot](image/image_choice_fiw_conf_prompt.png)
-3. Finally click on __Write to Disk__.
+3. Finally, click on __Write to Disk__.
 
 Once writing the image is done, you are ready to reboot from the USB drive. Leaving the USB drive plugged in, use the method appropriate to your operating system to restart your computer.
 

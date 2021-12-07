@@ -33,7 +33,7 @@ When installing user applications, favour containerized versions (ideally _flatp
 
 _System dependencies_
 
-Do not manually install important system libraries or codecs directly from _zypper_ or _Yast2_. Instead prefer flatpaks or at least software that ship with their own static libraries and codecs (certain web browsers do). When you don't have the choice you can use `.rpm` from the official repositories but in this case, install them from [opi](best_of_post.md#codecs) to simplify maintenance. 
+Do not manually install important system libraries or codecs directly from _zypper_ or _YaST2_. Instead prefer flatpaks or at least software that ship with their own static libraries and codecs (certain web browsers do). When you don't have the choice you can use `.rpm` from the official repositories but in this case, install them from [opi](best_of_post.md#codecs) to simplify maintenance. 
 
 _Update pace and method_
 
@@ -51,7 +51,7 @@ If you need fresh updates for essential parts of your toolchain (typically when 
 
 We encourage users to deviate -- little by little, as they build skills and self-confidence -- from the "lazy way" described above.
 
-Doing so means that users will be more often using packages from the official repositories and get familiar with the typical openSUSE tools (such as _Zypper_, _Snapper_ and _Yast_) and configuration scenarios. In the long run this will strengthen their understanding of Linux and of the openSUSE distributions, while improving their ability to troubleshoot with autonomy. 
+Doing so means that users will be more often using packages from the official repositories and get familiar with the typical openSUSE tools (such as _Zypper_, _Snapper_ and _YaST_) and configuration scenarios. In the long run this will strengthen their understanding of Linux and of the openSUSE distributions, while improving their ability to troubleshoot with autonomy. 
 
 At scale the openSUSE Project benefits more from users in position to report bugs, provide feedback and make direct contributions.
 

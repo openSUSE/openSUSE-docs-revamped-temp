@@ -1,5 +1,5 @@
 ## Installing Codecs 
-You need to play online or offline multimedia content but the content does not play or you receive errors. Usually this is a sign of missing codecs. Due to legal limitations proprietary codecs can't be stored and served directly from the __openSUSE__/__SUSE__ infrastructure. To install proprietary codec packages you will need to add the [Packman](http://packman.links2linux.org/) repository and install the required software from there. Some commonly used and installed codecs are:
+You need to play online or offline multimedia content, but the content does not play or you receive errors. Usually this is a sign of missing codecs. Due to legal limitations proprietary codecs can't be stored and served directly from the __openSUSE__/__SUSE__ infrastructure. To install proprietary codec packages you will need to add the [Packman](http://packman.links2linux.org/) repository and install the required software from there. Some commonly used and installed codecs are:
 
 - ffmpeg
 - gstreamer-plugins-good
@@ -15,7 +15,7 @@ You need to play online or offline multimedia content but the content does not p
 You could get codecs using `Zypper` or `YaST` but you _should_ get them with _OBS Package Installer_ (`opi`) as there are complications and risks associated with the alternative methods.
 
 ## Installing the Open Build Service Package Installer (opi) 
-`opi` can be used to search and install software from the _Open Build Service_ (OBS) and it works on _Leap_ and _Tumbleweed_. The only limitation is that this method will consider Packman as the unique provider of all codecs — not just the proprietary ones which openSUSE cannot provide. Proceed if this limitation is acceptable for your. If it is not acceptable, consider using `flatpaks` (see the __Info__ above).
+`opi` can be used to search and install software from the _Open Build Service_ (OBS) and it works on _Leap_ and _Tumbleweed_. The only limitation is that this method will consider Packman as the unique provider of all codecs — not just the proprietary ones which openSUSE cannot provide. Proceed if this limitation is acceptable for you. If it is not acceptable, consider using `flatpaks` (see the __Info__ above).
 
 __From a terminal__:
 

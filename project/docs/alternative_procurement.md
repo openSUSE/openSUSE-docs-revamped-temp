@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When it comes at getting software, modern Linux operating systems have access to a wide array of methods and formats. The openSUSE distributions are no exception:
+When it comes to getting software, modern Linux operating systems have access to a wide array of methods and formats. The openSUSE distributions are no exception:
 
 * the official and unofficial repositories, which you interact with from zypper, and which provide binaries packaged as RPMs files
 * third-party providers, which you interact with from a command prompt through `wget` or `curl` or `git`, and which either provide you with a complete installation solution, including binaries and installation scripts, or include just the source files along with build scripts
@@ -23,7 +23,7 @@ The goal of this document is to help you understand these various formats and me
 
 ### Detailed instructions for external repositories
 
-Certain application providers provide you with an `.rpm` file that will automatically add the require repository and install the desired application. When so you can simply point __zypper__ to the said file and install from there, as in:
+Certain application providers provide you with an `.rpm` file that will automatically add the required repository and install the desired application. When so, you can simply point __zypper__ to the said file and install from there, as in:
 
 ```
 cd ~/Downloads
@@ -55,7 +55,7 @@ __Pros__:
 
 __Cons__:
 
-* heavily depends the libraries and other dependencies provided by your operating system, which means that drastic changes in your system-wide dependencies might prevent the program from running at all
+* heavily depends upon the libraries and other dependencies provided by your operating system, which means that drastic changes in your system-wide dependencies might prevent the program from running at all
 * depends on the availability of the distribution's packagers and maintainers, as opposed to solutions "closer" to the developers or that can benefit from cross-distribution maintainership (_flatpaks_, _AppImages_, _Ubuntu snaps_)
 
 __Go for it when__:
@@ -68,7 +68,7 @@ __Go for it when__:
 
 We call _third-party remote providers_ as a catch-all term for websites, services or remote machines offering you an automatic installation solution provided by installation scripts provided along with the desired application.
 
-Since all the details fo the installation depends on custom made installation scripts, your experience with this method can vary significantly from one provider to another. Here your best bet is to thoroughly follow the instructions mentioned by the provider. For example, installing the Rust developer stack is a simple as copy-pasting into your command line the line:
+Since all the details for the installation depends on custom made installation scripts, your experience with this method can vary significantly from one provider to another. Here your best bet is to thoroughly follow the instructions mentioned by the provider. For example, installing the Rust developer stack is a simple as copy-pasting into your command line the line:
 
 ```
 $   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -89,7 +89,7 @@ __Pros__:
 __Cons__:
 
 * no control over the behaviour of the script -- especially if the script asks to be run as `sudo` -- which may incur some risk 
-* heavily depends the libraries and other dependencies provided by your operating system, which means that drastic changes in your system-wide dependencies might prevent the program from running at all
+* heavily depends upon the libraries and other dependencies provided by your operating system, which means that drastic changes in your system-wide dependencies might prevent the program from running at all
 * depends on the availability of the distribution's packagers and maintainers, as opposed to solutions "closer" to the developers or that can benefit from cross-distribution maintainership (_flatpaks_, _AppImages_, _Ubuntu snaps_)
 
 __Go for it when__:
@@ -128,7 +128,7 @@ $   flatpak install --user flathub com.spotify.Client
 Two things are important to bear in mind:
 
 1. Using the `--user` flag is recommended for this reason: if the user has a separate `/home` and installs flatpaks using the `--user` flag, these applications will remain even after the entire file system is reinstalled, which means that the installed flatpaks can be reused after restoring the system.
-2. Installing applications (with or without `--user` should automatically export a `.desktop` file to `/var/lib/flatpak/exports/share/applications` and add the corresponding symlinks to your system. This means applications will show up in your desktop environment's application launchers and other menus right after you have installed them (no reboot required).
+2. Installing applications (with or without `--user`) should automatically export a `.desktop` file to `/var/lib/flatpak/exports/share/applications` and add the corresponding symlinks to your system. This means applications will show up in your desktop environment's application launchers and other menus right after you have installed them (no reboot required).
 
 Updating your flatpaks is then as easy as:
 ```
@@ -146,11 +146,11 @@ $   flatpak update <the.application.name>
 
 The two main themes behind flatpaks are _binary versioning control_ and _containerization_.
 
-Binary versioning control (BVC) ensures that the system sees flatpak applications not just as a bunch of files with a given name, but in a way that tracks them against the context of a full versioning control system, such as Git. Flatpak applications are thus much like Git branches, in that they "wear their orgin up their sleeves". For example, the complete reference of the Spotify application on my machine as of this writing is:
+Binary versioning control (BVC) ensures that the system sees flatpak applications not just as a bunch of files with a given name, but in a way that tracks them against the context of a full versioning control system, such as Git. Flatpak applications are thus much like Git branches, in that they "wear their origin up their sleeves". For example, the complete reference of the Spotify application on my machine as of writing this is:
 ```
 $   flatpak list
 Spotify com.spotify.Client      1.1.55.498.gf9a83c60    stable  system
-``` 
+```
 
 which amounts to, in this order: a human-friendly name, the exact name as fixed by the provider, the (git) snapshot it is built from, the (git) branch hosting the snapshot (here _stable_), as well as the installation site on my machine (here, it is installed for the _system_, which means it can be run by any other user on my machine.)
 
@@ -159,11 +159,11 @@ Under this constraint, any difference in the name or snapshot or branch or insta
 The other main theme behind flatpaks is containerization. Here it means that flatpak applications run in isolation from one another. This is made possible by taking advantage of the binary versioning control system mentioned above. Indeed, flatpak allows developers to specify a particular _runtime_ for their app, which is the context against which their applications is to run, and that serves as a proxy for the full operating system. Because of BVC developers are free to specify different runtimes for the same byte-to-byte identical binaries, or conversely, the same runtime for widely different binaries, should they happen to have similar requirements. The flatpak system then makes sure that runtimes meet the requirements of the applications they are associated with by their developers, and are executing in mutually inaccessible memory spaces.
 
 !!! info
-    Even though the sharing of runtimes means that flatpak applications will share some of their dedependencies, there is no reliable way of ensuring that all their dependencies are thus shared, or that a developer has specified the same runtime as the one specified by the developers of the other flatpak applications installed by the user. This means that some duplication is to be expected, wasting some disk space.
+    Even though the sharing of runtimes means that flatpak applications will share some of their dependencies, there is no reliable way of ensuring that all their dependencies are thus shared, or that a developer has specified the same runtime as the one specified by the developers of the other flatpak applications installed by the user. This means that some duplication is to be expected, wasting some disk space.
 
 #### Improving desktop integration (KDE Plasma)
 
-The degree of independence that flatpaks enjoy with respect to the host operating system means that some frictions may occur now and then. This is particularily true for applications (or for runtimes) which do not always play nice with recent rendering and compositing frameworks. For example, drag-dropping a file for sending via a messaging application run as flatpak might not work as seamlessly as exepcted. For these corner cases, there is not much choice but to tinker with the runtime's parameters.
+The degree of independence that flatpaks enjoy with respect to the host operating system means that some frictions may occur now and then. This is particularly true for applications (or for runtimes) which do not always play nice with recent rendering and compositing frameworks. For example, drag-dropping a file for sending via a messaging application run as flatpak might not work as seamlessly as expected. For these corner cases, there is not much choice but to tinker with the runtime's parameters.
 
 Consider for example `org.telegram.desktop`. Should your version of this app seem to be affected by the above bug, you can try to run the application as:
 ```
@@ -173,7 +173,7 @@ $   flatpak run --env=QT_QPA_PLATFORM=xcb org.telegram.desktop
 which basically instructs the runtime to use X11 instead of Wayland as the compositing client. They are countless other environment parameters you can use, and the right approach is usually to read the documentation and Git Issues of your favorite flatpak applications.
 
 !!! info
-    Every single flatpak has is a public repository (often on GitHub) where you read Issues and participate to the conversation. Do not hesitate to go there now and then, as the tips you might learn are likely to serve you for many other flatpak applications.
+    Every single flatpak has is a public repository (often on GitHub) where you read Issues and participate in the conversation. Do not hesitate to go there now and then, as the tips you might learn are likely to serve you for many other flatpak applications.
 
 When you are satisfied with the results, you can attach a runtime setting to an application permanently to the current user as in:
 ```

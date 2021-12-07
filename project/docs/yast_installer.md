@@ -16,8 +16,8 @@ This guide targets **openSUSE Leap**; however the differences between the instal
 ### Precautions
 
 * Make sure that you have backed up all your data from the disk where you're planning to install openSUSE to.
-* If installing on a separate drive, it is recommended to disconnect the drives not in use. You can always probe a foreign operating systems to Grub from a finalized installation with *YaST*, but selecting the wrong drive to install openSUSE will overwrite the disk destroying the data on it.
-* In case you are using a Network image (Netiso) make sure that you have a strong internet connection. A wired connection is always more reliable than a wifi one.
+* If installing on a separate drive, it is recommended to disconnect the drives not in use. You can always probe foreign operating systems to Grub from a finalized installation with *YaST*, but selecting the wrong drive to install openSUSE will overwrite the disk destroying the data on it.
+* In case you are using a Network image (Netiso) make sure that you have a strong internet connection. A wired connection is always more reliable than a Wi-Fi one.
 * If installing on a laptop, it is good practice to plug in the AC charger.
 
 You are now ready to boot the USB drive, which you have previously prepared - as explained in the [Preparing the installation media](image_choice.md) section - and turn on your computer. Boot from the USB drive and select installation from the boot menu.
@@ -38,7 +38,7 @@ The `License Agreement` informs you on roles, responsibilities and potential lim
 
 ## Network activation
 !!! note "Online repositories"
-    If you have an active internet conenction over an ethernet cable connected to your computer, right after you pass the *"Language, Keyboard and License Agreement"* section you will be prompted, asking if you want to *"Activate online repositories now?"*.It is recommended to select *Yes* which will provide you with a list of repositories, pre-selecting the main ones in advance and will download updated packages from the online repository during the installation. If you're on a metered connection you press "No". 
+    If you have an active internet connection over an ethernet cable connected to your computer, right after you pass the *"Language, Keyboard and License Agreement"* section you will be prompted, asking if you want to *"Activate online repositories now?"*.It is recommended to select *Yes* which will provide you with a list of repositories, pre-selecting the main ones in advance and will download updated packages from the online repository during the installation. If you're on a metered connection you press "No". 
 
 ### Network settings
 You can skip this part if:
@@ -64,7 +64,7 @@ On the `Addresses` tab you will be able to configure the IP address of your adap
 
 These repositories are the following:
 
-* _Update Repository (Non-Oss)_: Non-free -- as in Free Open-Source Software (FOSS) -- update repository. Provides security and maintenance updates for the distribution. _Selected by default._
+* _Update Repository (Non-OSS)_: Non-free -- as in Free Open-Source Software (FOSS) -- update repository. Provides security and maintenance updates for the distribution. _Selected by default._
 * _Non-OSS Repository_: Non-free repository. Provides packages like Steam. _Selected by default._
 * _Main Update Repository_: Main free -- as in FOSS -- update repository. Provides security and maintenance updates for the distribution. _Selected by default._
 * _Main Repository_: Main free repository provides FOSS only. _Selected by default._
@@ -104,8 +104,8 @@ Most Linux distributions use the same "base" partition scheme:
 
 If you are not interested in keeping whatever data or operating system is installed on the target machine, you can simply proceed with the base partition scheme. In that cases, simply run the installer and, on the _Disk_ screen, pick the _Suggested Partitioning_ option, and accept all recommendations there. 
 
-Chances are, however, that you will want to install Leap on a disk with an already functional operating system (i.e. Windows, macOS, or another Linux distribution). Or that you will want to install more operating systems alongside _Leap_ easily and reliably in the future. These families of scenarios require some extra steps with respect ot to the "base" partition scheme above.
-#### Installing Leap alongside preexistent Windows partitions  
+Chances are, however, that you will want to install Leap on a disk with an already functional operating system (i.e. Windows, macOS, or another Linux distribution). Or that you will want to install more operating systems alongside _Leap_ easily and reliably in the future. These families of scenarios require some extra steps with respect to the "base" partition scheme above.
+#### Installing Leap alongside pre-existent Windows partitions  
 If you have Windows installed already, you are likely to have the following (physical) partitions already:
 
 * one 'recovery partition', about 500 MB large, usually using the _Fat32_ filesystem (we won't consider it further as it is not relevant to what comes next)
@@ -148,7 +148,7 @@ Optionally, you could create a new partition for your user data under `/home`. T
 ???+ info
     After the installation you will want to switch between Leap and Windows. Use [these instructions](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode) to learn how to reboot to your UEFI. From there you will be able to select Windows or Leap as boot destination.
 
-#### Installing Leap alongside preexistent Linux partitions
+#### Installing Leap alongside pre-existent Linux partitions
 You can follow the _Step by Step_ from the previous section, making sure that:
 
 * you flag your already existent bootloader partition as `/boot/efi`
@@ -168,8 +168,8 @@ Optionally, you could create a new partition for your user data under `/home`. T
 ???+ info
     After the installation you will want to switch between Leap and whichever operating system you're using. Refer to your machine's manufacturer for instructions. If your machine had Windows preinstalled, use [these instructions](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode) to learn how to reboot to your UEFI. From there you will be able to select the desired boot destination.
 
-#### Installing Leap alongside preexistent macOS partitions
-The installation process for Mac users interested in dual-booting Leap alongside their mac OS partitions is simple:
+#### Installing Leap alongside pre-existent macOS partitions
+The installation process for Mac users interested in dual-booting Leap alongside their macOS partitions is simple:
 
 <u>Step by step: Expert partitioning for Mac</u>
 
@@ -270,8 +270,8 @@ By default you will also use this newly created account to act as the administra
 ## Installation
 ## Installation Overview
 ### Installation Settings
-This is the final and probably the an important section of the installer, __don't skip it__! You can and should review your settings, fine tune your installation if you need to and can even gain access to the _YaST Software Installer_ which can be used to install additional packages or patterns. To change any of the settings just click the _headlines_ (like "Software" or "Security").
-After you reviewed the settings you can move on with the installation which will finalize your openSUSE deployment based on your provided informations.
+This is the final and probably an important section of the installer, __don't skip it__! You can and should review your settings, fine tune your installation if you need to and can even gain access to the _YaST Software Installer_ which can be used to install additional packages or patterns. To change any of the settings just click the _headlines_ (like "Software" or "Security").
+After you reviewed the settings you can move on with the installation which will finalize your openSUSE deployment based on your provided information.
 
 ???+ info
     Patterns are a group of packages that allows the user to easily install otherwise complex packages and configurations - like KDE Plasma or Gnome -.
