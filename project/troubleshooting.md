@@ -132,5 +132,3 @@ $   systemctl unmask <service name>
 ```
 
 and start using it now with `systemctl restart <service name>`.
-
-### Coredumps
