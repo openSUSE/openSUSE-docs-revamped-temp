@@ -47,7 +47,7 @@ cd ~/Downloads
 sudo zypper in <package>.rpm
 ```
 
-Before you do this, you should make sure the package is safe and the provider trustworthy. Most trustworthy providers crytographically sign their RPMs, providing you with an `.asc` file containing a public key. This lets you verify that the package has not been tampered with, like so:
+Before you do this, you should make sure the package is safe and the provider trustworthy. Most trustworthy providers cryptographically sign their RPMs, providing you with an `.asc` file containing a public key. This lets you verify that the package has not been tampered with, like so:
 
 ```
 $   rpm --import <the-package-public-key>.asc
