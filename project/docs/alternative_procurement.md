@@ -73,7 +73,7 @@ __Pros__:
 __Cons__:
 
 * heavily depends the libraries and other dependencies provided by your operating system. This may mean you are unable to install the latest versions of some programs, because the supporting libraries provided by your distro are too old.
-* you are depending on the maintainers and software-packagers of your distribution, as opposed to packaging methods "closer" to the developers or which benefit from cross-distribution maintenance  (such as Flatpaks, Snaps or AppImages).
+* you are depending on the maintainers and software-packagers of your distribution, as opposed to packaging methods "closer" to the developers or which benefit from cross-distribution maintenance (such as Flatpaks, Snaps or AppImages).
 
 __Best used when__:
 
