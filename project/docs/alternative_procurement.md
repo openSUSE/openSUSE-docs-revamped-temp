@@ -17,7 +17,7 @@ The goal of this document is to help you understand these various formats and me
 `.rpm` packages are the traditional and most common way of obtaining new software on openSUSE distributions. Just in case you are not already familiar with how these work:
 
 1. Find the repository providing the package you are looking for.
-    * If the package is provided by one of the  official repositories that openSUSE already knows about, such as http://download.opensuse.org/update/tumbleweed/, then the desired package will show up in `zypper search <package_name>`.
+    * If the package is provided by one of the official repositories that openSUSE already knows about, such as https://download.opensuse.org/update/tumbleweed/, then the desired package will show up in `zypper search <package_name>`.
     * If the package is _not_ provided by an official repository, you will need to first add the repository.
 > :point_right: **TIP:** **Listing repositories**
 >
