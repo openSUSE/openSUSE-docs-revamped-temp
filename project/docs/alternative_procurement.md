@@ -9,7 +9,7 @@ The openSUSE distributions are no exception:
 
 *   Third-party installers, which you interact with from a command prompt by downloading files (for example, with `wget`, `curl`, or `git`).
     These may provide you with a something ready to install, complete with binaries and installation scripts.
-    Alternatively, they may only include source code and build scripts, so you must compile them yourself.
+    Alternatively, they may only include source code and build scripts which you have to compile yourself.
 
 *   _Flatpak_ is a delivery tool for containerized desktop application.
     It provides apps packaged up with all their dependencies.
