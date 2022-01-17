@@ -33,7 +33,7 @@ RPM packages (`.rpm`) are the traditional and most common way of obtaining new s
 Installing RPM packages works like this:
 
 1.  Find the repository providing the package you are looking for.
-    *   If the package is provided by one of the official repositories that openSUSE already knows about, such as [download.opensuse.org/update/tumbleweed/](https://download.opensuse.org/update/tumbleweed/), it will show up in `zypper search <package_name>`.
+    *   If the package is provided by one of the official repositories, which are preconfigured in openSUSE, such as [download.opensuse.org/update/tumbleweed/](https://download.opensuse.org/update/tumbleweed/), it will show up in `zypper search <package_name>`.
     *   If the package is _not_ provided by an official repository, you will first need to add the repository.
 
     !!! tip
