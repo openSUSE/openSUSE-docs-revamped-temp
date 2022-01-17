@@ -190,7 +190,7 @@ __Best used when:__
 
 ## Flatpaks
 
-_Flatpak_ is a complete solution for installing, updating and running desktop applications from a containerized environment.
+_Flatpak_ is a complete solution for installing, updating and running desktop applications from a containerized environment (see [flatpak official documentation](https://docs.flatpak.org/en/latest/introduction.html) for more information).
 It makes use of the following components:
 
 *   The `flatpak` command line utility
