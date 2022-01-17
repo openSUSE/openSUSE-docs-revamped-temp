@@ -44,14 +44,14 @@ Installing RPM packages works like this:
 
 ### The _openSUSE Software_ website
 
-The openSUSE project maintains a website where contributors can find software packages for easy installation, especially those built using the _openSUSE Build Service_.
+The openSUSE project offers a website where contributors can find software packages for easy installation, especially those built using the _openSUSE Build Service_.
 The site can be found at [software.opensuse.org](https://software.opensuse.org/).
 
 It offers a search engine and references to official and unofficial software repositories.
 In addition, in some cases, the tool also offers downloadable packages for Debian, Ubuntu, Fedora, or other Linux distributions.
 
 It also offers easy installation using the _YaST_ administration tool of openSUSE.
-If a package is available for your version of openSUSE, generally, click the link with the version number.
+If a package is available for your version of openSUSE, click the link with the version number.
 This will download a `.ymp` file which your web browser should offer to open using the YaST software management tool.
 If not, you can click on the `.ymp` file in your file manager and YaST should open it.
 YaST will then add any necessary repositories, asking you for permission in the process, and then install the program and its dependencies.
@@ -144,7 +144,7 @@ __Best used when:__
 
 ## Third-party remote providers
 
-We use "third-party remote providers" to mean for websites, services or remote machines offering automatic installation using scripts provided along with the desired application.
+We use "third-party remote providers" to mean websites, services or remote machines offering automatic installation using scripts provided along with the desired application.
 
 Since the details of the installation depend on custom-made installation scripts, your experience with this method can vary significantly from one provider to another.
 Thoroughly follow the instructions mentioned by the provider.
@@ -298,11 +298,11 @@ $   flatpak run --env=QT_QPA_PLATFORM=xcb org.telegram.desktop
 ```
 
 This instructs the runtime to use X11 instead of Wayland as the compositing client.
-There are many other environment parameters
+There are many other environment parameters.
 To learn which to apply to a particular application, read the documentation and GitHub Issues for the Flatpak wrapper of the application.
 
 !!! info
-    All Flatpak applications hosted on Flathub have a public repository (often on GitHub) where you read GitHub Issues and participate in the conversation.
+    All Flatpak applications hosted on Flathub have a public repository (often on GitHub) where you can read GitHub Issues and participate in the conversation.
     Do not hesitate to go there now and then, as the tips you might learn are likely to serve you for many other Flatpak applications.
 
 When you are satisfied with the results, you can attach a runtime setting to an application permanently to the current user as in:
@@ -358,7 +358,7 @@ __Best used when:__
 ## AppImage
 
 AppImage is the simplest cross-platform application package format.
-However, you need to do a little more work.
+However, you need to do a little manual work.
 
 To install an AppImage, download it and marking it _executable_ with:
 
@@ -396,7 +396,7 @@ __Pros__:
 __Cons__:
 
 *   Maintenance is your responsibility:
-    You have to update your apps yourself, by hand.
+    You have to update your apps yourself, manually.
 
 *   Some apps integrate well with the system, but this is not guaranteed.
     Launchers, file associations, etc. may have to be created by hand.
