@@ -185,7 +185,7 @@ __Best used when:__
 
 *   You know that you won't need several versions of the software installed at the same time.
 
-*   You need maximal performance/minimal usage.
+*   You need maximal performance and minimal resource usage.
 
 
 ## Flatpaks
