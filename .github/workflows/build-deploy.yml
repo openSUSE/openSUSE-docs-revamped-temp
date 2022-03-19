@@ -25,9 +25,9 @@ jobs:
            working-directory: ./project
            run: mkdocs gh-deploy --force
          - name: Deploy to GitHub Pages
-           uses: JamesIves/github-pages-deploy-action@3.7.1
+           uses: JamesIves/github-pages-deploy-action@v4.2.2
            with:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              BRANCH: gh-pages
-              FOLDER: ./project/site
-              CLEAN: true
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              branch: gh-pages
+              folder: ./project/site
+              clean: true

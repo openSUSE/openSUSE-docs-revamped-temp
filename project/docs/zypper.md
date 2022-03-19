@@ -36,7 +36,7 @@ the following benefits:
   app that uses it gains that improvement. We don't have to rely on developers tracking the libraries that they use
   and rebuilding their apps every time one changes.
   3. If you improve upon a library in some way, you can exchange the version on your computer with
-  your modified version. Your improvment is then available to all applications that use that library and can adopt your changes. 
+  your modified version. Your improvement is then available to all applications that use that library and can adopt your changes. 
   This is a core principle in [free software](https://en.wikipedia.org/wiki/Free_software).
 
 However, there is a drawback. When installing software, we have to ensure that the libraries that it requires (known as dependencies)
@@ -67,9 +67,9 @@ This means that the system must be able to 'see through' the actual _versions_ o
 their dependencies and warn about required alterations.
 
 These problems are solved with a package manager. Developers can build applications, libraries and many other things into packages that
-contain what you want install and a set of references to any other packages that it depends upon. The _package manager_ is an essential
+contain what you want to install and a set of references to any other packages that it depends upon. The _package manager_ is an essential
 piece of software that downloads, installs, uninstalls and updates packages for you. If you tell the package manager to install Firefox,
-it will download a package containing the firefox executable, as well as a number of packages that contain the dependencies
+it will download a package containing the Firefox executable, as well as a number of packages that contain the dependencies
 of Firefox. It also holds a database of all installed packages so it knows when it can uninstall certain dependencies without
 breaking software on your computer. _Zypper_ is the name of the package manager used by openSUSE and SUSE Enterprise Linux.
 
@@ -313,7 +313,7 @@ Standard updates simply check to see if newer versions of your packages exist in
 If there is a newer version, it will download and install it.
 
 Patches are groups of package updates. They are categorised so that you can see why they are being updated. For example,
-often, when you ask zypper to list available patches, some will be labeled as security patches. This  means that they
+often, when you ask zypper to list available patches, some will be labelled as security patches. This  means that they
 fix a certain security problem that has been discovered in some packages on your system.
 
 Distro upgrades do not only update the packages on your system, but also change the source that you get your packages from.

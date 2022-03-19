@@ -1,7 +1,7 @@
 ## Setting up MicroOS as a desktop OS
 
 !!! warning 
-    Parts of this documentation is not in line with the _official_ intent of the developers such as the use of _snap_ packages which are considered a security risk as proper _snap_ to _system_ separation is not possible. You can also visit the [official documentation](https://en.opensuse.org/Portal:MicroOS) for _upstream_ recommendations. Also the use of _MicroOS Desktop_ with _KDE Plasma_ is discouraged as it is not being actively maintained.
+    Parts of this documentation are not in line with the _official_ intent of the developers such as the use of _snap_ packages which are considered a security risk as proper _snap_ to _system_ separation is not possible. You can also visit the [official documentation](https://en.opensuse.org/Portal:MicroOS) for _upstream_ recommendations. Also the use of _MicroOS Desktop_ with _KDE Plasma_ is discouraged as it is not being actively maintained.
 
 ### Audience and context
 This document is meant for users interested in using the openSUSE MicroOS as a desktop. Although this operating system is offered in two flavours (one based on Leap, the other on Tumbleweed), we will only be concerned with the Tumbleweed base, as the Leap base does not provide the required patterns for desktop usage.
@@ -36,20 +36,20 @@ You can install applications in several ways:
 ### Package manager options
 MicroOS now has a few different package managers as an option during install:
 
-  * transactional-update with zypper `the old default, and still the default for the server version`
-  * Packagekit + tukit `the new default, using pkcon and tukit`
+  * transactional-update with zypper `the default, and still the default for the server version`
   * microdnf `an experimental package manager based on dnf`
+  * Packagekit + tukit alternative, using pkcon and tukit`
 
 The reason for changing package managers is because pkcon gives the opportunity to use Gnome Software or Discover for KDE as an installer of RPM's. And currently we are working on the ability to let Gnome Software and Discover perform system upgrades.
 
-#### Transcational-update _old default_
+#### Transcational-update _default_
 commands for transactional-update are:
 
   * `sudo transactional-update pkg install package_name` install a rpm package
   * `sudo transactional-udpdate dup` perform a system upgrade to the next release
   * `sudo transactional-update shell` open a shell of the next snapshot (you can use zypper commands there)
 
-#### Packagekit + tukit _new default_
+#### Packagekit + tukit _packagekit alternative_
 commands for Packagekit and tukit:
 
   * `pkcon install package_name` install a rpm package
@@ -79,7 +79,7 @@ Alternatively, the second decrypt can be performed automatically; instructions a
 ### Installation: GNOME
 _Gnome is currently in a beta stage._
 
-At first boot flatpaks are enabled and some flatpaks are installed by default (MozillaFirefox, Gedit and Gnome Calculator).
+At first boot flatpaks are enabled and some flatpaks are installed by default (Mozilla Firefox, Gedit and Gnome Calculator).
 
 Make sure to install a browser via transactional-updates if you want to use GNOME extensions. The easiest way to install GNOME extensions is via the website provided by the [GNOME project](https://extensions.gnome.org/). For this to work however, you will need a browser installed on the system via transactional-update, as it will not work inside a containerized environment (like flatpaks, snaps, AppImages or in a toolbox). The browser will need to have the plugin mentioned on the top of the page when you first open it. 
 
@@ -87,7 +87,7 @@ After installation of the plugin, you can reload the page and choose the GNOME E
 
 To get GNOME extensions running, you need the following command to install Chromium directly:
 ```
-$ pkcon install chromium
+$ transactional-update pkg install chromium
 $ sudo reboot
 ```
 
@@ -144,7 +144,7 @@ Some useful extra packages to install include:
 
 You can install both with:
 ```
-$ pkcon install tlp ntfs-3g fuse-exfat nano  
+$ transactional-update pkg install tlp ntfs-3g fuse-exfat nano  
 $ sudo reboot
 ```
 
@@ -256,7 +256,7 @@ Two important packages were found missing for some users:
 
 You can install both with:
 ```
-$ pkcon install tlp ModemManager libmbim usb_modeswitch NetworkManager-connection-editor  
+$ transactional-update pkg install tlp ModemManager libmbim usb_modeswitch NetworkManager-connection-editor  
 $ sudo reboot
 ```
 
@@ -284,7 +284,7 @@ Then for example typing `std` in a terminal prompt will issue the command `sudo 
 ### No graphical session/login screen in Hyper-V
 _Hyper-V_ requires the package `xf86-video-fbdev` for graphical session:
 ```
-$ pkcon install xf86-video-fbdev
+$ transactional-update pkg install xf86-video-fbdev
 $ sudo reboot
 ```
 
@@ -301,11 +301,14 @@ $ sudo reboot
 ### Graphical applications in the toolbox are missing fonts/icons
 They need to be installed inside the toolbox:
 ```
-sudo zypper install xorg-x11-fonts-core adwaita-icon-theme
+toolbox enter
+sudo zypper ref && sudo zypper dup
+sudo zypper install adwaita-icon-theme xorg-x11-fonts libX11-xcb1 gsettings-desktop-schemas
+sudo gdk-pixbuf-query-loaders-64 --update-cache
 ```
 
 ## Alternative for Gnome Extensions
-There is an alternative to installing GNOME Extensions, such that no RPM installed browser is necessary. It's currently under development at [Github](https://github.com/ekistece/GetExtensions). You can install it via `toolbox`; the commands are as follows:
+There is an alternative to installing GNOME Extensions, such that no RPM installed browser is necessary. It's currently under development at [GitHub](https://github.com/ekistece/GetExtensions). You can install it via `toolbox`; the commands are as follows:
 ```
 $ toolbox -u
 $ sudo zypper in git python38-pip
@@ -318,30 +321,3 @@ You can then open the application _Get Extensions_ that is available from your l
 
 To uninstall:
 ```pip3 uninstall getextensions```
-
-
-Old items:
-It is recommended to disable both automatic updating and automatic rebooting. They are handy features for servers running 24/7), but the developers are thinking about a different and better integration with desktop usage. For now it is recommended to do the same, at least until you have become more familiar with MicroOS. Then you will be able to come up with the best automatic updating & rebooting strategy for your workflow and use case. So:
-```
-$ sudo systemctl disable --now transactional-update.timer
-$ sudo systemctl disable --now rebootmgr.service
-```
-And then let’s check:
-```
-$ sudo rebootmgrctl is-active
-*RebootMgr is dead*
-$ sudo rebootmgrctl status
-*Error: The name org.opensuse.RebootMgr was not provided by any .service files*
-```
-For GNOME you have to use one of the two options below (also possible for a terminal prompt if you don't like Discover):
-
-If you want to install flathub for only your user (in `/home/~ folder`):
-```
-$ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
-Updating flatpaks via the terminal are done with the command `flatpak update`
-
-If you want to install flathub for all users (in `/var folder`):
-```
-$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-``` 

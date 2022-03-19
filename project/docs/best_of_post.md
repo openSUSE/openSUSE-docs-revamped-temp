@@ -1,17 +1,27 @@
 # Our "post installation" best of
+
 Some of the material covered below is presented and discussed in more details elsewhere in this documentation. Use the links if you'd like to learn more.
 
 The order in which you carry out these recommendations is not crucial, but we advise you to follow our order, as certain steps feel more natural if you have followed previous ones on the list. 
 
-The list takes the point of view of a user who has just rebooted and logged in to an openSUSE distribution.
+The list takes the point of view of a user who has just rebooted and logged in to an openSUSE distribution. Also, if you are Tumbleweed users, checkout out our [safety and usability](safety_usability.md) rules of thumbs.
 
-## Tumbleweed
 
 ### Update
-Even if you have installed Tumbleweed with repositories enabled, who knows if there isn't a bunch of updates pending already? 
+Even if you have installed Tumbleweed with repositories enabled, who knows if there aren't a bunch of updates pending already? 
 ```
 $   sudo zypper dup
 ```
+
+
+### Take advantage of zypper's concurrent downloader
+The backend for the `zypper` package manager recently got a more efficient downloader, able to download data concurrently. You can turn it on by setting the `ZYPP_MEDIANETWORK` environment variable to `1`:
+
+```
+$   export ZYPP_MEDIANETWORK=1
+```
+
+To set this variable at every boot, add the same command line to your shell's initialization file (i.e. `~/.bashrc`, `~/bash_profile`, etc).
 
 ### Get used to adding repositories with auto-refresh on
 When you add repositories to Tumbleweed, those do not have their auto-refresh setting on by default. This means that doing `sudo zypper dup` might report no pending updates when in fact there __are__ updates, but those were just not seen by the package manager. To change this behavior and ensure that your system will always hook up to repositories with auto-refresh enabled, make sure you add repositories with auto-refresh on:
@@ -27,7 +37,7 @@ Refer to the documentation provided by the developers to make your favorite shel
 For a terminal application we recommend to stick to the one provided by your desktop environment. Users interested in having a collapsible, HUD-like terminal can turn to the excellent _Yakuake_ terminal, based on KDE's _Konsole_.
 
 ### (KDE Plasma only) Disable Discover notifications
-On Tumbleweed software are better installed using the official package manager, at your own pace (although we recommend updating at least once a month) using either a terminal or Yast. This means that Discover update notifications will feel annoying at best, and will push to frantically update even in cases where you'd want to postpone updating for a couple of days or weeks. To regain your peace of mind:
+On Tumbleweed software are better installed using the official package manager, at your own pace (although we recommend updating at least once a month) using either a terminal or YaST. This means that Discover update notifications will feel annoying at best, and will push to frantically update even in cases where you'd want to postpone updating for a couple of days or weeks. To regain your peace of mind:
 
 Go to _Plasma settings_ > _Notification_ > _Applications: Configure_ > Select _Discover_ in the list > Untick as many boxes as you need.
 
@@ -85,7 +95,7 @@ Check out the following documentation for this step:
 ### Use a password manager
 KDE's _kwallet_ and _gnome-keyring_ are decent password managers as far as storing identifiers meant to be consumed by third-party applications, but some users might feel they fall short when it comes at providing a comfortable interface for auto-completion and daily management (especially the latter). 
 
-For alternatives you can consider _KeePass Password Safe_ (https://keepass.info/) and _Password Safe_ (https://gitlab.gnome.org/World/PasswordSafe).
+For alternatives you can consider [KeePass Password Safe](https://keepass.info/) and [Password Safe](https://gitlab.gnome.org/World/PasswordSafe).
 
 ### Have your backup plan ready
 Tumbleweed snapshots protect your system by allowing you to rollback to and from the snapshot of your liking. One noticeable exceptions to this protection is `/home` (for the simple reason that it allows the user to backup their `home` at their own pace, independently from system snapshots.)

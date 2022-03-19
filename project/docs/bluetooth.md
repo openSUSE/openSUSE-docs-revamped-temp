@@ -1,6 +1,21 @@
 ## Pairing a Bluetooth device across different operating systems
 
-### With Windows 10 (adapted from [StackExchange](https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p))
+### Shared chipset for Wi-Fi and bluetooth functionalities
+Some machines -- especially laptops -- feature a single chip handling both wireless and bluetooth connections. Certain Linux drivers have a hard time communicating with microcontrollers using this architecture. This means that you may run into issues when trying to pair up or connect a bluetooth device. If this is the case:
+
+1. Turn off all network connections (enable "Fly mode", represented with an airplane icon in most Linux desktop environments.)
+2. Enable bluetooth, and pair up or connect the device.
+3. Turn on network connections (disable "Fly mode").
+
+This should allow you to have both functional and bluetooth connections.
+
+### Pairing up the same device across different operating systems on the same machine
+When you pair up a bluetooth device to your machine for the first time, they negotiate a single identifier key that will be used to authenticate the device whenever you actually connect it. An important caveat is that there is no built-in mechanism to allow you to connect the bluetooth device to an operating system (on the same machine) that is different from the operating system where the pairing up took place. This is unpleasant if you happen to use several operating systems on the machine (multi-boot scenario).
+
+You can however circumvent this issue by manually re-applying the same key across operating systems. The procedure below has been tested across any operating system (except macOS). It works across different Linux distributions (you will just need steps 10-14 then).
+
+__Windows 10 and Linux__ (adapted from [StackExchange](https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p))
+
 1. Pair all devices on Linux 
 2. Pair all devices on Windows
 3. From Windows, go to _Device & Printers_ in _Control Panel_ and go to your Bluetooth device's properties. Then, in the _Bluetooth_ section, you can find the unique identifier. Copy it as you will need it.

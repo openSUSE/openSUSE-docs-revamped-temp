@@ -1,5 +1,5 @@
 !!! warning
-    This documentation has not been deployed to its destination yet. In the mean time please prefer the sources below.
+    This documentation has not been deployed to its destination yet. In the meantime, please prefer the sources below.
 
 * [Standard documentation based on Leap](https://doc.opensuse.org/)
 * [Tumbleweed-specific knowledgebase](https://en.opensuse.org/Portal:Tumbleweed)
@@ -15,7 +15,7 @@ This documentation is curated and maintained by openSUSE volunteers. The content
 
 In response to these caveats we expect the reader to help us identify typos, omissions, inaccuracies or outdated contents by [reporting them](https://github.com/openSUSE/openSUSE-docs-revamped-temp/issues), ideally along with suggested improvements. 
 
-In advance we thank you and will try to response to your submissions as quickly as possible. We hope you enjoy our contents.
+In advance we thank you and will try to respond to your submissions as quickly as possible. We hope you enjoy our contents.
 
 ## Audience
 ### New users
@@ -35,7 +35,7 @@ The pre-install documentation gives you everything you need to get a system runn
 
 __Choosing a distribution__
 
-For experienced users, this section describes what differentiates openSUSE from other distros, and helps you get to know the unique features and make informed choices during the install process.
+For experienced users, this section describes what differentiates openSUSE from other distros, and helps you get to know the unique features and make informed choices during the installation process.
 
 __Preparing the installation media__
 
