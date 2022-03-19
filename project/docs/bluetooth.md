@@ -14,7 +14,7 @@ When you pair up a bluetooth device to your machine for the first time, they neg
 
 You can however circumvent this issue by manually re-applying the same key across operating systems. The procedure below has been tested across any operating system (except macOS). It works across different Linux distributions (you will just need steps 10-14 then).
 
-__Windows 10 and Linux__ (adapted from [StackExchange](https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p))
+__Windows 10 and Linux__
 
 1. Pair all devices on Linux 
 2. Pair all devices on Windows
@@ -34,3 +34,7 @@ __Windows 10 and Linux__ (adapted from [StackExchange](https://unix.stackexchang
 Key=< NEW KEY, ex. B99999999FFFFFFFFF999999999FFFFF >
 ```
 14. Finally restart your bluetooth systemd service with `sudo systemctl restart bluetooth`
+
+## References & credits
+Adapted from:
+- [StackExchange](https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p)

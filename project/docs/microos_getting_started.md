@@ -321,3 +321,5 @@ You can then open the application _Get Extensions_ that is available from your l
 
 To uninstall:
 ```pip3 uninstall getextensions```
+
+## References & 

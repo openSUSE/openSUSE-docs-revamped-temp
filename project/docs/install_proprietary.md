@@ -55,3 +55,7 @@ $ sudo zypper ref -rf  # to refresh all repositories.
 
 ### Hybrid Graphics/Optimus
 1 See [Hybrid Graphics](hybrid_graphics.md)
+
+## References & credits
+- [SBD:Nvidia_drivers](https://en.opensuse.org/SDB:NVIDIA_drivers)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:NVIDIA_drivers&action=history)

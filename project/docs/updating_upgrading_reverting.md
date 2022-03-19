@@ -137,3 +137,7 @@ $   sudo zypper in -f --oldpackage <path/to/kernel package.rpm>
 * _YaST_ > _Bootloader_ > _Bootloader Options_ > _Default Boot Section_ > __`<new kernel entry>`__ (select it)
 
 You can now reboot and select the new entry and press `Enter` to start using the newly installed kernel.
+
+## References & credits
+- [openSUSE:Tumbleweed_upgrade](https://en.opensuse.org/openSUSE:Tumbleweed_upgrade)
+    - [authors](https://en.opensuse.org/index.php?title=openSUSE:Tumbleweed_upgrade&action=history)

@@ -279,6 +279,10 @@ UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /opt btrfs subvol=/@/opt 0 0
 UUID=22e658f2-1586-4ac2-8aeb-a6862c8c9a25 /home btrfs subvol=/@/home 0 0
 ```
 
-### Further reading
+## Further reading
 * [Snapper.io](http://snapper.io "Snapper.io")
 * [openSUSE Wiki Portal:Snapper](https://en.opensuse.org/Portal:Snapper "openSUSE Wiki Portal:Snapper")
+
+## References & credits
+- [openSUSE:Snapper_Tutorial](https://en.opensuse.org/openSUSE:Snapper_Tutorial)
+    - [authors](https://en.opensuse.org/index.php?title=openSUSE:Snapper_Tutorial&action=history)

@@ -429,6 +429,10 @@ When wondering which to use, between Snaps, Flatpaks and AppImages:
 
 *   Favour __AppImages__ if you need a handful of "fire-and-forget" or "portable" (no installation needed) applications.
 
-## References
+## References & credits
 
-For a comparison between AppImage, Flatpak and Snap, see [the AppImageKit wiki](https://github.com/AppImage/AppImageKit/wiki/Similar-projects#comparison).
+- [the AppImageKit wiki](https://github.com/AppImage/AppImageKit/wiki/Similar-projects#comparison)
+- [Flatpak](https://en.opensuse.org/Flatpak)
+    - [authors](https://en.opensuse.org/index.php?title=Flatpak&action=history)
+- [Snap](https://en.opensuse.org/Snap)
+    - [authors](https://en.opensuse.org/index.php?title=Snap&action=history)
