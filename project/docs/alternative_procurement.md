@@ -432,7 +432,6 @@ When wondering which to use, between Snaps, Flatpaks and AppImages:
 ## References & credits
 
 - [the AppImageKit wiki](https://github.com/AppImage/AppImageKit/wiki/Similar-projects#comparison)
-- [Flatpak](https://en.opensuse.org/Flatpak)
-    - [authors](https://en.opensuse.org/index.php?title=Flatpak&action=history)
+- [openSUSE wiki: Flatpak](https://en.opensuse.org/Flatpak) ([authors](https://en.opensuse.org/index.php?title=Flatpak&action=history))
 - [Snap](https://en.opensuse.org/Snap)
     - [authors](https://en.opensuse.org/index.php?title=Snap&action=history)
