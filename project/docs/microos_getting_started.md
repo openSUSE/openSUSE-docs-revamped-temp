@@ -307,6 +307,14 @@ sudo zypper install adwaita-icon-theme xorg-x11-fonts libX11-xcb1 gsettings-desk
 sudo gdk-pixbuf-query-loaders-64 --update-cache
 ```
 
+### ssh port forwarding blocked by selinux
+To connect to a local vnc server, virtual machine, or container with ssh forwarding, you will
+need to enable this SELinux option:
+```
+setsebool -P nis_enabled 1
+```
+See [SELinux](https://en.opensuse.org/SDB:SELinux)
+
 ## Alternative for Gnome Extensions
 There is an alternative to installing GNOME Extensions, such that no RPM installed browser is necessary. It's currently under development at [GitHub](https://github.com/ekistece/GetExtensions). You can install it via `toolbox`; the commands are as follows:
 ```
