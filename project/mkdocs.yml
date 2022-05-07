@@ -63,6 +63,7 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Version Selector: "../"
+    - License notices: license_notices.md
     - Before installing:
         - Choosing a distribution: pick_an_image.md
         - Preparing the installation media: image_choice.md
@@ -109,3 +110,4 @@ nav:
             - Markdown flavour: markdown.md
             - Todo: todo.md
         - A contributor's checklist: ""
+    - License: license.md

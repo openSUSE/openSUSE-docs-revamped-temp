@@ -45,3 +45,9 @@ Similar considerations apply to other devices on your network that you might wan
 In the case of scanners, they use a protocol called SANE which is the analogue of _CUPS_, and the [detailed page](https://en.opensuse.org/SDB:CUPS_and_SANE_Firewall_settings) mentioned above has some more specific advice for SANE.
 
 In any case, similar principles should apply: you may want to disable the firewall if configuration is not working, re-enable it when the device is responding properly, and then tailor the firewall to allow the proper operation of the device thereafter. 
+
+## References & credits
+- [YaST_Printer](https://en.opensuse.org/YaST_Printer)
+    - [authors](https://en.opensuse.org/index.php?title=YaST_Printer&action=history)
+- [SDB:Installing_a_Printer](https://en.opensuse.org/SDB:Installing_a_Printer)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Installing_a_Printer&action=history)

@@ -275,3 +275,7 @@ After you reviewed the settings you can move on with the installation which will
 
 ???+ info
     Patterns are a group of packages that allows the user to easily install otherwise complex packages and configurations - like KDE Plasma or Gnome -.
+
+## References & credits
+- [Leap short installation guide](https://doc.opensuse.org/documentation/leap/startup/html/book-startup/art-opensuse-installquick.html)
+- [Leap detailed installation guide](https://doc.opensuse.org/documentation/leap/startup/html/book-startup/cha-install.html)

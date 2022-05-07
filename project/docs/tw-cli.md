@@ -82,3 +82,7 @@ From now on `zypper-dup` will again fetch updates across all snapshots, which is
 ## Further reading
 * [tumbleweed-cli](https://github.com/boombatower/tumbleweed-cli)
 * [snapshow reviewer](https://review.tumbleweed.boombatower.com/)
+
+## References & credits
+- [SDB:Upgrade_Tumbleweed](https://en.opensuse.org/SDB:Upgrade_Tumbleweed)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Upgrade_Tumbleweed&action=history)

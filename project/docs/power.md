@@ -211,3 +211,9 @@ This is often located next to the shut down, reboot and sleep commands.
 
 You can read about testing and using hibernation functionality in the openSUSE Wiki:
 [SDB:Suspend to disk](https://en.opensuse.org/SDB:Suspend_to_disk).
+
+## References & credits
+- [SDB:Suspend_to_disk](https://en.opensuse.org/SDB:Suspend_to_disk)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Suspend_to_disk&action=history)
+- [SDB:Partitioning](https://en.opensuse.org/SDB:Partitioning)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Partitioning&action=history)

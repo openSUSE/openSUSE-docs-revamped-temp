@@ -64,3 +64,9 @@ To offload anything to the AMD GPU, simply use the special environment variable 
     DRI_PRIME=1 supertuxkart
 
 The same applies to users with the open source _nouveau_ driver for NVIDIA cards.
+
+## References & credits
+- [SBD:Nvidia_drivers](https://en.opensuse.org/SDB:NVIDIA_drivers)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:NVIDIA_drivers&action=history)
+- [SDB:AMDGPU](https://en.opensuse.org/SDB:AMDGPU#Hybrid_Graphics_Configuration)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:AMDGPU&action=history)

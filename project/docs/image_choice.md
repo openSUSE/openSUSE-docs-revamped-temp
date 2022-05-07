@@ -160,3 +160,8 @@ Use [these instructions](https://docs.microsoft.com/en-us/windows-hardware/manuf
 
 #### macOS
 Simply hold the `alt` (option) key immediately after restarting and select the openSUSE bootloader from there.
+
+## References & credits
+- [SDB:Download](https://en.opensuse.org/SDB:Download_help#Example:_Verify_Tumbleweed_Netinstall)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Download_help&action=history)
+- [The GNU Privacy Handbook](https://www.gnupg.org/gph/en/manual/x135.html)

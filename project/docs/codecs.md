@@ -35,3 +35,9 @@ As of this writing, `opi` performs the following operations behind the curtains 
 
 
 Upgrading and installing packages using the option `--from packman` tells the system to set Packman as their unique, permitted provider. This means that updates from the openSUSE official repositories targeting the same packages will _no longer_ be applied. This behaviour is intended for users who agree to have all their codecs provisioned by Packman.
+
+## References & credits
+- [Codecs](https://en.opensuse.org/Codecs)
+    - [authors](https://en.opensuse.org/index.php?title=Codecs&action=history)
+- [SDB:Installing_codecs_from_Packman_repositories](https://en.opensuse.org/SDB:Installing_codecs_from_Packman_repositories)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Installing_codecs_from_Packman_repositories&action=history)

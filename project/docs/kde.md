@@ -89,3 +89,7 @@ Now the custom keyboard shortcut runs the command system wide, no matter what ap
 #### Using panes, bars, widgets & docks
 
 #### Learning more
+
+
+## References & credits
+- [KDE official documentation & authors](https://docs.kde.org/)

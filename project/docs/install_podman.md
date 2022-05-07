@@ -939,9 +939,11 @@ Before we go any further there are few things to make sure are set correctly on 
 
 Podman's other important feature is the automatic updates of containers without the need of even putting containers in pods or adding a Watchtower service. This is done by adding the `--label io.containers.autoupdate=image` label during container creation.    
 This to be followed by generating `systemd` units for the container: `podman generate systemd --new --files [container ID or name]`. Once this is ready and the unit file is under the corresponding `systemd` folder - depending on how podman is used, rootfull or rootless - the container unit to be started. Following this the `podman auto-update` command can update every container with changed images.
-## References
+
+## References & credits
 
 I strongly suggest checking out the `man` pages of `podman` which provides a lot of information straight from the terminal. Also the following resources can help a lot on your `podman` journey:
+
 * https://podman.io/
 * http://docs.podman.io/en/latest/
 * http://docs.podman.io/en/latest/Tutorials.html

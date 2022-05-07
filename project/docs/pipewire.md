@@ -30,3 +30,7 @@ Finally reboot your system:
 ```
 systemctl reboot
 ```
+
+## References & credits
+- [openSUSE:Pipewire](https://en.opensuse.org/openSUSE:Pipewire)
+    - [authors](https://en.opensuse.org/index.php?title=openSUSE:Pipewire&action=history)

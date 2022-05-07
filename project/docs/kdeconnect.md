@@ -94,5 +94,6 @@ Open the KDE Connect settings on either device and ping the opposite or select R
 * [KDE Connect site](https://kdeconnect.kde.org)
 
 ## References
-* ["SDB:KDE Connect"](https://en.opensuse.org/SDB:KDE_Connect). _openSUSE Wiki_. Retrieved 5 August 2021.
-* ["KDEConnect"](https://community.kde.org/KDEConnect). _KDE Community Wiki_. Retrieved 5 August 2021.
+* [SDB:KDE Connect](https://en.opensuse.org/SDB:KDE_Connect)
+    * [authors](https://en.opensuse.org/index.php?title=SDB:KDE_Connect&action=history)
+* [KDEConnect](https://community.kde.org/KDEConnect)

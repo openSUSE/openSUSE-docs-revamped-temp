@@ -217,3 +217,11 @@ If you prefer one of these desktop environments, de-select the __A very basic de
         In this setup configuration, you shouldn't have any Desktop Environment patterns selected, unless you desire multiple desktop environments.
         
         Clicking the __Details...__ button on __Installer__ &gt; __Software Selection and System Tasks__ displays packages associated with the respective patterns.
+
+## References & credits
+- [openSUSE:Tumbleweed_installation](https://en.opensuse.org/openSUSE:Tumbleweed_installation)
+    - [authors](https://en.opensuse.org/index.php?title=openSUSE:Tumbleweed_installation&action=history)
+- [openSUSE:Tumbleweed_upgrade](https://en.opensuse.org/openSUSE:Tumbleweed_upgrade)
+    - [authors](https://en.opensuse.org/index.php?title=openSUSE:Tumbleweed_upgrade&action=history)
+- [SDB:Live_USB_stick](https://en.opensuse.org/SDB:Live_USB_stick)
+    - [authors](https://en.opensuse.org/index.php?title=SDB:Live_USB_stick&action=history)
