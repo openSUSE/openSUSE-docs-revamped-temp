@@ -99,7 +99,6 @@ nav:
         - Advanced fine-tunings:
             - Transparent compression (zstd): zstd.md
     - Experimenting:
-        - MicroOS Desktop: microos_getting_started.md
         - Alternative update workflow on Tumbleweed: tw-cli.md
     - Giving back to the community:
         - The art of reporting bugs: ""
