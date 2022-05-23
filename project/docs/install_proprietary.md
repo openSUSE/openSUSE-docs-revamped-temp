@@ -2,10 +2,12 @@
 
 ### Determine which driver is required by your GPU
 
-1. There are two Nvidia driver options available in the Nvidia repository - __nvidia-glG05__ and __nvidia-glG04__.
-2. The __nvidia-glG05__ package corresponds with the Nvidia 460 series driver.
-3. The __nvidia-glG04__ package corresponds with the Nvidia 390 series driver.
-4. Please refer to the Nvidia [website](https://www.nvidia.com/en-us/drivers/unix/) to determine which driver best supports your GPU.
+1. There are three Nvidia driver options available in the Nvidia repository - __nvidia-glG06__, __nvidia-glG05__ and __nvidia-glG04__.
+2. The __nvidia-glG06__ package corresponds with the Nvidia 515 series driver.
+3. The __nvidia-glG05__ package corresponds with the Nvidia 470 series driver.
+4. The __nvidia-glG04__ package corresponds with the Nvidia 390 series driver.
+5. Please refer to the Nvidia [website](https://www.nvidia.com/en-us/drivers/unix/) to determine which driver best supports your GPU.
+6. If you want to use 32-bit 3D-accelerated applications like Steam and Wine __outside of flatpak__, you need to install the native 32-bit driver libraries. If the 32-bit applications are running via Flatpak, this step is not required.
 
 ### Setup the driver
 
@@ -17,13 +19,21 @@
 5. Select __nVidia Graphics Drivers__ &gt; __Accept__ &gt; __Trust__.
 6. On the _Configured Software Repositories_ &gt; Click __Ok__
 7. Back to _Software Management Windows_" &gt; __View__ &gt; __Repositories__ &gt; Select __nVidia Graphics Drivers__.
-8. Select __x11-video-nvidiaG05__ &gt; __Accept__ (Some graphic cards need _G04_, see the first section above)
+8. Select __x11-video-nvidiaG06__ &gt; __Accept__ (Some graphic cards need _G05_ or _G04_, see the first section above)
 9. Reboot.
+##### Installing native 32-bit driver libraries
+1. Go to _YaST2_.
+2. Then _Software Management_ &gt; __View__ &gt; __Repositories__ &gt; Select __nVidia Graphics Drivers__.
+3. Select  __nvidia-glG06-32bit__, __nvidia-computeG06-32bit__ and __x11-video-nvidiaG06-32bit__ &gt; __Accept__ (Some graphic cards need _G05_ or _G04_, see the first section above)
+4. Reboot.
 
 #### Using the command line
 1. Add the Nvidia Repository. If using Tumbleweed for example, you would run `sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA`. For Leap, you can run `sudo zypper addrepo --refresh 'https://download.nvidia.com/opensuse/leap/$releasever' NVIDIA`.
-2. Install the appropriate driver by running `sudo zypper in x11-video-nvidiaG05` or `sudo zypper in x11-video-nvidiaG04`
+2. Install the appropriate driver by running `sudo zypper in x11-video-nvidiaG06` or `sudo zypper in x11-video-nvidiaG05` or `sudo zypper in x11-video-nvidiaG04`
 3. Reboot.
+##### Installing native 32-bit driver libraries
+1. Install the appropriate 32-bit driver libraries by running `sudo zypper in nvidia-glG06-32bit nvidia-computeG06-32bit x11-video-nvidiaG06-32bit` or `sudo zypper in nvidia-glG05-32bit nvidia-computeG05-32bit x11-video-nvidiaG05-32bit` or `sudo zypper in nvidia-glG04-32bit nvidia-computeG04-32bit x11-video-nvidiaG04-32bit`
+2. Reboot.
 
 #### CUDA
 1. CUDA can be installed with the __Nvidia-ComputeG05__ or __Nvidia-ComputeG04__ package.
@@ -39,7 +49,7 @@ Sometimes, installing NVIDIA through zypper is not what you want because you wan
 1. Check in `zypper` if you have `NVIDIA` repo. If there is, remove NVIDIA repo with `sudo zypper removerepo NVIDIA`.
 2. Uninstall the existing NVIDIA packages with the following commands:
 ```sh	
-$ sudo zypper remove x11-video-nvidiaG04 nvidia-glG04 # or `sudo zypper remove x11-video-nvidiaG05 nvidia-glG05` depending on the driver you are using.
+$ sudo zypper remove x11-video-nvidiaG06 nvidia-glG06 # or `sudo zypper remove x11-video-nvidiaG05 nvidia-glG05` or`sudo zypper remove x11-video-nvidiaG04 nvidia-glG04` depending on the driver you are using.
 $ sudo zypper ref -rf  # to refresh all repositories.
 ```
 3. Do note that NVIDIA has two "download types"; the new feature branch and production branch. Download NVIDIA.run or `nvidia-installer` with your chosen download type through your browser or through `curl` or `wget` from either of these websites:
