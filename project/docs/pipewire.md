@@ -22,7 +22,7 @@ Then enable the pipewire audio socket:
 ```
 systemctl --user enable --now pipewire.{service,socket}
 systemctl --user enable --now pipewire-pulse.{service,socket}
-systemctl --user enable --now pipewire-media-session.service
+systemctl --user enable --now wireplumber.service
 ```
 
 Finally reboot your system:
