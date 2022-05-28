@@ -47,6 +47,15 @@ Flatpaks are covered in more details in this guide, but they are an invaluable s
 $   sudo zypper in flatpak
 $   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
+Add the flatpak repo as user to enable auto-updates without the need of a root password: 
+```
+$   sudo zypper in flatpak
+$   flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+To switch from a system-wide installation to the user variant, you'll need to first remove the old repo and then follow the steps shown above. (Note that this step will remove all your installed flatpaks)
+```
+$   flatpak remote-delete flathub
+```
 
 ### Customize your .desktop files for a better user experience
 Most user applications shipping their own GUI install with a desktop file (`<program name>.desktop`) providing the application with some parameters discovered at the installation. Some of these parameters are key to a comfortable user experience.
