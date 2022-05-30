@@ -23,7 +23,11 @@
 
 #### Using the command line
 1. Add the Nvidia Repository. If using Tumbleweed for example, you would run `sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA`. For Leap, you can run `sudo zypper addrepo --refresh 'https://download.nvidia.com/opensuse/leap/${releasever}' NVIDIA`.
-2. To auto-detect and install the right driver for your hardware, run: `sudo zypper install-new-recommends --repo nvidia` Alternatively you can also specify which version via: `sudo zypper in x11-video-nvidiaG06` or `sudo zypper in x11-video-nvidiaG05` or `sudo zypper in x11-video-nvidiaG04`
+2. To auto-detect and install the right driver for your hardware, run:
+   `sudo zypper install-new-recommends --repo nvidia` Alternatively you can also specify which version with:
+   `sudo zypper in x11-video-nvidiaG06` or 
+   `sudo zypper in x11-video-nvidiaG05` or 
+   `sudo zypper in x11-video-nvidiaG04` (you can use `zypper se -s x11-video-nvidia` to help you determine which driver best fits your hardware`).
 3. Reboot.
 
 #### CUDA
