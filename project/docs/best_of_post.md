@@ -47,7 +47,7 @@ Flatpaks are covered in more details in this guide, but they are an invaluable s
 $   sudo zypper in flatpak
 $   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
-dd the flatpak repo as user to enable auto-updates without the need of a root password: 
+add the flatpak repo as user to enable auto-updates without the need of a root password: 
 ```
 $   sudo zypper in flatpak
 $   flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
