@@ -25,8 +25,7 @@ __From a terminal__:
 
 As of this writing, `opi` performs the following operations behind the curtains (see [here](https://github.com/openSUSE/opi/commits/master/opi/plugins/packman.py) for reference):
 
-1. Add the Packman repository with a higher priority than the official repositories.
-   + `sudo zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman`
+1. Add the Packman repository suited to the user's distribution with a higher priority than the official repositories.
 2. Upgrade the system exclusively using the Packman repository.
    + `sudo zypper dist-upgrade --from packman --allow-downgrade --allow-vendor-change`
 3. Install the codecs to the system.
