@@ -1,0 +1,2836 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../image/geeko-color.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.2.8">
+    
+    
+      
+        <title>Zypper - openSUSE User Documentation Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.92558b1b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,400i,700%7CFira+Code&display=fallback">
+        <style>:root{--md-text-font-family:"Noto Sans TC";--md-code-font-family:"Fira Code"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../styles.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zypper" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="openSUSE User Documentation Project" class="md-header__button md-logo" aria-label="openSUSE User Documentation Project" data-md-component="logo">
+      
+  <img src="../image/Button-filled-colour.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            openSUSE User Documentation Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Zypper
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/openSUSE/openSUSE-docs-revamped-temp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="openSUSE User Documentation Project" class="md-nav__button md-logo" aria-label="openSUSE User Documentation Project" data-md-component="logo">
+      
+  <img src="../image/Button-filled-colour.png" alt="logo">
+
+    </a>
+    openSUSE User Documentation Project
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/openSUSE/openSUSE-docs-revamped-temp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Version Selector
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Before installing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Before installing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Before installing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pick_an_image/" class="md-nav__link">
+        Choosing a distribution
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image_choice/" class="md-nav__link">
+        Preparing the installation media
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yast_installer/" class="md-nav__link">
+        Installing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Learning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        openSUSE core tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="openSUSE core tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          openSUSE core tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Zypper
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Zypper
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    Zypper
+  </a>
+  
+    <nav class="md-nav" aria-label="Zypper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-package-manager" class="md-nav__link">
+    What is a Package Manager?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basics" class="md-nav__link">
+    The Basics
+  </a>
+  
+    <nav class="md-nav" aria-label="The Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-packages" class="md-nav__link">
+    Installing packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-packages" class="md-nav__link">
+    Searching for packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-repository" class="md-nav__link">
+    Adding a New Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-repositories" class="md-nav__link">
+    Removing Repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-repositories" class="md-nav__link">
+    Listing Repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-packages" class="md-nav__link">
+    Removing Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-your-repositories" class="md-nav__link">
+    Refreshing your repositories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-your-computer" class="md-nav__link">
+    Updating Your Computer
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating Your Computer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-updates" class="md-nav__link">
+    Listing Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating" class="md-nav__link">
+    Updating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-for-patches" class="md-nav__link">
+    Checking for patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-patches" class="md-nav__link">
+    Listing patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-patch" class="md-nav__link">
+    Installing a patch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distro-upgrading" class="md-nav__link">
+    Distro upgrading
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-advanced-commands" class="md-nav__link">
+    More advanced commands
+  </a>
+  
+    <nav class="md-nav" aria-label="More advanced commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rename-specified-repository" class="md-nav__link">
+    Rename specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-specified-repository" class="md-nav__link">
+    Modify specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-local-caches" class="md-nav__link">
+    Clean local caches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-integrity-of-package-dependencies" class="md-nav__link">
+    Verify integrity of package dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-source-packages-and-their-build-dependencies" class="md-nav__link">
+    Install source packages and their build dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-newly-added-packages-recommended-by-installed-packages" class="md-nav__link">
+    Install newly added packages recommended by installed packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-packages" class="md-nav__link">
+    Show full information for specified packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-patches" class="md-nav__link">
+    Show full information for specified patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-patterns" class="md-nav__link">
+    Show full information for specified patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-products" class="md-nav__link">
+    Show full information for specified products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-patches" class="md-nav__link">
+    List all available patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-packages" class="md-nav__link">
+    List all available packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-manually-installed-packages-as-a-single-history" class="md-nav__link">
+    List all manually installed packages as a single history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-patterns" class="md-nav__link">
+    List all available patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-products" class="md-nav__link">
+    List all available products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-packages-providing-specified-capability" class="md-nav__link">
+    List packages providing specified capability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-package-lock" class="md-nav__link">
+    Add a package lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-a-package-lock" class="md-nav__link">
+    Remove a package lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-current-package-locks" class="md-nav__link">
+    List current package locks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-useless-locks" class="md-nav__link">
+    Remove useless locks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-requested-locales-languages-codes" class="md-nav__link">
+    List requested locales (languages codes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-locales-to-requested-locales" class="md-nav__link">
+    Add locale(s) to requested locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-locales-from-requested-locales" class="md-nav__link">
+    Remove locale(s) from requested locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-command-specific-help" class="md-nav__link">
+    Get command-specific help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compare-two-version-strings" class="md-nav__link">
+    Compare two version strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-the-target-operating-system-id-string" class="md-nav__link">
+    Print the target operating system ID string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-report-about-licenses-and-eulas-of-installed-packages" class="md-nav__link">
+    Print report about licenses and EULAs of installed packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-rpms-specified-on-the-commandline-to-a-local-directory" class="md-nav__link">
+    Download rpms specified on the commandline to a local directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-source-rpms-for-all-installed-packages-to-a-local-directory" class="md-nav__link">
+    Download source rpms for all installed packages to a local directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-the-needs-reboot-flag-was-set" class="md-nav__link">
+    Check if the needs-reboot flag was set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades" class="md-nav__link">
+    List running processes which might still use files and libraries deleted by recent upgrades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-old-kernels" class="md-nav__link">
+    Remove old kernels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-options" class="md-nav__link">
+    Global Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-options" class="md-nav__link">
+    Repository Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-options" class="md-nav__link">
+    Command Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        YaST2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating_upgrading_reverting/" class="md-nav__link">
+        Updating, upgrading, snapshots and best practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snapper/" class="md-nav__link">
+        Snapper and Btrfs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety_usability/" class="md-nav__link">
+        Safety and usability on Tumbleweed
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Distro basics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Distro basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Distro basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_of_post/" class="md-nav__link">
+        Post-installation best-of
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kde/" class="md-nav__link">
+        KDE Plasma basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        GNOME basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" data-md-state="indeterminate" type="checkbox" id="__nav_6_4" checked>
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Additional software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Additional software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Additional software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alternative_procurement/" class="md-nav__link">
+        Software procurement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Building from source
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.md" class="md-nav__link">
+        Troubleshooting with autonomy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Completing and fine-tuning your setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Completing and fine-tuning your setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Completing and fine-tuning your setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" data-md-state="indeterminate" type="checkbox" id="__nav_7_1" checked>
+      
+      <label class="md-nav__link" for="__nav_7_1">
+        Audio & Video
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Audio & Video" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Audio & Video
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codecs/" class="md-nav__link">
+        Codecs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipewire/" class="md-nav__link">
+        Pipewire
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" data-md-state="indeterminate" type="checkbox" id="__nav_7_2" checked>
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_proprietary/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Dual GPUs ("Optimus")
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3">
+        Peripherals
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Peripherals" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Peripherals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bluetooth/" class="md-nav__link">
+        Bluetooth
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kdeconnect/" class="md-nav__link">
+        KDE Connect
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3_3">
+        Printers & scanners
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Printers & scanners" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Printers & scanners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../printersetc/" class="md-nav__link">
+        Printers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        Power management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" data-md-state="indeterminate" type="checkbox" id="__nav_7_5" checked>
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Advanced fine-tunings
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Advanced fine-tunings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced fine-tunings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zstd/" class="md-nav__link">
+        Transparent compression (zstd)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Experimenting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        Giving back to the community
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Giving back to the community" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Giving back to the community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        The art of reporting bugs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference_docs/" class="md-nav__link">
+        Other sources of documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_4" data-md-state="indeterminate" type="checkbox" id="__nav_9_4" checked>
+      
+      <label class="md-nav__link" for="__nav_9_4">
+        Contribute to this docs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contribute to this docs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to this docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown.md" class="md-nav__link">
+        Markdown flavour
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../todo/" class="md-nav__link">
+        Todo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A contributor's checklist
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    Zypper
+  </a>
+  
+    <nav class="md-nav" aria-label="Zypper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-package-manager" class="md-nav__link">
+    What is a Package Manager?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basics" class="md-nav__link">
+    The Basics
+  </a>
+  
+    <nav class="md-nav" aria-label="The Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-packages" class="md-nav__link">
+    Installing packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-packages" class="md-nav__link">
+    Searching for packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-repository" class="md-nav__link">
+    Adding a New Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-repositories" class="md-nav__link">
+    Removing Repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-repositories" class="md-nav__link">
+    Listing Repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-packages" class="md-nav__link">
+    Removing Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-your-repositories" class="md-nav__link">
+    Refreshing your repositories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-your-computer" class="md-nav__link">
+    Updating Your Computer
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating Your Computer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-updates" class="md-nav__link">
+    Listing Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating" class="md-nav__link">
+    Updating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-for-patches" class="md-nav__link">
+    Checking for patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-patches" class="md-nav__link">
+    Listing patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-patch" class="md-nav__link">
+    Installing a patch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distro-upgrading" class="md-nav__link">
+    Distro upgrading
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-advanced-commands" class="md-nav__link">
+    More advanced commands
+  </a>
+  
+    <nav class="md-nav" aria-label="More advanced commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rename-specified-repository" class="md-nav__link">
+    Rename specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-specified-repository" class="md-nav__link">
+    Modify specified repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-local-caches" class="md-nav__link">
+    Clean local caches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-integrity-of-package-dependencies" class="md-nav__link">
+    Verify integrity of package dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-source-packages-and-their-build-dependencies" class="md-nav__link">
+    Install source packages and their build dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-newly-added-packages-recommended-by-installed-packages" class="md-nav__link">
+    Install newly added packages recommended by installed packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-packages" class="md-nav__link">
+    Show full information for specified packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-patches" class="md-nav__link">
+    Show full information for specified patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-patterns" class="md-nav__link">
+    Show full information for specified patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-full-information-for-specified-products" class="md-nav__link">
+    Show full information for specified products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-patches" class="md-nav__link">
+    List all available patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-packages" class="md-nav__link">
+    List all available packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-manually-installed-packages-as-a-single-history" class="md-nav__link">
+    List all manually installed packages as a single history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-patterns" class="md-nav__link">
+    List all available patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-available-products" class="md-nav__link">
+    List all available products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-packages-providing-specified-capability" class="md-nav__link">
+    List packages providing specified capability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-package-lock" class="md-nav__link">
+    Add a package lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-a-package-lock" class="md-nav__link">
+    Remove a package lock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-current-package-locks" class="md-nav__link">
+    List current package locks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-useless-locks" class="md-nav__link">
+    Remove useless locks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-requested-locales-languages-codes" class="md-nav__link">
+    List requested locales (languages codes)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-locales-to-requested-locales" class="md-nav__link">
+    Add locale(s) to requested locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-locales-from-requested-locales" class="md-nav__link">
+    Remove locale(s) from requested locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-command-specific-help" class="md-nav__link">
+    Get command-specific help
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compare-two-version-strings" class="md-nav__link">
+    Compare two version strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-the-target-operating-system-id-string" class="md-nav__link">
+    Print the target operating system ID string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-report-about-licenses-and-eulas-of-installed-packages" class="md-nav__link">
+    Print report about licenses and EULAs of installed packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-rpms-specified-on-the-commandline-to-a-local-directory" class="md-nav__link">
+    Download rpms specified on the commandline to a local directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-source-rpms-for-all-installed-packages-to-a-local-directory" class="md-nav__link">
+    Download source rpms for all installed packages to a local directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-the-needs-reboot-flag-was-set" class="md-nav__link">
+    Check if the needs-reboot flag was set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades" class="md-nav__link">
+    List running processes which might still use files and libraries deleted by recent upgrades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-old-kernels" class="md-nav__link">
+    Remove old kernels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-options" class="md-nav__link">
+    Global Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-options" class="md-nav__link">
+    Repository Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-options" class="md-nav__link">
+    Command Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Zypper</h1>
+                
+                <h2 id="zypper">Zypper<a class="headerlink" href="#zypper" title="Permanent link">⚓︎</a></h2>
+<p>Zypper is a command line package manager for installing, updating and removing packages. It also manages repositories, can perform various queries, and is a command-line interface to ZYpp system management library (libzypp).</p>
+<details class="info" open="open">
+<summary>Show Definitions</summary>
+<dl>
+<dt><code>repository</code></dt>
+<dd>Local or remote directory containing packages and various package information (package metadata).</dd>
+<dt><code>package</code></dt>
+<dd>Software package (RPM package, source package). Patches, patterns, and products are also commonly referred to as different types of packages.</dd>
+<dt><code>patch</code></dt>
+<dd>Represents a package or a group of packages needed to install an update (a bug fix mostly).</dd>
+<dt><code>pattern</code></dt>
+<dd>Represents a group of packages. For example an Http Server pattern would have the dependencies defined so that all packages needed to run and manage an http server would have been triggered for installation when upon installing the pattern.</dd>
+<dt><code>product</code></dt>
+<dd>Represents the whole product (e.g. 'openSUSE Leap 15.3').</dd>
+</dl>
+</details>
+<h3 id="what-is-a-package-manager">What is a Package Manager?<a class="headerlink" href="#what-is-a-package-manager" title="Permanent link">⚓︎</a></h3>
+<p>Software is incredibly interconnected. Programming a user interface, a developer's code will specify the location on the screen
+of widgets, such as buttons or text, and define how these things rearrange when a window is resized. But most code depends on
+some other code that serves as a 'backend' (often called a <em>library</em>). For example, an application will rarely describe how to
+render a button, instead it will ask a library to do that for it. This allows for a number of benefits. Some people specialise
+on writing button drawing routines while others specialise on using those routines to
+create feature-full applications.</p>
+<p>Apps written for Linux use this principle a lot and it opens up a lot of opportunity. If 100 apps all use the same
+library, we could install that library once and all 100 apps could use that single copy when running. This has
+the following benefits:</p>
+<ol>
+<li>We save space! Instead of every graphical application containing the code necessary for drawing a button,
+  we have that code installed once!</li>
+<li>If a library used by many is found to contain insecure, buggy or slow code, you can fix and update the library and every 
+  app that uses it gains that improvement. We don't have to rely on developers tracking the libraries that they use
+  and rebuilding their apps every time one changes.</li>
+<li>If you improve upon a library in some way, you can exchange the version on your computer with
+  your modified version. Your improvement is then available to all applications that use that library and can adopt your changes. 
+  This is a core principle in <a href="https://en.wikipedia.org/wiki/Free_software">free software</a>.</li>
+</ol>
+<p>However, there is a drawback. When installing software, we have to ensure that the libraries that it requires (known as dependencies)
+are also installed. When removing software, we cannot remove a dependency without checking to make sure that
+nothing else depends upon it -- or it will break the 'dependency-tree' of the operating system. To visualize the issue, consider the
+following illustration:
+<div class="highlight"><pre><span></span><code>    lib5      lib6
+   /    \    /    \
+lib1     lib3      lib4
+  \      /  \      /
+  softwareA  softwareB
+</code></pre></div>
+Let's assume for simplicity that no other software requires <code>lib4</code>. Under this assumption, if the user remove softwareB, they will want
+to remove <code>lib4</code>, but neither <code>lib3</code> nor <code>lib6</code>, because the former is directly required by <code>softwareA</code>, while the latter is
+indirectly required by <code>softwareA</code> via <code>lib3</code>.</p>
+<p>In addition to this issue imagine the user updates <code>softwareB</code> so that it ends up depending on a new version of library <code>lib4</code>,
+say <code>lib4*</code>. This means that we need to recast the above structure as:
+<div class="highlight"><pre><span></span><code>    lib5      lib6
+   /    \    /    \
+lib1     lib3      lib4       lib4*
+  \      /  \                 /
+  softwareA  softwareB(updated)
+</code></pre></div>
+This means that the system must be able to 'see through' the actual <em>versions</em> of each package, so as to understand the path of
+their dependencies and warn about required alterations.</p>
+<p>These problems are solved with a package manager. Developers can build applications, libraries and many other things into packages that
+contain what you want to install and a set of references to any other packages that it depends upon. The <em>package manager</em> is an essential
+piece of software that downloads, installs, uninstalls and updates packages for you. If you tell the package manager to install Firefox,
+it will download a package containing the Firefox executable, as well as a number of packages that contain the dependencies
+of Firefox. It also holds a database of all installed packages so it knows when it can uninstall certain dependencies without
+breaking software on your computer. <em>Zypper</em> is the name of the package manager used by openSUSE and SUSE Enterprise Linux.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">⚓︎</a></h3>
+<p>Zypper is a command line tool, meaning that it is used from within the terminal. Installing, updating and removing packages are operations that affect all users on the system and so many of these commands will not work unless they are run as a privileged user. Although special permissions can be granted to individual user accounts, it is simpler to run commands as the root user (the user with the most privilege). Prefixing a command with <code>sudo</code> (e.g. <code>sudo zypper install firefox</code>) will ask for the password of the <code>root</code> user account and then runs the command as <code>root</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The components enclosed in brackets are not required, thus the simplest way to execute zypper is to type its name followed by a command. See zypper help for a list of general options and all commands. To get help for a specific command, type zypper help command</p>
+</div>
+<p><div class="highlight"><pre><span></span><code># zypper [--GLOBAL-OPTIONS] &lt;COMMAND&gt; [--COMMAND-OPTIONS] [ARGUMENTS]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># zypper &lt;SUBCOMMAND&gt; [--COMMAND-OPTIONS] [ARGUMENTS]`
+</code></pre></div></p>
+<div class="admonition note on user prompts">
+<p class="admonition-title">Note</p>
+<p>Whenever Zypper needs input, it lists possible answers in brackets next to the prompt text. To choose the default answer, press &lt;<strong>Enter</strong>&gt; (the default answer is printed in capitals, with the exception of non-ascii characters). Some prompts also have help available, in which case there is a question mark '?' listed as a possible answer.</p>
+<p>To make Zypper use the default answers without user interaction, use the <code>--non-interactive</code> global option.</p>
+</div>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">⚓︎</a></h3>
+<p>A single command is given to zypper (without a leading <code>--</code>) to instruct it on what kind of task
+it should do. For example <code>zypper install</code> instructs zypper that we want to install something and
+<code>zypper search</code> instructs zypper that we want to search for a package.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The most used zypper commands have shorter aliases; for example, <code>zypper in</code> is the same
+as <code>zypper install</code>.</p>
+<p><code>zypper</code> without any commands or arguments will print a list of commands and options.</p>
+</div>
+<p>This manual is a great starting point but it does not cover all possible ways to use zypper. If you want to see all of the options
+that can be given to each subcommand in zypper, type:
+<div class="highlight"><pre><span></span><code>zypper &lt;COMMAND&gt; -h
+</code></pre></div>
+and it will show all of the different ways of configuring the command specified in an easy to read way.</p>
+<h4 id="the-basics">The Basics<a class="headerlink" href="#the-basics" title="Permanent link">⚓︎</a></h4>
+<h5 id="installing-packages">Installing packages<a class="headerlink" href="#installing-packages" title="Permanent link">⚓︎</a></h5>
+<p>To install a package type:
+<div class="highlight"><pre><span></span><code># zypper install packagename
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper in packagename
+</code></pre></div></p>
+<p>This will download the package you specified along with all of
+its dependencies and install them. If you want to install more than
+one package, you simply list them all:
+<div class="highlight"><pre><span></span><code># zypper in package_1 package_2 ... package_n
+</code></pre></div></p>
+<h5 id="searching-for-packages">Searching for packages<a class="headerlink" href="#searching-for-packages" title="Permanent link">⚓︎</a></h5>
+<p>In order to install a package, you need to know its name. To search the repositories
+for a package type:
+<div class="highlight"><pre><span></span><code># zypper search packagename
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper se packagename
+</code></pre></div>
+This will return a list of packages that contain your search string along
+with a summary, a type and whether they have been installed.</p>
+<details class="example" open="open">
+<summary>Example: Search for Firefox</summary>
+<p><div class="highlight"><pre><span></span><code># zypper se firefox
+Loading repository data...
+Reading installed packages...
+
+S  | Name                               | Summary                                      | Type
+---+------------------------------------+----------------------------------------------+--------
+i+ | MozillaFirefox                     | Mozilla Firefox Web Browser                  | package
+i+ | MozillaFirefox-branding-openSUSE   | openSUSE branding of MozillaFirefox          | package
+   | MozillaFirefox-branding-upstream   | Upstream branding for Firefox                | package
+   | MozillaFirefox-buildsymbols        | Breakpad buildsymbols for Firefox            | package
+   | MozillaFirefox-devel               | Devel package for Firefox                    | package
+   | MozillaFirefox-translations-common | Common translations for Firefox              | package
+   | MozillaFirefox-translations-other  | Extra translations for Firefox               | package
+   | eid-mw-firefox                     | Firefox Extension for Belgium eID Middleware | package
+   | firefox-esr-branding-openSUSE      | openSUSE branding of MozillaFirefox          | package
+   | firefox-uget-integrator            | Integration of uGet with Firefox             | package
+</code></pre></div>
+Note: <code>i</code> or <code>i+</code> tell us that it is already installed. <code>i+</code> means installed by request of the user
+and <code>i</code> means it was installed as a dependency</p>
+</details>
+<h5 id="adding-a-new-repository">Adding a New Repository<a class="headerlink" href="#adding-a-new-repository" title="Permanent link">⚓︎</a></h5>
+<p>A repository is simply a source of packages. Zypper will already have a few
+added (the default for either Tumbleweed or Leap) but there are many reasons
+why you might want to add some more. You might need to install proprietary
+libraries such as cuda or non-free media codecs. To add a new repository type:
+<div class="highlight"><pre><span></span><code>zypper addrepo https://somerepo.com/something name
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code>zypper ar https://somerepo.com/something [optional-name]
+</code></pre></div>
+If successful, zypper will report the settings of that repo:</p>
+<ol>
+<li>URI of the repository</li>
+<li>If the repository is enabled</li>
+<li>If the repository will be GPG checked</li>
+<li>The priority</li>
+</ol>
+<details class="info" open="open">
+<summary>Understanding The Output</summary>
+<dl>
+<dt><code>Enabled</code>/<code>Disabled</code></dt>
+<dd>If a repository is disabled, it means that zypper still knows where it is
+but will not use it. You can enable repositories globally or for single
+commands.</dd>
+<dt><code>GPG check</code></dt>
+<dd>If a repository has GPG checks enabled, it means that your computer will
+save a key, which you will be asked if you trust it the first time you use a repository.
+After downloading a package, zypper will use this key to make sure that the
+download succeeded and the package is not corrupted. It also verifies that
+the package is authentic. If a hacker intercepts a package download in an attempt
+to load malicious software onto your computer, the evil package will fail the
+GPG check.</dd>
+<dt><code>Priority</code></dt>
+<dd>If two repositories contain the same package and you ask zypper to install it,
+it will automatically use a repository with a higher priority (lower number).</dd>
+<dt><code>Autorefresh</code></dt>
+<dd>If autorefresh is on, zypper will automatically download a fresh list
+of packages from the repository to ensure that it isn't going to give
+you out of date information or packages.</dd>
+</dl>
+</details>
+<details class="example" open="open">
+<summary>Example: Adding the cuda Leap repo</summary>
+<div class="highlight"><pre><span></span><code># sudo zypper ar https://developer.download.nvidia.com/compute/cuda/repos/opensuse15/x86_64/cuda-opensuse15.repo cuda
+[sudo] password for root:
+Adding repository &#39;cuda&#39; ..................................................................................[done]
+Repository &#39;cuda&#39; successfully added
+
+URI         : https://developer.download.nvidia.com/compute/cuda/repos/opensuse15/x86_64
+Enabled     : Yes
+GPG Check   : Yes
+Autorefresh : No
+Priority    : 99 (default priority)
+
+Repository priorities are without effect. All enabled repositories share the same priority.
+</code></pre></div>
+</details>
+<h5 id="removing-repositories">Removing Repositories<a class="headerlink" href="#removing-repositories" title="Permanent link">⚓︎</a></h5>
+<p>You might decide that you no longer need a repository. Maybe you broke
+your nvidia graphics card and feel that having the cuda repository
+just slows down zypper operations. You can remove a repository typing
+<div class="highlight"><pre><span></span><code># zypper removerepo reponame
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper rr reponame
+</code></pre></div></p>
+<details class="example" open="open">
+<summary>Example: Removing the cuda repository</summary>
+<div class="highlight"><pre><span></span><code># sudo zypper rr cuda
+[sudo] password for root:
+Removing repository &#39;cuda&#39; ...............................................[done]
+Repository &#39;cuda&#39; has been removed.
+</code></pre></div>
+</details>
+<h5 id="listing-repositories">Listing Repositories<a class="headerlink" href="#listing-repositories" title="Permanent link">⚓︎</a></h5>
+<p>To list all of the installed repositories type:
+<div class="highlight"><pre><span></span><code># zypper repos
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># zypper lr
+</code></pre></div>
+This will display a table containing information and names of all the
+added repos</p>
+<details class="example" open="open">
+<summary>Example: Listing repositories</summary>
+<div class="highlight"><pre><span></span><code># zypper lr
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias             | Name                      | Enabled | GPG Check | Refresh
+--+-------------------+---------------------------+---------+-----------+--------
+1 | repo-debug        | Debug Repository          | No      | ----      | ----
+2 | repo-debug-update | Update Repository (Debug) | No      | ----      | ----
+3 | repo-oss          | Main Repository           | Yes     | (r ) Yes  | Yes
+4 | repo-source       | Source Repository         | No      | ----      | ----
+5 | repo-update       | Main Update Repository    | Yes     | (r ) Yes  | Yes
+</code></pre></div>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>See the info box in <a href="#adding-a-new-repository">Adding a New Repository</a> to
+understand the output</p>
+</div>
+<h5 id="removing-packages">Removing Packages<a class="headerlink" href="#removing-packages" title="Permanent link">⚓︎</a></h5>
+<p>Sometimes you will want to remove packages. To achieve this, type:
+<div class="highlight"><pre><span></span><code># zypper remove package
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper rm package
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If your aim is to save space, you may want to add <code>-u</code> or <code>--clean-deps</code>
+e.g. <code>sudo zypper rm -u firefox</code> to remove the unneeded dependencies
+as well.</p>
+</div>
+<p>Just like when installing, you can remove multiple packages at a time:
+<div class="highlight"><pre><span></span><code># zypper rm package_1 package_2 ... package_n
+</code></pre></div></p>
+<h5 id="refreshing-your-repositories">Refreshing your repositories<a class="headerlink" href="#refreshing-your-repositories" title="Permanent link">⚓︎</a></h5>
+<p>Your computer stores a list of packages that each repository provides and metadata to help it work out
+what each package depends on. This is so that when you instruct zypper to do something, it can calculate
+the steps it will take without having to make many slow web requests. For some repositories,
+this offline list is automatically kept up to date (called autorefresh), but a lot of the time you will
+want to update this offline list yourself. Before updating, after adding a repository and before
+installing a package it is a good idea to update this list. You update it by typing:
+<div class="highlight"><pre><span></span><code># zypper refresh
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper ref
+</code></pre></div></p>
+<h4 id="updating-your-computer">Updating Your Computer<a class="headerlink" href="#updating-your-computer" title="Permanent link">⚓︎</a></h4>
+<p>There are three different types of update that you can do with zypper</p>
+<ol>
+<li>Standard Update</li>
+<li>Patch Updates</li>
+<li>Distro Upgrade</li>
+</ol>
+<p>Standard updates simply check to see if newer versions of your packages exist in the repository.
+If there is a newer version, it will download and install it.</p>
+<p>Patches are groups of package updates. They are categorised so that you can see why they are being updated. For example,
+often, when you ask zypper to list available patches, some will be labelled as security patches. This  means that they
+fix a certain security problem that has been discovered in some packages on your system.</p>
+<p>Distro upgrades do not only update the packages on your system, but also change the source that you get your packages from.
+This is used mostly on Tumbleweed. The build server where Tumbleweed packages are built is a bit chaotic; packages
+are updated at an extremely high speed. A consequence of this is that incompatibilities between new packages emerge all over the place. So how does
+Tumbleweed stay so stable? In regular intervals, a stable snapshot of the Tumbleweed packages is found and frozen for
+a short amount of time.</p>
+<p>Tumbleweed users use the distro upgrade feature of zypper to get their updates and so they change their
+distribution to the newest snapshot. This means that zypper changes repositories to point to the newer snapshot, and then updates all the packages
+with respect to the new snapshot. This means that Tumbleweed users can enjoy incredibly up to date packages without having to deal with
+too much instability. Distro-upgrades can be used by leap users to upgrade version (for example, upgrading Leap 15.1 to 15.2). See 
+<a href="https://en.opensuse.org/SDB:System_upgrade">here</a> for more details.</p>
+<p>Don't be intimidated by the number of options available to you for updating. The golden rule is if you are on Tumbleweed, do distro-upgrades
+and if you are on leap do normal upgrades. The exception to this rule is if you are in charge of a production system, such as a web-server
+(or any system where the only things scarier than change are security issues)
+then use patches to ensure that only the minimum amount of your system is touched by updates.</p>
+<h5 id="listing-updates">Listing Updates<a class="headerlink" href="#listing-updates" title="Permanent link">⚓︎</a></h5>
+<p>To list all of packages that have updates waiting for them, type:
+<div class="highlight"><pre><span></span><code># zypper list-updates
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper lu
+</code></pre></div>
+Zypper will print out a table that shows you the updatable packages, the repos they come from, the installed versions and
+the available versions.</p>
+<details class="example" open="open">
+<summary>Example: Listing updates</summary>
+<div class="highlight"><pre><span></span><code># zypper lu
+Loading repository data...
+Reading installed packages...
+S | Repository             | Name             | Current Version      | Available Version    | Arch
+--+------------------------+------------------+----------------------+----------------------+--------
+v | Main Update Repository | grub2            | 2.04-lp152.7.18.2    | 2.04-lp152.7.22.7    | aarch64
+v | Main Update Repository | grub2-arm64-efi  | 2.04-lp152.7.18.2    | 2.04-lp152.7.22.7    | noarch
+v | Main Update Repository | hwdata           | 0.343-lp152.2.3.1    | 0.345-lp152.2.6.1    | noarch
+v | Main Update Repository | libefivar1       | 37-lp152.3.6.1       | 37-lp152.3.9.1       | aarch64
+v | Main Update Repository | libsolv-tools    | 0.7.16-lp152.2.13.1  | 0.7.17-lp152.2.16.1  | aarch64
+v | Main Update Repository | libz1            | 1.2.11-lp152.8.6.1   | 1.2.11-lp152.8.9.1   | aarch64
+v | Main Update Repository | libzypp          | 17.25.6-lp152.2.19.1 | 17.25.8-lp152.2.22.1 | aarch64
+v | Main Update Repository | python3-solv     | 0.7.16-lp152.2.13.1  | 0.7.17-lp152.2.16.1  | aarch64
+v | Main Update Repository | ruby-solv        | 0.7.16-lp152.2.13.1  | 0.7.17-lp152.2.16.1  | aarch64
+v | Main Update Repository | tcl              | 8.6.7-lp152.7.3.1    | 8.6.7-lp152.7.6.1    | aarch64
+v | Main Update Repository | tk               | 8.6.7-lp152.4.3.1    | 8.6.7-lp152.4.6.1    | aarch64
+v | Main Update Repository | yast2-security   | 4.2.19-lp152.2.12.1  | 4.2.23-lp152.2.15.1  | noarch
+v | Main Update Repository | yast2-storage-ng | 4.2.114-lp152.2.9.1  | 4.2.115-lp152.2.12.1 | aarch64
+v | Main Update Repository | zypper           | 1.14.42-lp152.2.15.1 | 1.14.43-lp152.2.18.1 | aarch64
+v | Main Update Repository | zypper-aptitude  | 1.14.42-lp152.2.15.1 | 1.14.43-lp152.2.18.1 | noarch
+</code></pre></div>
+</details>
+<h5 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">⚓︎</a></h5>
+<p>In order to install all necessary updates, you can simply type:
+<div class="highlight"><pre><span></span><code># zypper update
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper up
+</code></pre></div>
+You also have the option to update just a select few packages. And this is done, just like with installing
+and removing, by listing the packages you want to update after the command:
+<div class="highlight"><pre><span></span><code># zypper up package_1 package_2 ... package_n
+</code></pre></div></p>
+<h5 id="checking-for-patches">Checking for patches<a class="headerlink" href="#checking-for-patches" title="Permanent link">⚓︎</a></h5>
+<p>To check for available patches, type:
+<div class="highlight"><pre><span></span><code># zypper patch-check
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper pchk
+</code></pre></div>
+This will print out a table that shows the number of patches available for your system and how important they are</p>
+<details class="example" open="open">
+<summary>Example: Checking for patches</summary>
+<div class="highlight"><pre><span></span><code># sudo zypper pchk
+Loading repository data...
+Reading installed packages...
+
+Found 8 applicable patches:
+Category    | Updatestack | Patches
+------------+-------------+--------
+security    | -           | 1
+recommended | 1           | 5
+optional    | -           | 1
+
+1 patch optional                                 (use &#39;--with-optional&#39; to include optional patches)
+7 patches needed (1 security patch)
+</code></pre></div>
+</details>
+<h5 id="listing-patches">Listing patches<a class="headerlink" href="#listing-patches" title="Permanent link">⚓︎</a></h5>
+<p>If you looked at the example in the section above, you may have noticed that very little information is
+given about the patches. To see much better information about the patches themselves, type:
+<div class="highlight"><pre><span></span><code># zypper list-patches
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper lp
+</code></pre></div>
+This will output at least one table showing you the name, id, priority and a little note about each set of patches.</p>
+<details class="example" open="open">
+<summary>Example: Listing patches</summary>
+<div class="highlight"><pre><span></span><code># zypper lp
+Loading repository data...
+Reading installed packages...
+
+Needed software management updates will be installed first:
+
+Repository             | Name              | Category    | Severity | Interactive | Status | Summary
+-----------------------+-------------------+-------------+----------+-------------+--------+------------------------------------------------
+Main Update Repository | openSUSE-2021-456 | recommended | moderate | restart     | needed | Recommended update for libsolv, libzypp, zypper
+
+The following updates are also available:
+
+Repository             | Name              | Category    | Severity  | Interactive | Status   | Summary
+-----------------------+-------------------+-------------+-----------+-------------+----------+----------------------------------------
+Main Update Repository | openSUSE-2021-361 | optional    | low       | ---         | optional | Optional update for tk and tcl
+Main Update Repository | openSUSE-2021-433 | recommended | moderate  | ---         | needed   | Recommended update for yast2-storage-ng
+Main Update Repository | openSUSE-2021-434 | recommended | moderate  | ---         | needed   | Recommended update for yast2-security
+Main Update Repository | openSUSE-2021-438 | recommended | moderate  | ---         | needed   | Recommended update for efivar
+Main Update Repository | openSUSE-2021-439 | recommended | moderate  | ---         | needed   | Recommended update for zlib
+Main Update Repository | openSUSE-2021-462 | security    | important | ---         | needed   | Security update for grub2
+Main Update Repository | openSUSE-2021-463 | recommended | low       | ---         | needed   | Recommended update for hwdata
+
+Found 8 applicable patches:
+1 patch optional                                                                          (use &#39;--with-optional&#39; to include optional patches)
+7 patches needed (1 security patch)
+</code></pre></div>
+</details>
+<h5 id="installing-a-patch">Installing a patch<a class="headerlink" href="#installing-a-patch" title="Permanent link">⚓︎</a></h5>
+<p>To install all available patches type:
+<div class="highlight"><pre><span></span><code># zypper patch
+</code></pre></div>
+If you want to specify a specific category of patches, type:
+<div class="highlight"><pre><span></span><code># zypper patch -g CATEGORY
+</code></pre></div></p>
+<details class="example" open="open">
+<summary>Example: Applying only security patches</summary>
+<div class="highlight"><pre><span></span><code># sudo zypper patch -g security
+Loading repository data...
+Reading installed packages...
+Patch &#39;openSUSE-2021-456-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-463-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-456-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-439-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-438-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-434-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-433-1&#39; is not in the specified category.
+Patch &#39;openSUSE-2021-361-1&#39; is optional. Use &#39;zypper in patch:openSUSE-2021-361&#39; to install it, or &#39;--with-optional&#39; to include all optional patches.
+Resolving package dependencies...
+
+The following 3 NEW packages are going to be installed:
+  dmraid grub2-systemd-sleep-plugin os-prober
+
+The following NEW patch is going to be installed:
+  openSUSE-2021-462
+
+The following 2 packages are going to be upgraded:
+  grub2 grub2-arm64-efi
+
+2 packages to upgrade, 3 new.
+Overall download size: 3.7 MiB. Already cached: 0 B. After the operation, additional 706.9 KiB will be used.
+Continue? [y/n/v/...? shows all options] (y): y
+Retrieving package dmraid-1.0.0.rc16-lp152.5.3.aarch64                                                 (1/5), 133.8 KiB (528.0 KiB unpacked)
+Retrieving: dmraid-1.0.0.rc16-lp152.5.3.aarch64.rpm ..................................................................................[done]
+Retrieving package os-prober-1.76-lp152.3.2.aarch64                                                    (2/5),  51.6 KiB (188.4 KiB unpacked)
+Retrieving: os-prober-1.76-lp152.3.2.aarch64.rpm .....................................................................................[done]
+Retrieving package grub2-2.04-lp152.7.22.7.aarch64                                                     (3/5),   2.6 MiB ( 23.9 MiB unpacked)
+Retrieving: grub2-2.04-lp152.7.22.7.aarch64.rpm ..........................................................................[done (1.7 MiB/s)]
+Retrieving package grub2-systemd-sleep-plugin-2.04-lp152.7.22.7.noarch                                 (4/5),  64.6 KiB (  7.1 KiB unpacked)
+Retrieving: grub2-systemd-sleep-plugin-2.04-lp152.7.22.7.noarch.rpm ..................................................................[done]
+Retrieving package grub2-arm64-efi-2.04-lp152.7.22.7.noarch                                            (5/5), 885.3 KiB (  5.1 MiB unpacked)
+Retrieving: grub2-arm64-efi-2.04-lp152.7.22.7.noarch.rpm .................................................................[done (2.2 MiB/s)]
+
+Checking for file conflicts: .........................................................................................................[done]
+(1/5) Installing: dmraid-1.0.0.rc16-lp152.5.3.aarch64 ................................................................................[done]
+(2/5) Installing: os-prober-1.76-lp152.3.2.aarch64 ...................................................................................[done]
+(3/5) Installing: grub2-2.04-lp152.7.22.7.aarch64 ....................................................................................[done]
+(4/5) Installing: grub2-systemd-sleep-plugin-2.04-lp152.7.22.7.noarch ................................................................[done]
+(5/5) Installing: grub2-arm64-efi-2.04-lp152.7.22.7.noarch ...........................................................................[done]
+</code></pre></div>
+</details>
+<h5 id="distro-upgrading">Distro upgrading<a class="headerlink" href="#distro-upgrading" title="Permanent link">⚓︎</a></h5>
+<p>To do a distro upgrade, type:
+<div class="highlight"><pre><span></span><code># zypper dist-upgrade
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code># zypper dup
+</code></pre></div></p>
+<h4 id="more-advanced-commands">More advanced commands<a class="headerlink" href="#more-advanced-commands" title="Permanent link">⚓︎</a></h4>
+<p>If you are digging into these commands, then I think we can safely assume that you know what you are doing.
+All zypper commands have a plethora of options, which can be discovered in the man pages, or by adding
+<code>-h</code> to the end a subcommand invocation. This section is more to introduce you to things zypper can do!</p>
+<h5 id="rename-specified-repository">Rename specified repository<a class="headerlink" href="#rename-specified-repository" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>renamerepo</code> or <code>nr</code></li>
+</ul>
+<h5 id="modify-specified-repository">Modify specified repository<a class="headerlink" href="#modify-specified-repository" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>modifyrepo</code> or <code>mr</code></li>
+</ul>
+<h5 id="clean-local-caches">Clean local caches<a class="headerlink" href="#clean-local-caches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>clean</code> or <code>cc</code></li>
+</ul>
+<h5 id="verify-integrity-of-package-dependencies">Verify integrity of package dependencies<a class="headerlink" href="#verify-integrity-of-package-dependencies" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>verify</code> or <code>ve</code></li>
+</ul>
+<h5 id="install-source-packages-and-their-build-dependencies">Install source packages and their build dependencies<a class="headerlink" href="#install-source-packages-and-their-build-dependencies" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>source-install</code> or <code>si</code></li>
+</ul>
+<h5 id="install-newly-added-packages-recommended-by-installed-packages">Install newly added packages recommended by installed packages<a class="headerlink" href="#install-newly-added-packages-recommended-by-installed-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>install-new-recommends</code> or <code>inr</code></li>
+</ul>
+<h5 id="show-full-information-for-specified-packages">Show full information for specified packages<a class="headerlink" href="#show-full-information-for-specified-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>info</code> or <code>if</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ sudo zypper if [package]</code></p>
+</div>
+<h5 id="show-full-information-for-specified-patches">Show full information for specified patches<a class="headerlink" href="#show-full-information-for-specified-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patch-info</code></li>
+</ul>
+<h5 id="show-full-information-for-specified-patterns">Show full information for specified patterns<a class="headerlink" href="#show-full-information-for-specified-patterns" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>pattern-info</code></li>
+</ul>
+<h5 id="show-full-information-for-specified-products">Show full information for specified products<a class="headerlink" href="#show-full-information-for-specified-products" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>product-info</code></li>
+</ul>
+<h5 id="list-all-available-patches">List all available patches<a class="headerlink" href="#list-all-available-patches" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patches</code> or <code>pch</code></li>
+</ul>
+<h5 id="list-all-available-packages">List all available packages<a class="headerlink" href="#list-all-available-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>packages</code> or <code>pa</code></li>
+</ul>
+<h5 id="list-all-manually-installed-packages-as-a-single-history">List all manually installed packages as a single history<a class="headerlink" href="#list-all-manually-installed-packages-as-a-single-history" title="Permanent link">⚓︎</a></h5>
+<p>For the entire list:</p>
+<p><code>sudo cut -d "|" -f 1-4 -s --output-delimiter " | " /var/log/zypp/history | grep -v " radd "</code></p>
+<p>For a specific package:</p>
+<p><code>sudo cut -d "|" -f 1-4 -s --output-delimiter " | " /var/log/zypp/history | grep -v " radd " | grep "&lt;package name&gt;"</code></p>
+<h5 id="list-all-available-patterns">List all available patterns<a class="headerlink" href="#list-all-available-patterns" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>patterns</code> or <code>pt</code></li>
+</ul>
+<h5 id="list-all-available-products">List all available products<a class="headerlink" href="#list-all-available-products" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>products</code> or <code>pd</code></li>
+</ul>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code># zypper pd
+Loading repository data...
+Reading installed packages...
+S  | Repository                  | Internal Name         | Name                  | Version    | Arch   | Is Base
+---+-----------------------------+-----------------------+-----------------------+------------+--------+--------
+i+ | @System                     | openSUSE              | openSUSE Tumbleweed   | 20201216-0 | x86_64 | Yes
+   | openSUSE-Tumbleweed-Non-Oss | openSUSE-Addon-NonOss | openSUSE NonOSS Addon | 20201218-0 | x86_64 | No
+   | openSUSE-Tumbleweed-Non-Oss | openSUSE-Addon-NonOss | openSUSE NonOSS Addon | 20201218-0 | i586   | No
+v  | openSUSE-Tumbleweed-Oss     | openSUSE              | openSUSE Tumbleweed   | 20201218-0 | x86_64 | No
+v  | openSUSE-Tumbleweed-Oss     | openSUSE              | openSUSE Tumbleweed   | 20201218-0 | i586   | No
+   | openSUSE-Tumbleweed-Oss     | MicroOS               | openSUSE MicroOS      | 20201218-0 | x86_64 | No
+   | openSUSE-Tumbleweed-Oss     | MicroOS               | openSUSE MicroOS      | 20201218-0 | i586   | No
+</code></pre></div>
+</details>
+<h5 id="list-packages-providing-specified-capability">List packages providing specified capability<a class="headerlink" href="#list-packages-providing-specified-capability" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>what-provides</code> or <code>wp</code></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The subcommand <code>what-provides</code> is deprecated. It is replaced by <code>search --provides --match-exact</code>.</p>
+</div>
+<h5 id="add-a-package-lock">Add a package lock<a class="headerlink" href="#add-a-package-lock" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>locks</code> or <code>ll</code></li>
+</ul>
+<h5 id="remove-a-package-lock">Remove a package lock<a class="headerlink" href="#remove-a-package-lock" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>addlock</code> or <code>al</code></li>
+</ul>
+<h5 id="list-current-package-locks">List current package locks<a class="headerlink" href="#list-current-package-locks" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>removelock</code> or <code>rl</code></li>
+</ul>
+<h5 id="remove-useless-locks">Remove useless locks<a class="headerlink" href="#remove-useless-locks" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>cleanlocks</code> or <code>cl</code></li>
+</ul>
+<h5 id="list-requested-locales-languages-codes">List requested locales (languages codes)<a class="headerlink" href="#list-requested-locales-languages-codes" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>locales</code> or <code>lloc</code></li>
+</ul>
+<h5 id="add-locales-to-requested-locales">Add locale(s) to requested locales<a class="headerlink" href="#add-locales-to-requested-locales" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>addlocale</code> or <code>aloc</code></li>
+</ul>
+<h5 id="remove-locales-from-requested-locales">Remove locale(s) from requested locales<a class="headerlink" href="#remove-locales-from-requested-locales" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>removelocale</code> or <code>rloc</code></li>
+</ul>
+<h5 id="get-command-specific-help">Get command-specific help<a class="headerlink" href="#get-command-specific-help" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>help</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>$ zypper help in</code></p>
+</div>
+<h5 id="compare-two-version-strings">Compare two version strings<a class="headerlink" href="#compare-two-version-strings" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>versioncmp</code> or <code>vcmp</code></li>
+</ul>
+<h5 id="print-the-target-operating-system-id-string">Print the target operating system ID string<a class="headerlink" href="#print-the-target-operating-system-id-string" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>targetos</code> or <code>tos</code></li>
+</ul>
+<h5 id="print-report-about-licenses-and-eulas-of-installed-packages">Print report about licenses and EULAs of installed packages<a class="headerlink" href="#print-report-about-licenses-and-eulas-of-installed-packages" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>licenses</code></li>
+</ul>
+<h5 id="download-rpms-specified-on-the-commandline-to-a-local-directory">Download rpms specified on the commandline to a local directory<a class="headerlink" href="#download-rpms-specified-on-the-commandline-to-a-local-directory" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>download</code></li>
+</ul>
+<h5 id="download-source-rpms-for-all-installed-packages-to-a-local-directory">Download source rpms for all installed packages to a local directory<a class="headerlink" href="#download-source-rpms-for-all-installed-packages-to-a-local-directory" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>source-download</code></li>
+</ul>
+<h5 id="check-if-the-needs-reboot-flag-was-set">Check if the needs-reboot flag was set<a class="headerlink" href="#check-if-the-needs-reboot-flag-was-set" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>needs-rebooting</code></li>
+</ul>
+<h5 id="list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades">List running processes which might still use files and libraries deleted by recent upgrades<a class="headerlink" href="#list-running-processes-which-might-still-use-files-and-libraries-deleted-by-recent-upgrades" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>ps</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code># zypper ps</code></p>
+<p><code>$ sudo zypper ps</code></p>
+</div>
+<h5 id="remove-old-kernels">Remove old kernels<a class="headerlink" href="#remove-old-kernels" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><code>purge-kernels</code></li>
+</ul>
+<h3 id="global-options">Global Options<a class="headerlink" href="#global-options" title="Permanent link">⚓︎</a></h3>
+<details class="info" open="open">
+<summary>Show Options</summary>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Alias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--color</td>
+<td>Use colors in output</td>
+<td></td>
+</tr>
+<tr>
+<td>--config &lt;FILE&gt;</td>
+<td>Use specified config file instead of the default</td>
+<td>-c &lt;FILE&gt;</td>
+</tr>
+<tr>
+<td>--help</td>
+<td>Help</td>
+<td>-h</td>
+</tr>
+<tr>
+<td>--ignore-unknown</td>
+<td>Ignore unknown packages</td>
+<td>-i</td>
+</tr>
+<tr>
+<td>--no-abbrev</td>
+<td>Do not abbreviate text in tables</td>
+<td>-A</td>
+</tr>
+<tr>
+<td>--no-color</td>
+<td>Do no use colors in output</td>
+<td></td>
+</tr>
+<tr>
+<td>--non-interactive</td>
+<td>Do not ask anything, use default answers automatically</td>
+<td>-n</td>
+</tr>
+<tr>
+<td>--promptids</td>
+<td>Output a list of zypper's user prompts</td>
+<td></td>
+</tr>
+<tr>
+<td>--quiet</td>
+<td>Suppress normal output, print only error messages</td>
+<td>-q</td>
+</tr>
+<tr>
+<td>--table-style &lt;INTEGER&gt;</td>
+<td>Table style (0-11)</td>
+<td>-s &lt;INTEGER&gt;</td>
+</tr>
+<tr>
+<td>--terse</td>
+<td>Terse output for machine consumption</td>
+<td>-t</td>
+</tr>
+<tr>
+<td>--userdata &lt;STRING&gt;</td>
+<td>User defined transaction id used in history and plugins</td>
+<td></td>
+</tr>
+<tr>
+<td>--verbose</td>
+<td>Increase verbosity</td>
+<td>-v</td>
+</tr>
+<tr>
+<td>--version</td>
+<td>Output the version number</td>
+<td>-V</td>
+</tr>
+<tr>
+<td>--xmlout</td>
+<td>Switch to XML output</td>
+<td>-x</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="repository-options">Repository Options<a class="headerlink" href="#repository-options" title="Permanent link">⚓︎</a></h3>
+<details class="info" open="open">
+<summary>Show Options</summary>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Alias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--disable-repositories</td>
+<td>Do not read meta-data from repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--gpg-auto-import-keys</td>
+<td>Automatically trust and import new repository signing keys</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-gpg-checks</td>
+<td>Ingore GPG check failures</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-cd</td>
+<td>Ignore CD/DVD repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-refresh</td>
+<td>Do not refresh the repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--no-remote</td>
+<td>Ignore remote repositories</td>
+<td></td>
+</tr>
+<tr>
+<td>--plus-content &lt;TAG&gt;</td>
+<td>Additionally use disabled repositories providing a specific keyword</td>
+<td></td>
+</tr>
+<tr>
+<td>--plus-repo &lt;URI&gt;</td>
+<td>Use an additional repository</td>
+<td>-p &lt;URI&gt;</td>
+</tr>
+<tr>
+<td>--releasever</td>
+<td>Set the value of $releasever in all .repo files</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="command-options">Command Options<a class="headerlink" href="#command-options" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Command-specific options can be obtained using <code># zypper help &lt;COMMAND&gt;</code></p>
+</div>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code># zypper help in
+install (in) [OPTIONS] &lt;CAPABILITY|RPM_FILE_URI&gt; ...
+
+Install packages with specified capabilities or RPM files with specified location. A capability is
+NAME[.ARCH][OP&lt;VERSION&gt;], where OP is one of &lt;, &lt;=, =, &gt;=, &gt;.
+
+Command options:
+
+-t, --type &lt;TYPE&gt;           Type of package (package, patch, pattern, product).
+-n, --name                  Select packages by plain name, not by capability. Default: false
+-C, --capability            Select packages solely by capability. Default: false
+    --details               Show the detailed installation summary. Default: false
+    --from &lt;ALIAS|#|URI&gt;    Select packages from the specified repository.
+    --oldpackage            Allow to replace a newer item with an older one. Handy if you are doing
+                            a rollback. Unlike --force it will not enforce a reinstall. Default:
+                            false
+    --allow-unsigned-rpm    Silently install unsigned rpm packages given as commandline parameters.
+                            Default: false
+-f, --force                 Install even if the item is already installed (reinstall), downgraded or
+                            changes vendor or architecture. Default: false
+-r, --repo &lt;ALIAS|#|URI&gt;    Work only with the specified repository.
+-y, --no-confirm            Don&#39;t require user interaction. Alias for the --non-interactive global
+                            option. Default: false
+-D, --dry-run               Don&#39;t change anything, just report what would be done. A meaningful file
+                            conflict check can only be performed if used together with
+                            &#39;--download-only&#39;. Default: false
+    --replacefiles          Install the packages even if they replace files from other, already
+                            installed, packages. Default is to treat file conflicts as an error.
+                            --download-as-needed disables the fileconflict check. Default: false
+-l, --auto-agree-with-licenses
+                            Automatically say &#39;yes&#39; to third party license confirmation prompt. See
+                            &#39;man zypper&#39; for more details. Default: false
+    --download &lt;MODE&gt;       Set the download-install mode. Available modes: only, in-advance,
+                            in-heaps, as-needed Default: DownloadDefault
+-d, --download-only         Only download the packages, do not install.
+
+Solver options
+
+    --debug-solver          Create a solver test case for debugging.
+    --force-resolution      Force the solver to find a solution (even an aggressive one) rather than
+                            asking.
+-R, --no-force-resolution   Do not force the solver to find a solution, let it ask.
+    --solver-focus &lt;MODE&gt;   Set the solvers general attitude when resolving a job.
+    --recommends            Install also recommended packages in addition to the required ones.
+    --no-recommends         Do not install recommended packages, only required ones.
+
+Expert options
+
+    --allow-downgrade
+    --no-allow-downgrade    Whether to allow downgrading installed resolvables.
+    --allow-name-change
+    --no-allow-name-change  Whether to allow changing the names of installed resolvables.
+    --allow-arch-change
+    --no-allow-arch-change  Whether to allow changing the architecture of installed resolvables.
+    --allow-vendor-change
+    --no-allow-vendor-change
+                            Whether to allow changing the vendor of installed resolvables.
+</code></pre></div>
+</details>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2022-07-15
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../yast_installer/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installing
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../updating_upgrading_reverting/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Updating, upgrading, snapshots and best practices
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made by openSUSE volunteers, using <a href="https://www.mkdocs.org/">MkDocs</a> 
+        and the <a href="https://squidfunk.github.io/mkdocs-material/">Material theme</a>.
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://www.opensuse.org" target="_blank" rel="noopener" title="openSUSE Main Website" class="md-footer-social__link">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256.00001" version="1.1" id="svg8">
+  <defs id="defs2"/>
+  <metadata id="metadata5">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <circle r="98" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.96168292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path907" cx="128" cy="127.99999"/>
+  <path style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:13.84463978;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 128,16 A 112,112 0 0 0 16,128 112,112 0 0 0 128,240 112,112 0 0 0 240,128 112,112 0 0 0 128,16 Z m 0,14 a 97.998915,97.999659 0 0 1 98,98 97.998915,97.999659 0 0 1 -98,98 97.998915,97.999659 0 0 1 -73.763183,-33.66528 c 7.061098,-5.10706 18.640211,-3.80284 32.872314,-2.19605 6.934989,0.81013 14.833329,1.71669 23.008059,1.89869 22.82389,0.14504 47.40688,-4.07013 62.55908,-10.69825 9.80273,-4.26047 16.0584,-7.09653 19.97802,-10.66064 1.40972,-1.16811 2.14191,-3.06412 2.90357,-5.10474 l 0.53491,-1.34839 c 0.63379,-1.65411 1.56454,-5.13956 1.97388,-7.04956 0.16481,-0.8414 0.35765,-1.66518 -0.33838,-2.20288 -0.6363,-0.49168 -2.09863,0.38964 -2.09863,0.38964 -6.65366,4.00476 -23.28584,11.58939 -38.83667,11.91334 -19.30731,0.38942 -58.425755,-19.5443 -62.478764,-21.64942 -2.71264,-6.45909 -5.424076,-12.92177 -8.175778,-19.3645 27.986982,18.44043 51.201812,28.63435 68.971192,30.20631 19.78212,1.76219 35.20114,-9.03277 41.89404,-13.5232 0.87612,-0.58244 1.75161,-1.23425 2.55493,-1.86109 h 0.004 c 0.14375,-0.11214 0.47936,-0.40775 0.43579,-0.68017 -1.10961,-6.93392 -11.43969,-40.557897 -19.25854,-48.644534 -2.15437,-2.202672 -3.87946,-4.375411 -7.37256,-6.418947 -28.28567,-16.482787 -95.389828,-26.430355 -98.533705,-26.88574 0,0 -0.316184,-0.06492 -0.534912,0.14868 -0.169835,0.165952 -0.20337,0.485353 -0.20337,0.485353 0,0 -0.257656,13.903155 -0.297362,15.457768 -2.533803,-0.851287 -10.99503,-3.594596 -22.948243,-6.788093 A 97.998915,97.999659 0 0 1 128,30 Z m 20.42578,56.851078 c 0.4763,-0.0079 0.95442,-0.0035 1.43384,0.01199 15.81694,0.565582 28.24724,13.917972 27.70434,29.717522 -0.29835,7.66562 -3.50617,14.77959 -9.09692,19.98145 -5.60761,5.26668 -12.90665,7.97471 -20.61206,7.71607 -15.79992,-0.5826 -28.21547,-13.9073 -27.68555,-29.72095 0.28408,-7.66561 3.49191,-14.778768 9.09693,-19.996831 5.25711,-4.90819 12.01497,-7.59416 19.15942,-7.709222 z m 0.1897,8.457758 c -4.99469,0.0623 -9.69358,1.940689 -13.33862,5.359374 -3.88819,3.64661 -6.17999,8.5876 -6.34204,13.93677 -0.37225,11.05356 8.28161,20.35056 19.30981,20.75732 5.36323,0.16206 10.47533,-1.73499 14.38622,-5.38159 3.90522,-3.66361 6.15261,-8.6024 6.32325,-13.93163 0.37225,-11.05065 -8.28164,-20.337805 -19.33545,-20.729989 -0.33538,-0.01207 -0.6702,-0.01444 -1.00317,-0.01024 z m 4.27929,10.060794 c 4.91126,0 8.89014,2.64343 8.89014,5.93189 0,3.25718 -3.98164,5.91479 -8.89014,5.91479 -4.91139,0 -8.87817,-2.65746 -8.87817,-5.91479 0,-3.28846 3.96678,-5.93189 8.87817,-5.93189 z" id="path820-3-6"/>
+  <circle style="opacity:0.3;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.088377;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path872" cx="787.51135" cy="-1078.8389" r="0"/>
+</svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/openSUSE" target="_blank" rel="noopener" title="openSUSE GitHub" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+      
+    
+  </body>
+</html>

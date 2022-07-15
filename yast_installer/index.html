@@ -1,0 +1,1929 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../image/geeko-color.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.2.8">
+    
+    
+      
+        <title>Installing - openSUSE User Documentation Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.92558b1b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,400i,700%7CFira+Code&display=fallback">
+        <style>:root{--md-text-font-family:"Noto Sans TC";--md-code-font-family:"Fira Code"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../styles.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-by-step-guide-for-opensuse-leap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="openSUSE User Documentation Project" class="md-header__button md-logo" aria-label="openSUSE User Documentation Project" data-md-component="logo">
+      
+  <img src="../image/Button-filled-colour.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            openSUSE User Documentation Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/openSUSE/openSUSE-docs-revamped-temp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="openSUSE User Documentation Project" class="md-nav__button md-logo" aria-label="openSUSE User Documentation Project" data-md-component="logo">
+      
+  <img src="../image/Button-filled-colour.png" alt="logo">
+
+    </a>
+    openSUSE User Documentation Project
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/openSUSE/openSUSE-docs-revamped-temp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Version Selector
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Before installing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Before installing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Before installing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pick_an_image/" class="md-nav__link">
+        Choosing a distribution
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image_choice/" class="md-nav__link">
+        Preparing the installation media
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Installing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Installing
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-continue" class="md-nav__link">
+    Before you continue
+  </a>
+  
+    <nav class="md-nav" aria-label="Before you continue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimum-system-requirements" class="md-nav__link">
+    Minimum system requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precautions" class="md-nav__link">
+    Precautions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    Welcome
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-keyboard-and-license-agreement" class="md-nav__link">
+    Language, keyboard and license agreement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-activation" class="md-nav__link">
+    Network activation
+  </a>
+  
+    <nav class="md-nav" aria-label="Network activation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-settings" class="md-nav__link">
+    Network settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-repositories" class="md-nav__link">
+    Online repositories
+  </a>
+  
+    <nav class="md-nav" aria-label="Online repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-online-repositories" class="md-nav__link">
+    List of online repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-role" class="md-nav__link">
+    System role
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-partitioning" class="md-nav__link">
+    Suggested Partitioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guided-setup" class="md-nav__link">
+    Guided Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-partitioner" class="md-nav__link">
+    Expert Partitioner
+  </a>
+  
+    <nav class="md-nav" aria-label="Expert Partitioner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-partition-schemes" class="md-nav__link">
+    About partition schemes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-pre-existent-windows-partitions" class="md-nav__link">
+    Installing Leap alongside pre-existent Windows partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-pre-existent-linux-partitions" class="md-nav__link">
+    Installing Leap alongside pre-existent Linux partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-pre-existent-macos-partitions" class="md-nav__link">
+    Installing Leap alongside pre-existent macOS partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picking-a-filesystem-for-data-partitions" class="md-nav__link">
+    Picking a filesystem for data partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luks-encryption" class="md-nav__link">
+    LUKS encryption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-zone" class="md-nav__link">
+    Time Zone
+  </a>
+  
+    <nav class="md-nav" aria-label="Time Zone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clock-and-time-zone" class="md-nav__link">
+    Clock and Time Zone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-settings" class="md-nav__link">
+    User Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="User Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-user" class="md-nav__link">
+    Local User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-overview" class="md-nav__link">
+    Installation Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-settings" class="md-nav__link">
+    Installation Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Learning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_1" checked>
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        openSUSE core tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="openSUSE core tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          openSUSE core tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zypper/" class="md-nav__link">
+        Zypper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        YaST2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating_upgrading_reverting/" class="md-nav__link">
+        Updating, upgrading, snapshots and best practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snapper/" class="md-nav__link">
+        Snapper and Btrfs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety_usability/" class="md-nav__link">
+        Safety and usability on Tumbleweed
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Distro basics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Distro basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Distro basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_of_post/" class="md-nav__link">
+        Post-installation best-of
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kde/" class="md-nav__link">
+        KDE Plasma basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        GNOME basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" data-md-state="indeterminate" type="checkbox" id="__nav_6_4" checked>
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Additional software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Additional software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Additional software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alternative_procurement/" class="md-nav__link">
+        Software procurement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Building from source
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.md" class="md-nav__link">
+        Troubleshooting with autonomy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Completing and fine-tuning your setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Completing and fine-tuning your setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Completing and fine-tuning your setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" data-md-state="indeterminate" type="checkbox" id="__nav_7_1" checked>
+      
+      <label class="md-nav__link" for="__nav_7_1">
+        Audio & Video
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Audio & Video" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Audio & Video
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codecs/" class="md-nav__link">
+        Codecs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipewire/" class="md-nav__link">
+        Pipewire
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" data-md-state="indeterminate" type="checkbox" id="__nav_7_2" checked>
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_proprietary/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Dual GPUs ("Optimus")
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3">
+        Peripherals
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Peripherals" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Peripherals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bluetooth/" class="md-nav__link">
+        Bluetooth
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kdeconnect/" class="md-nav__link">
+        KDE Connect
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3_3">
+        Printers & scanners
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Printers & scanners" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Printers & scanners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../printersetc/" class="md-nav__link">
+        Printers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        Power management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" data-md-state="indeterminate" type="checkbox" id="__nav_7_5" checked>
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Advanced fine-tunings
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Advanced fine-tunings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced fine-tunings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zstd/" class="md-nav__link">
+        Transparent compression (zstd)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Experimenting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        Giving back to the community
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Giving back to the community" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Giving back to the community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        The art of reporting bugs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference_docs/" class="md-nav__link">
+        Other sources of documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_4" data-md-state="indeterminate" type="checkbox" id="__nav_9_4" checked>
+      
+      <label class="md-nav__link" for="__nav_9_4">
+        Contribute to this docs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contribute to this docs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to this docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown.md" class="md-nav__link">
+        Markdown flavour
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../todo/" class="md-nav__link">
+        Todo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A contributor's checklist
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-continue" class="md-nav__link">
+    Before you continue
+  </a>
+  
+    <nav class="md-nav" aria-label="Before you continue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimum-system-requirements" class="md-nav__link">
+    Minimum system requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precautions" class="md-nav__link">
+    Precautions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome" class="md-nav__link">
+    Welcome
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-keyboard-and-license-agreement" class="md-nav__link">
+    Language, keyboard and license agreement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-activation" class="md-nav__link">
+    Network activation
+  </a>
+  
+    <nav class="md-nav" aria-label="Network activation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-settings" class="md-nav__link">
+    Network settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-repositories" class="md-nav__link">
+    Online repositories
+  </a>
+  
+    <nav class="md-nav" aria-label="Online repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-online-repositories" class="md-nav__link">
+    List of online repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-role" class="md-nav__link">
+    System role
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk" class="md-nav__link">
+    Disk
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-partitioning" class="md-nav__link">
+    Suggested Partitioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guided-setup" class="md-nav__link">
+    Guided Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-partitioner" class="md-nav__link">
+    Expert Partitioner
+  </a>
+  
+    <nav class="md-nav" aria-label="Expert Partitioner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-partition-schemes" class="md-nav__link">
+    About partition schemes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-pre-existent-windows-partitions" class="md-nav__link">
+    Installing Leap alongside pre-existent Windows partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-pre-existent-linux-partitions" class="md-nav__link">
+    Installing Leap alongside pre-existent Linux partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-leap-alongside-pre-existent-macos-partitions" class="md-nav__link">
+    Installing Leap alongside pre-existent macOS partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picking-a-filesystem-for-data-partitions" class="md-nav__link">
+    Picking a filesystem for data partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luks-encryption" class="md-nav__link">
+    LUKS encryption
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-zone" class="md-nav__link">
+    Time Zone
+  </a>
+  
+    <nav class="md-nav" aria-label="Time Zone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clock-and-time-zone" class="md-nav__link">
+    Clock and Time Zone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-settings" class="md-nav__link">
+    User Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="User Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-user" class="md-nav__link">
+    Local User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-overview" class="md-nav__link">
+    Installation Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-settings" class="md-nav__link">
+    Installation Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="step-by-step-guide-for-opensuse-leap">Step by step guide for openSUSE Leap<a class="headerlink" href="#step-by-step-guide-for-opensuse-leap" title="Permanent link">⚓︎</a></h1>
+<h2 id="before-you-continue">Before you continue<a class="headerlink" href="#before-you-continue" title="Permanent link">⚓︎</a></h2>
+<p>This guide targets <strong>openSUSE Leap</strong>; however the differences between the installers for the openSUSE variants -- like Tumbleweed, MicroOS and Kubic -- are minor and most parts of the installer will be identical.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Expect slight differences in <em>System Role</em> and <em>Installation Settings</em>.</p>
+</div>
+<h3 id="minimum-system-requirements">Minimum system requirements<a class="headerlink" href="#minimum-system-requirements" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Any AMD64/Intel* EM64T processor (32-bit processors are not supported).</li>
+<li>1 GB physical RAM (4 GB or more strongly recommended).</li>
+<li>10 GB available disk space for a minimal installation, 16 GB for a graphical desktop (more is recommended). In case you plan to use <em>Btrfs</em> snapshots, a minimum of 40 GB for the root partition is recommended.</li>
+<li>Supports most modern sound and graphics cards, 1024 x 768 display resolution (higher recommended).</li>
+</ul>
+<h3 id="precautions">Precautions<a class="headerlink" href="#precautions" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Make sure that you have backed up all your data from the disk where you're planning to install openSUSE to.</li>
+<li>If installing on a separate drive, it is recommended to disconnect the drives not in use. You can always probe foreign operating systems to Grub from a finalized installation with <em>YaST</em>, but selecting the wrong drive to install openSUSE will overwrite the disk destroying the data on it.</li>
+<li>In case you are using a Network image (Netiso) make sure that you have a strong internet connection. A wired connection is always more reliable than a Wi-Fi one.</li>
+<li>If installing on a laptop, it is good practice to plug in the AC charger.</li>
+</ul>
+<p>You are now ready to boot the USB drive, which you have previously prepared - as explained in the <a href="../image_choice/">Preparing the installation media</a> section - and turn on your computer. Boot from the USB drive and select installation from the boot menu.</p>
+<p>If you want to see the details of the installation while the installer is booting you can press the <code>ESC</code> key.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>On the left you will see a list of items where you can follow the steps you will take next or have already taken. You can always press <code>Back</code> in case you want to change something you configured earlier.</p>
+</details>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">⚓︎</a></h2>
+<h2 id="welcome">Welcome<a class="headerlink" href="#welcome" title="Permanent link">⚓︎</a></h2>
+<h3 id="language-keyboard-and-license-agreement">Language, keyboard and license agreement<a class="headerlink" href="#language-keyboard-and-license-agreement" title="Permanent link">⚓︎</a></h3>
+<p><em>Welcome to the YaST installer!</em></p>
+<p>Here you can change the language under <code>Language</code> (Alt+L), change the keyboard layout under <code>Keyboard Layout</code> (Alt+K) and you have a chance to test your selected keyboard layout in the field under <code>Keyboard Test</code> (Alt+y).</p>
+<p>The <code>License Agreement</code> informs you on roles, responsibilities and potential limitations.</p>
+<h2 id="network-activation">Network activation<a class="headerlink" href="#network-activation" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Online repositories</p>
+<p>If you have an active internet connection over an ethernet cable connected to your computer, right after you pass the <em>"Language, Keyboard and License Agreement"</em> section you will be prompted, asking if you want to <em>"Activate online repositories now?"</em>.It is recommended to select <em>Yes</em> which will provide you with a list of repositories, pre-selecting the main ones in advance and will download updated packages from the online repository during the installation. If you're on a metered connection you press "No". </p>
+</div>
+<h3 id="network-settings">Network settings<a class="headerlink" href="#network-settings" title="Permanent link">⚓︎</a></h3>
+<p>You can skip this part if:
+* you have an active wired internet connection which can be automatically configured by the system; or
+* you're not planning to use online repositories during the installation process and rely on the packages provided by the DVD installer.   </p>
+<p>If you don't have a network connection -- because you have don't have an ethernet port or you're using wireless connections only -- you will be prompted to configure your network settings. By default the YaST system installer is using <em>Wicked</em> as the network controller. Keep in mind that if you choose to use <em>Network Manager</em> (NM) instead of <em>Wicked</em>, your network configuration will not be transferred from <em>Wicked</em> to <em>Network Manager</em>.</p>
+<p>You will see a list of available network adapters in a list from which you can select the one that you wish to configure and press <code>Edit</code>. In case of configuring a wireless adapter you will see the <code>Wireless Specific</code> tab open. Here you can <code>Scan Network</code>, select the name of your wireless network (SSID), select the authentication mode -- which in most cases will be WPA-PSK "home" -- and input your password. 
+On the <code>Addresses</code> tab you will be able to configure the IP address of your adapter. You can select <code>Dynamic Address</code> in which case you will receive an address from your router/other dhcp server on your network or <code>Statically Assigned IP Address</code> in which case you need to type an ip address, a subnet mask and a hostname. Click <code>Next</code> when finished.  <br />
+<img alt="Wireless configuration" src="../image/yast_wireless_specific.png" /></p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Wireless networks configured here will be transferred to the finalized system as well, regardless the solution you are choosing to use to manage your connections.</p>
+</details>
+<p><strong>If</strong> you configured a statically assigned IP address:
+1. Switch to the <code>Routing</code> tab.
+2. Press <code>Add</code>, add your default gateway address and select the network adapter to which you want this route assigned to.
+3. Press <code>OK</code> then <code>Next</code> to apply your changes and continue the installation.</p>
+<h2 id="online-repositories">Online repositories<a class="headerlink" href="#online-repositories" title="Permanent link">⚓︎</a></h2>
+<h3 id="list-of-online-repositories">List of online repositories<a class="headerlink" href="#list-of-online-repositories" title="Permanent link">⚓︎</a></h3>
+<p>These repositories are the following:</p>
+<ul>
+<li><em>Update Repository (Non-OSS)</em>: Non-free -- as in Free Open-Source Software (FOSS) -- update repository. Provides security and maintenance updates for the distribution. <em>Selected by default.</em></li>
+<li><em>Non-OSS Repository</em>: Non-free repository. Provides packages like Steam. <em>Selected by default.</em></li>
+<li><em>Main Update Repository</em>: Main free -- as in FOSS -- update repository. Provides security and maintenance updates for the distribution. <em>Selected by default.</em></li>
+<li><em>Main Repository</em>: Main free repository provides FOSS only. <em>Selected by default.</em></li>
+<li><em>Update Repository (Debug)</em>: A repository for those who want to debug application updates for openSUSE, for experts only. </li>
+<li><em>Untested Updates</em>: Security and maintenance updates that requires testing. Add this repository if you want to participate in testing.</li>
+<li><em>Source Repository</em>: Provides all source packages in the distribution, for experts only.</li>
+<li><em>Debug Repository</em>: A repository for those who want to debug applications for openSUSE, for experts only.</li>
+</ul>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Keep in mind that if you're on a metered network and you choose to add the online repos, the installer will download packages with newer versions. </p>
+</details>
+<h3 id="system-role">System role<a class="headerlink" href="#system-role" title="Permanent link">⚓︎</a></h3>
+<p>At this section of the preparation you can select from a list of predefined use cases which will tailor the system for the selected scenario. It is recommended to take a look at the <a href="../pick_an_image/">Choosing the right image</a> page prior to continuing as it provides a brief explanation of desktop environments. Do note if you're using a DVD installer without an active internet connection, some of the listed desktop environments will not be available.</p>
+<ul>
+<li><em>Desktop with KDE Plasma</em>: the Plasma desktop with KDE applications.</li>
+<li><em>Desktop with GNOME</em>: the GNOME desktop with GNOME applications.</li>
+<li><em>Generic Desktop</em>: IceWM, a minimal desktop environment with minimal amount of packages.</li>
+<li><em>Server</em>: A server installation without providing any graphical environment. <em>Not recommended for inexperienced users.</em></li>
+<li><em>Transactional Server</em>: A server installation with a read-only root filesystem in an immutable server style. This will provide atomic, automatic updates and packages can be installed with <code>transactional-update</code> only. <em>Not recommended for inexperienced users.</em></li>
+</ul>
+<p>Select one and press <strong>Next</strong> to continue.</p>
+<h2 id="disk">Disk<a class="headerlink" href="#disk" title="Permanent link">⚓︎</a></h2>
+<h3 id="suggested-partitioning">Suggested Partitioning<a class="headerlink" href="#suggested-partitioning" title="Permanent link">⚓︎</a></h3>
+<p><img alt="Suggested Partitioning" src="../image/yast_suggested_partitioning.png" /> </p>
+<h3 id="guided-setup">Guided Setup<a class="headerlink" href="#guided-setup" title="Permanent link">⚓︎</a></h3>
+<h3 id="expert-partitioner">Expert Partitioner<a class="headerlink" href="#expert-partitioner" title="Permanent link">⚓︎</a></h3>
+<h4 id="about-partition-schemes">About partition schemes<a class="headerlink" href="#about-partition-schemes" title="Permanent link">⚓︎</a></h4>
+<p>Most Linux distributions use the same "base" partition scheme:</p>
+<ul>
+<li>a <em>bootloader partition</em>, hosting a small program called a <em>bootloader</em>, whose purpose is to take over from the UEFI/BIOS of your computer and set up the initial conditions for your operating system to get running </li>
+<li>a main <em>data partition</em> (or <em>OS partition</em>), which is where the operating system (i.e. <em>Leap</em>) is installed, optionally along with your personal user data.</li>
+<li>(recommended but not necessary) a swap partition of the size of your machine's RAM, + 1 GB</li>
+</ul>
+<p>If you are not interested in keeping whatever data or operating system is installed on the target machine, you can simply proceed with the base partition scheme. In that cases, simply run the installer and, on the <em>Disk</em> screen, pick the <em>Suggested Partitioning</em> option, and accept all recommendations there. </p>
+<p>Chances are, however, that you will want to install Leap on a disk with an already functional operating system (i.e. Windows, macOS, or another Linux distribution). Or that you will want to install more operating systems alongside <em>Leap</em> easily and reliably in the future. These families of scenarios require some extra steps with respect to the "base" partition scheme above.</p>
+<h4 id="installing-leap-alongside-pre-existent-windows-partitions">Installing Leap alongside pre-existent Windows partitions<a class="headerlink" href="#installing-leap-alongside-pre-existent-windows-partitions" title="Permanent link">⚓︎</a></h4>
+<p>If you have Windows installed already, you are likely to have the following (physical) partitions already:</p>
+<ul>
+<li>one 'recovery partition', about 500 MB large, usually using the <em>Fat32</em> filesystem (we won't consider it further as it is not relevant to what comes next)</li>
+<li>one 'Windows data' partition, usually using the <em>Fat32</em> filesystem, hosting both Windows and your user data (you want to leave it untouched)</li>
+<li>one 'Windows bootloader' partition, about 100 MB large, using the <em>Fat32</em> filesystem, hosting the Windows bootloader.</li>
+</ul>
+<p>We recommend adding to these physical partitions a single 'Leap OS' partition, at least 40 GB large, using the <em>Btrfs</em> filesystem. Please scroll down to <a href="./#picking-a-file-system-for-data-partitions">pick a filesystem for data partitions</a> to for more details as to why we recommend <em>Btrfs</em>.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>The 'Leap OS' partition will host the Leap bootloader under the <code>/boot</code> subvolume, the operating system directly under <code>/</code> and your user data under the <code>/home</code> subvolume. Do note that, by default, a <code>/home</code> directory will be installed to store your user data. Also by default, this directory will be excluded from the snapshotting system, which means that there will be no <em>Btrfs</em> backups for your user data. This permits rollbacks between snapshots to proceed smoothly, leaving your user data in no incoherent state. This also means that you will need to manually manage your user data <a href="backing_up.md">back ups</a>.</p>
+</details>
+<p>Alternatively, you might want to install your user data under a separate partition, also mounted as <code>/home</code>, using any file system of your liking. This might come in handy if you plan on using multiple operating systems reading from, and writing to, a single user data partition.</p>
+<p>Whichever option you choose, you can refer to the following instructions:</p>
+<p><u>Step by step: Expert partitioning for Windows</u></p>
+<ol>
+<li>From the <em>Disk</em> view, select <em>Expert Partitioner</em></li>
+<li>Click the <strong>Add Partition</strong> button (bottom left-hand side)</li>
+<li>Assign it at least 40 GBs, and set its filesystem to <em>Btrfs</em>, and the mount point to <code>/</code>. You could label this partition 'Leap OS'.</li>
+<li>If it is not set already, set the <code>/boot/efi</code> flag your 'Windows bootloader' partition (the ~100MB partition probably using the <em>Fat32</em> filesystem)</li>
+<li>(recommended) Add a <code>swap</code> partition with a size equal to your current RAM + 1 GB.</li>
+</ol>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Even though this makes no difference from the installer's point of view, we recommend assigning meaningful labels to each partition, to make them easier to reidentify them.</p>
+</details>
+<p>The result should look like this:</p>
+<p><u>Check list: Expert partitioning for Windows</u></p>
+<ul>
+<li>(old) ... some other Windows partitions ...</li>
+<li>(old) <code>/boot/efi</code>, <em>Fat32</em>, ~ 100 MB</li>
+<li>(new) <code>/</code>, <em>Btrfs</em>, &gt; 40 GB</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because you are installing the Leap bootloader on a non-btrfs partition, the bootloader will be outside of the scope of the snapshotting system. This means that you won't be able to rollback from a misconfigured bootloader settings, and that in general rolling back won't suffice to fix issues with your bootloader configuration. See <a href="../snapper/">Introduction to snapper</a> for details. Consider also <a href="https://doc.opensuse.org/documentation/leap/reference/html/book.opensuse.reference/cha-snapper.html#sec-snapper-snapshot-boot">the official documentation</a> on snapper rollbacks.</p>
+</div>
+<p>Optionally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>After the installation you will want to switch between Leap and Windows. Use <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">these instructions</a> to learn how to reboot to your UEFI. From there you will be able to select Windows or Leap as boot destination.</p>
+</details>
+<h4 id="installing-leap-alongside-pre-existent-linux-partitions">Installing Leap alongside pre-existent Linux partitions<a class="headerlink" href="#installing-leap-alongside-pre-existent-linux-partitions" title="Permanent link">⚓︎</a></h4>
+<p>You can follow the <em>Step by Step</em> from the previous section, making sure that:</p>
+<ul>
+<li>you flag your already existent bootloader partition as <code>/boot/efi</code></li>
+<li>(if it already exists on the disk before installing <em>Leap</em>) you flag your user data partition as <code>/home</code>, or alternatively, that you apply steps (4 &amp; 5) if you need to have a <code>/home</code> partition outside of <code>/</code>.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure there is enough space (&gt;100 MB is fine) on whatever partition you're installing your bootloader(s) to. Resize it if necessary.</p>
+</div>
+<p><u>Check list: Expert partitioning for multiple Linux distributions</u></p>
+<ul>
+<li>(old) ... some other partitions ...</li>
+<li>(old) <code>/boot/efi</code>, preferably <em>Btrfs</em>, &gt; 100 MB</li>
+<li>(new) <code>/</code>, <em>Btrfs</em>, &gt; 40 GB</li>
+</ul>
+<p>Optionally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>After the installation you will want to switch between Leap and whichever operating system you're using. Refer to your machine's manufacturer for instructions. If your machine had Windows preinstalled, use <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">these instructions</a> to learn how to reboot to your UEFI. From there you will be able to select the desired boot destination.</p>
+</details>
+<h4 id="installing-leap-alongside-pre-existent-macos-partitions">Installing Leap alongside pre-existent macOS partitions<a class="headerlink" href="#installing-leap-alongside-pre-existent-macos-partitions" title="Permanent link">⚓︎</a></h4>
+<p>The installation process for Mac users interested in dual-booting Leap alongside their macOS partitions is simple:</p>
+<p><u>Step by step: Expert partitioning for Mac</u></p>
+<ol>
+<li>From the <em>Disk</em> view, select <em>Expert Partitioner</em></li>
+<li>Click the <strong>Add Partition</strong> button (bottom left-hand side)</li>
+<li>Create a new <em>Btrfs</em> partition of at least 100 MB for the Leap bootloader. Set it the <code>/boot/efi</code> mount point. You could label this partition 'Leap bootloader'.</li>
+<li>Create a new <em>Btrfs</em> partition of at least 40 GBs by repeating (2). Set it the <code>/</code> mount point. You could label this partition 'Leap OS'.</li>
+<li>(recommended) Create a <code>swap</code> partition with a size equal to your current RAM + 1 GB.</li>
+</ol>
+<p><u>Check list: Expert partitioning for macOS</u></p>
+<ul>
+<li>(old) ... some macOS partitions ...</li>
+<li>(new) <code>/boot/efi</code>, <em>Btrfs</em>, &gt; 100 MB</li>
+<li>(new) <code>/</code>, <em>Btrfs</em>, &gt; 40 GB</li>
+</ul>
+<p>Optionally, you could create a new partition for your user data under <code>/home</code>. This partition would then be easily accessible to other operating systems installed on your machine. If you do so, make sure there is no <code>/home</code> subvolume created inside the partition assigned to <code>/</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some recent Macs have been reported to ship with firmware lock enabled by default. Refer to <a href="https://support.apple.com/en-gb/HT204455">this guide</a> to disable it.</p>
+</div>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>After the installation you will want to switch between Leap and macOS. Simply hold the <code>alt</code> (option) key immediately after restarting and select Leap or macOS.</p>
+</details>
+<h4 id="picking-a-filesystem-for-data-partitions">Picking a filesystem for data partitions<a class="headerlink" href="#picking-a-filesystem-for-data-partitions" title="Permanent link">⚓︎</a></h4>
+<p>The <em>Leap</em> installer allows you to pick among several filesystems for <em>data partitions</em>, which for the purpose of this section we define as any partition mounted as <code>/</code> (root) or having root on its path (i.e. <code>/home</code>). Among the supported filesystems for data partitions you will find:</p>
+<ul>
+<li><em>Btrfs</em></li>
+<li><em>Ext4</em></li>
+<li><em>XFS</em></li>
+</ul>
+<p>However, <em>Btrfs</em> has been the preferred filesystem for all openSUSE distributions for several years. This filesystem boasts a powerful <em>copy-on-write</em> logic, which lies at the heart of openSUSE's approach to stability: <em>Btrfs</em> allows to conveniently create and use <em>snapshots</em>, aka 'restoration points' on Windows (see <a href="../snapper/">Introduction to snapper</a> for details). For this reason we highly recommend you to use it for all your data partitions when installing <em>Leap</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Snapshots take advantage of the <em>copy-on-write</em> logic of <em>Btrfs</em>. On a copy-on write filesystem, submitted changes do not overwrite the previous state; instead, changes are 'moved' to a different location on the disk, so that the location of origin is left unchanged. Together with 'deduplication' rules aimed at minimizing redundancies between file changes, this logic allows for the layering of several versions of an entire filesystem, with each layer representing different sets of changes. These sets of changes thus correspond to meaningful actions from the end user's perspective, such as 'before installing package X', 'before creating subvolume Y', etc.
+Renouncing <em>Btrfs</em> thus means renouncing this feature. Given that <em>Tumbleweed</em> was designed around this feature, it will not work as intended unless you pick this filesystem.</p>
+</div>
+<h4 id="luks-encryption">LUKS encryption<a class="headerlink" href="#luks-encryption" title="Permanent link">⚓︎</a></h4>
+<p>If you are installing <em>Leap</em> on a laptop, or generally on any machine accessible to untrusted individuals, we highly recommend protecting your data with a <em>full disk encryption</em>. The price to pay is that doing so will entirely wipe out your drive. The obvious advantage, however, is that this will protect your data with a sound security model. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Full disk encryption contrasts with <em>partition encryption</em> in that it protects your entire physical drive using cryptographic techniques. For reasons that go beyond the scope of this document, partition encryption is significantly less secure than full disk encryption. In pictures, partition encryption is like locking your house with an old fashioned padlock and hiding the key in a flowerpot lying on the terrace, while full disk encryption is like locking your house with a digital padlock and keeping the code only in your mind.</p>
+</div>
+<p>To apply full disk encryption while installing, you can either use the <em>Guided Setup</em> feature or manually create the partition scheme first and then apply encryption. If you do the latter, you can simply reproduce the steps listed below:</p>
+<p><u>Step by step: Guided partitioning for LUKS on Btrfs</u></p>
+<ol>
+<li>Select <em>Guided Setup</em> from the <em>Disk</em> screen</li>
+<li>Check <em>Enable Disk Encryption</em>, and enter a strong password in both text fields</li>
+<li>Then, on the <em>Filesystem Options</em> screen:<ul>
+<li>Select <em>Btrfs</em>.</li>
+<li>Tick the <em>Enable Snapshots</em> checkbox (<a href="./#picking-a-file-system-for-data-partitions">scroll up</a> or see <a href="../snapper/">this document</a> to understand the reason why we recommend this).</li>
+<li>Select <em>Btrfs</em> again as <em>File System Type</em> for your any mount point / partition presented to you by the installer.</li>
+</ul>
+</li>
+</ol>
+<p>Alternatively, if you prefer to turn to a different filesystem than <em>Btrfs</em> (typically <em>Ext4</em>) follow the following steps:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using <em>Ext4</em> on either <code>/</code> or <code>/boot</code> will prevent you from using <code>snapper</code> snapshots.</p>
+</div>
+<p><u>Step by step (Guided Setup: LUKS + LVM + Ext4)</u></p>
+<ol>
+<li>Select <em>Guided Setup</em>'<em> from the _Disk</em> screen</li>
+<li>Check <em>Enable LVM</em>'<em> and _Enable Disk Encryption</em>, and enter a strong password in both text fields</li>
+<li>Then, on the <em>Filesystem Options</em> screen:<ul>
+<li>Select <em>Ext4</em>.</li>
+<li>Tick the <em>Enable Snapshots</em> checkbox (<a href="./#picking-a-file-system-for-data-partitions">scroll up</a> or see <a href="../snapper/">this document</a> to understand the reason why we recommend this).</li>
+<li>Tick the <em>Propose Separate Home LVM Logical Volume</em> checkbox.</li>
+<li>Select <em>Ext4</em> again as <em>File System Type</em> for your <code>/home</code> directory.</li>
+<li>Tick the <em>Propose Separate Swap LVM Logical Volume</em>.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The recommended setup mentioned here makes use of the <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">cryptsetup</a> utility in conjunction with an LVM partition. <code>cryptsetup</code> is a popular and trusted tool in the Linux community implementing the LUKS Linux kernel standard, using the <code>aes-xts-plain64</code> encryption standard. As for LVM, it is a partitioning scheme that allows your machine to see multiple physical disks as one single (logical) partition, or vice-versa, to see one unique physical disk as multiple (logical) partitions. LVM &amp; LUKS work well together, with LVM considerably simplifying encryption - decryption operations.</p>
+</div>
+<h2 id="time-zone">Time Zone<a class="headerlink" href="#time-zone" title="Permanent link">⚓︎</a></h2>
+<h3 id="clock-and-time-zone">Clock and Time Zone<a class="headerlink" href="#clock-and-time-zone" title="Permanent link">⚓︎</a></h3>
+<p>Select your region and the time zone that you want to use for the system. The hardware clock is by default set to UTC. Select <em>Other Settings</em> for other time settings:</p>
+<ul>
+<li><em>Manually</em>: Set time and date manually.</li>
+<li><em>Synchronize with NTP Server</em>: Automatically synchronize time and date with the provided NTP servers which you can initiate right now by selecting <em>"Synchronize now"</em>.</li>
+<li><em>Run NTP as daemon</em>: Run NTP as a daemon so the service always runs and starts automatically on boot and sets the time and date based on the received values from the NTP server.</li>
+<li><em>Save NTP Configuration</em>: save or discard the NTP configuration into the installed system.</li>
+</ul>
+<h2 id="user-settings">User Settings<a class="headerlink" href="#user-settings" title="Permanent link">⚓︎</a></h2>
+<h3 id="local-user">Local User<a class="headerlink" href="#local-user" title="Permanent link">⚓︎</a></h3>
+<p>At this point you can create a local user or skip that by selecting <em>Skip User Creation</em> you can set up a password for <code>root</code>. 
+You need to fill out the empty fields in order to create a first user:</p>
+<ul>
+<li><em>User's Full Name</em>: A human-friendly version of your username, which will be shown in login windows for example.</li>
+<li><em>Username</em>: The actual username for your account. This will be used in all login contexts, whether dialogue boxes or terminal prompts, including virtual console (vc) or over Secure Shell (SSH).</li>
+<li><em>Password</em>: The password for your user to secure your account.</li>
+</ul>
+<p>By default you will also use this newly created account to act as the administrator. The password set there will be set for the <code>root</code> user as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Root user</p>
+<p>openSUSE creates the root user by default, in contrast to other Linux distributions. To avoid using the same password for both users, untick the <em>Use this password for system administrator</em> checkbox. Clicking <strong>Next</strong> will take you to the page where you can set a different password for root. At this page you can also import existing SSH public keys. This is useful if you're installing openSUSE over another distribution.</p>
+</div>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
+<h2 id="installation-overview">Installation Overview<a class="headerlink" href="#installation-overview" title="Permanent link">⚓︎</a></h2>
+<h3 id="installation-settings">Installation Settings<a class="headerlink" href="#installation-settings" title="Permanent link">⚓︎</a></h3>
+<p>This is the final and probably an important section of the installer, <strong>don't skip it</strong>! You can and should review your settings, fine tune your installation if you need to and can even gain access to the <em>YaST Software Installer</em> which can be used to install additional packages or patterns. To change any of the settings just click the <em>headlines</em> (like "Software" or "Security").
+After you reviewed the settings you can move on with the installation which will finalize your openSUSE deployment based on your provided information.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Patterns are a group of packages that allows the user to easily install otherwise complex packages and configurations - like KDE Plasma or Gnome -.</p>
+</details>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2022-07-15
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../image_choice/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Preparing the installation media
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../zypper/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Zypper
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made by openSUSE volunteers, using <a href="https://www.mkdocs.org/">MkDocs</a> 
+        and the <a href="https://squidfunk.github.io/mkdocs-material/">Material theme</a>.
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://www.opensuse.org" target="_blank" rel="noopener" title="openSUSE Main Website" class="md-footer-social__link">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256.00001" version="1.1" id="svg8">
+  <defs id="defs2"/>
+  <metadata id="metadata5">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <circle r="98" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.96168292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path907" cx="128" cy="127.99999"/>
+  <path style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:13.84463978;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 128,16 A 112,112 0 0 0 16,128 112,112 0 0 0 128,240 112,112 0 0 0 240,128 112,112 0 0 0 128,16 Z m 0,14 a 97.998915,97.999659 0 0 1 98,98 97.998915,97.999659 0 0 1 -98,98 97.998915,97.999659 0 0 1 -73.763183,-33.66528 c 7.061098,-5.10706 18.640211,-3.80284 32.872314,-2.19605 6.934989,0.81013 14.833329,1.71669 23.008059,1.89869 22.82389,0.14504 47.40688,-4.07013 62.55908,-10.69825 9.80273,-4.26047 16.0584,-7.09653 19.97802,-10.66064 1.40972,-1.16811 2.14191,-3.06412 2.90357,-5.10474 l 0.53491,-1.34839 c 0.63379,-1.65411 1.56454,-5.13956 1.97388,-7.04956 0.16481,-0.8414 0.35765,-1.66518 -0.33838,-2.20288 -0.6363,-0.49168 -2.09863,0.38964 -2.09863,0.38964 -6.65366,4.00476 -23.28584,11.58939 -38.83667,11.91334 -19.30731,0.38942 -58.425755,-19.5443 -62.478764,-21.64942 -2.71264,-6.45909 -5.424076,-12.92177 -8.175778,-19.3645 27.986982,18.44043 51.201812,28.63435 68.971192,30.20631 19.78212,1.76219 35.20114,-9.03277 41.89404,-13.5232 0.87612,-0.58244 1.75161,-1.23425 2.55493,-1.86109 h 0.004 c 0.14375,-0.11214 0.47936,-0.40775 0.43579,-0.68017 -1.10961,-6.93392 -11.43969,-40.557897 -19.25854,-48.644534 -2.15437,-2.202672 -3.87946,-4.375411 -7.37256,-6.418947 -28.28567,-16.482787 -95.389828,-26.430355 -98.533705,-26.88574 0,0 -0.316184,-0.06492 -0.534912,0.14868 -0.169835,0.165952 -0.20337,0.485353 -0.20337,0.485353 0,0 -0.257656,13.903155 -0.297362,15.457768 -2.533803,-0.851287 -10.99503,-3.594596 -22.948243,-6.788093 A 97.998915,97.999659 0 0 1 128,30 Z m 20.42578,56.851078 c 0.4763,-0.0079 0.95442,-0.0035 1.43384,0.01199 15.81694,0.565582 28.24724,13.917972 27.70434,29.717522 -0.29835,7.66562 -3.50617,14.77959 -9.09692,19.98145 -5.60761,5.26668 -12.90665,7.97471 -20.61206,7.71607 -15.79992,-0.5826 -28.21547,-13.9073 -27.68555,-29.72095 0.28408,-7.66561 3.49191,-14.778768 9.09693,-19.996831 5.25711,-4.90819 12.01497,-7.59416 19.15942,-7.709222 z m 0.1897,8.457758 c -4.99469,0.0623 -9.69358,1.940689 -13.33862,5.359374 -3.88819,3.64661 -6.17999,8.5876 -6.34204,13.93677 -0.37225,11.05356 8.28161,20.35056 19.30981,20.75732 5.36323,0.16206 10.47533,-1.73499 14.38622,-5.38159 3.90522,-3.66361 6.15261,-8.6024 6.32325,-13.93163 0.37225,-11.05065 -8.28164,-20.337805 -19.33545,-20.729989 -0.33538,-0.01207 -0.6702,-0.01444 -1.00317,-0.01024 z m 4.27929,10.060794 c 4.91126,0 8.89014,2.64343 8.89014,5.93189 0,3.25718 -3.98164,5.91479 -8.89014,5.91479 -4.91139,0 -8.87817,-2.65746 -8.87817,-5.91479 0,-3.28846 3.96678,-5.93189 8.87817,-5.93189 z" id="path820-3-6"/>
+  <circle style="opacity:0.3;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.088377;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path872" cx="787.51135" cy="-1078.8389" r="0"/>
+</svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/openSUSE" target="_blank" rel="noopener" title="openSUSE GitHub" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+      
+    
+  </body>
+</html>

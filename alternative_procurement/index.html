@@ -1,0 +1,1926 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../image/geeko-color.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.2.8">
+    
+    
+      
+        <title>Software procurement - openSUSE User Documentation Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.92558b1b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,400i,700%7CFira+Code&display=fallback">
+        <style>:root{--md-text-font-family:"Noto Sans TC";--md-code-font-family:"Fira Code"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../styles.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#obtaining-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="openSUSE User Documentation Project" class="md-header__button md-logo" aria-label="openSUSE User Documentation Project" data-md-component="logo">
+      
+  <img src="../image/Button-filled-colour.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            openSUSE User Documentation Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software procurement
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/openSUSE/openSUSE-docs-revamped-temp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="openSUSE User Documentation Project" class="md-nav__button md-logo" aria-label="openSUSE User Documentation Project" data-md-component="logo">
+      
+  <img src="../image/Button-filled-colour.png" alt="logo">
+
+    </a>
+    openSUSE User Documentation Project
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/openSUSE/openSUSE-docs-revamped-temp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Version Selector
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Before installing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Before installing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Before installing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pick_an_image/" class="md-nav__link">
+        Choosing a distribution
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image_choice/" class="md-nav__link">
+        Preparing the installation media
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yast_installer/" class="md-nav__link">
+        Installing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Learning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_5_1" checked>
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        openSUSE core tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="openSUSE core tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          openSUSE core tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zypper/" class="md-nav__link">
+        Zypper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        YaST2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating_upgrading_reverting/" class="md-nav__link">
+        Updating, upgrading, snapshots and best practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snapper/" class="md-nav__link">
+        Snapper and Btrfs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety_usability/" class="md-nav__link">
+        Safety and usability on Tumbleweed
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Distro basics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Distro basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Distro basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_of_post/" class="md-nav__link">
+        Post-installation best-of
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kde/" class="md-nav__link">
+        KDE Plasma basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        GNOME basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Additional software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Additional software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Additional software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Software procurement
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Software procurement
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#official-and-third-party-rpm-repositories" class="md-nav__link">
+    Official and third-party RPM repositories
+  </a>
+  
+    <nav class="md-nav" aria-label="Official and third-party RPM repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-opensuse-software-website" class="md-nav__link">
+    The openSUSE Software website
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-repositories-from-third-party-providers" class="md-nav__link">
+    Using repositories from third-party providers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when-to-use" class="md-nav__link">
+    Pros, cons, when to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-remote-providers" class="md-nav__link">
+    Third-party remote providers
+  </a>
+  
+    <nav class="md-nav" aria-label="Third-party remote providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when" class="md-nav__link">
+    Pros, cons, when
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatpaks" class="md-nav__link">
+    Flatpaks
+  </a>
+  
+    <nav class="md-nav" aria-label="Flatpaks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-details" class="md-nav__link">
+    Additional details
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    How it works
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improving-desktop-integration-kde-plasma" class="md-nav__link">
+    Improving desktop integration (KDE Plasma)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatseal" class="md-nav__link">
+    Flatseal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when-to-use_1" class="md-nav__link">
+    Pros, cons, when to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appimage" class="md-nav__link">
+    AppImage
+  </a>
+  
+    <nav class="md-nav" aria-label="AppImage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when_1" class="md-nav__link">
+    Pros, cons, when
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-conclusion" class="md-nav__link">
+    Summary and conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Building from source
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.md" class="md-nav__link">
+        Troubleshooting with autonomy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Completing and fine-tuning your setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Completing and fine-tuning your setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Completing and fine-tuning your setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" data-md-state="indeterminate" type="checkbox" id="__nav_7_1" checked>
+      
+      <label class="md-nav__link" for="__nav_7_1">
+        Audio & Video
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Audio & Video" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Audio & Video
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codecs/" class="md-nav__link">
+        Codecs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipewire/" class="md-nav__link">
+        Pipewire
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" data-md-state="indeterminate" type="checkbox" id="__nav_7_2" checked>
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Graphic Drivers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Graphic Drivers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Graphic Drivers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_proprietary/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid_graphics/" class="md-nav__link">
+        Dual GPUs ("Optimus")
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3">
+        Peripherals
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Peripherals" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Peripherals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bluetooth/" class="md-nav__link">
+        Bluetooth
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kdeconnect/" class="md-nav__link">
+        KDE Connect
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3_3">
+        Printers & scanners
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Printers & scanners" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Printers & scanners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../printersetc/" class="md-nav__link">
+        Printers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        Power management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" data-md-state="indeterminate" type="checkbox" id="__nav_7_5" checked>
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        Advanced fine-tunings
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Advanced fine-tunings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced fine-tunings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zstd/" class="md-nav__link">
+        Transparent compression (zstd)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Experimenting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        Giving back to the community
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Giving back to the community" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Giving back to the community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        The art of reporting bugs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference_docs/" class="md-nav__link">
+        Other sources of documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_4" data-md-state="indeterminate" type="checkbox" id="__nav_9_4" checked>
+      
+      <label class="md-nav__link" for="__nav_9_4">
+        Contribute to this docs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contribute to this docs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to this docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown.md" class="md-nav__link">
+        Markdown flavour
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../todo/" class="md-nav__link">
+        Todo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A contributor's checklist
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#official-and-third-party-rpm-repositories" class="md-nav__link">
+    Official and third-party RPM repositories
+  </a>
+  
+    <nav class="md-nav" aria-label="Official and third-party RPM repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-opensuse-software-website" class="md-nav__link">
+    The openSUSE Software website
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-repositories-from-third-party-providers" class="md-nav__link">
+    Using repositories from third-party providers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when-to-use" class="md-nav__link">
+    Pros, cons, when to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-remote-providers" class="md-nav__link">
+    Third-party remote providers
+  </a>
+  
+    <nav class="md-nav" aria-label="Third-party remote providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when" class="md-nav__link">
+    Pros, cons, when
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatpaks" class="md-nav__link">
+    Flatpaks
+  </a>
+  
+    <nav class="md-nav" aria-label="Flatpaks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-details" class="md-nav__link">
+    Additional details
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    How it works
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improving-desktop-integration-kde-plasma" class="md-nav__link">
+    Improving desktop integration (KDE Plasma)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatseal" class="md-nav__link">
+    Flatseal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when-to-use_1" class="md-nav__link">
+    Pros, cons, when to use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appimage" class="md-nav__link">
+    AppImage
+  </a>
+  
+    <nav class="md-nav" aria-label="AppImage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-cons-when_1" class="md-nav__link">
+    Pros, cons, when
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-conclusion" class="md-nav__link">
+    Summary and conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="obtaining-software">Obtaining software<a class="headerlink" href="#obtaining-software" title="Permanent link">⚓︎</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>When it comes to getting software, modern Linux operating systems have access to a wide array of methods and formats.
+The openSUSE distributions are no exception:</p>
+<ul>
+<li>
+<p>The official and unofficial repositories, which you interact with from <code>zypper</code>, and which provide binaries packaged as RPM files.</p>
+</li>
+<li>
+<p>Third-party installers, which you interact with from a command prompt by downloading files (for example, with <code>wget</code>, <code>curl</code>, or <code>git</code>).
+    These may provide you with a something ready to install, complete with binaries and installation scripts.
+    Alternatively, they may only include source code and build scripts which you have to compile yourself.</p>
+</li>
+<li>
+<p><em>Flatpak</em> is a delivery tool for containerized desktop application.
+    It provides apps packaged up with all their dependencies.
+    You typically interact with it using the <code>flatpak</code> command-line utility.</p>
+</li>
+<li>
+<p><em>Snapcraft</em> is Ubuntu's equivalent to Flatpak.
+    It similarly provides apps in single files, containerized with their dependencies.
+    You typically interact with it using the <code>snapd</code> command-line utility.</p>
+</li>
+<li>
+<p><em>AppImages</em> are a vendor-neutral, cross-distro app format.
+    Apps are delivered as a single files, which you manually download from websites and various hosts.
+    AppImages do not need any supporting tools, they only need to be marked executable.</p>
+</li>
+</ul>
+<p>The goal of this document is to help you understand these formats and methods, as well as their strengths and weaknesses.
+We will also make a few openSUSE-specific recommendations along the way.</p>
+<h2 id="official-and-third-party-rpm-repositories">Official and third-party RPM repositories<a class="headerlink" href="#official-and-third-party-rpm-repositories" title="Permanent link">⚓︎</a></h2>
+<p>RPM packages (<code>.rpm</code>) are the traditional and most common way of obtaining new software on openSUSE distributions.
+Installing RPM packages works like this:</p>
+<ol>
+<li>
+<p>Find the repository providing the package you are looking for.</p>
+<ul>
+<li>If the package is provided by one of the official repositories, which are preconfigured in openSUSE, such as <a href="https://download.opensuse.org/update/tumbleweed/">download.opensuse.org/update/tumbleweed/</a>, it will show up in <code>zypper search &lt;package_name&gt;</code>.</li>
+<li>If the package is <em>not</em> provided by an official repository, you will first need to add the repository.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <code>zypper lr -d</code> to list all your repositories and their addresses.</p>
+</div>
+</li>
+<li>
+<p>Install the target package with <code>sudo zypper in &lt;package_name&gt;</code>.</p>
+</li>
+</ol>
+<h3 id="the-opensuse-software-website">The <em>openSUSE Software</em> website<a class="headerlink" href="#the-opensuse-software-website" title="Permanent link">⚓︎</a></h3>
+<p>The openSUSE project offers a website where contributors can find software packages for easy installation, especially those built using the <em>openSUSE Build Service</em>.
+The site can be found at <a href="https://software.opensuse.org/">software.opensuse.org</a>.</p>
+<p>It offers a search engine and references to official and unofficial software repositories.
+In addition, in some cases, the tool also offers downloadable packages for Debian, Ubuntu, Fedora, or other Linux distributions.</p>
+<p>It also offers easy installation using the <em>YaST</em> administration tool of openSUSE.
+If a package is available for your version of openSUSE, click the link with the version number.
+This will download a <code>.ymp</code> file which your web browser should offer to open using the YaST software management tool.
+If not, you can click on the <code>.ymp</code> file in your file manager and YaST should open it.
+YaST will then add any necessary repositories, asking you for permission in the process, and then install the program and its dependencies.</p>
+<p>For free and open-source software, using this is usually easier than manually adding a third-party repository.
+In some cases, you may also find packages of proprietary freeware.
+However, if you need a proprietary application, such as Google Chrome, Skype, or Microsoft Teams, you should obtain it directly from the vendor.
+If they have a Linux repository, you can add it to your system, or download and install an RPM directly.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After installing from a <code>.ymp</code> file, you will remain subscribed to all RPM repositories referenced in that file.
+In many cases, the package you wanted to install initially isn't the only RPM provided by the repository.
+Carelessly updating (with <code>zypper up</code> or <code>zypper dup</code>) afterwards can lead to surprising changes in your software selection.
+This is especially when you accidentally subscribe to repositories meant for different distribution versions.</p>
+</div>
+<h3 id="using-repositories-from-third-party-providers">Using repositories from third-party providers<a class="headerlink" href="#using-repositories-from-third-party-providers" title="Permanent link">⚓︎</a></h3>
+<p>Certain application providers offer RPM packages and RPM repositories themselves.
+In some cases, the RPM package will not only install the desired application but also add the RPM repository to the system, enabling application updates.
+For example, Google provides the official Chrome package this way.</p>
+<ol>
+<li>
+<p>After downloading an RPM package, check it.
+    Most trustworthy providers cryptographically sign their RPMs, providing you with an <code>.asc</code> file containing a public key.
+    This lets you verify that the package has not been tampered with:</p>
+<div class="highlight"><pre><span></span><code>$   rpm --import &lt;the-package-public-key&gt;.asc
+$   rpm --checksig &lt;the-rpm-package-file&gt;.rpm
+</code></pre></div>
+</li>
+<li>
+<p>To install the package, point <code>zypper</code> to the RPM file:</p>
+<div class="highlight"><pre><span></span><code>sudo zypper in ~/Downloads/&lt;package&gt;.rpm
+</code></pre></div>
+</li>
+</ol>
+<p>We recommend that you enable the <em>refresh</em> setting for the repositories of the applications you use most.
+If you don't do this, in some configurations, <code>sudo zypper dup</code> will not automatically acquire updates for the package provided by that repository.</p>
+<ol>
+<li>
+<p>Find out the number of of the repo and whether the <em>refresh</em> setting is enabled:</p>
+<div class="highlight"><pre><span></span><code>$   sudo zypper modifyrepo --refresh &lt;repo_number&gt;
+</code></pre></div>
+<p>The first column of the table, <code>#</code>, indicates the repo number.
+The last column of the table, <code>Refresh</code>, indicates whether the <em>refresh</em> setting is enabled (<code>Yes</code>) or not (<code>No</code>).</p>
+</li>
+<li>
+<p>For repos that are not yet set to refresh automatically, enable the <em>refresh</em> setting:</p>
+<div class="highlight"><pre><span></span><code>$   sudo zypper modifyrepo --refresh &lt;repo_number&gt;
+</code></pre></div>
+</li>
+</ol>
+<h3 id="pros-cons-when-to-use">Pros, cons, when to use<a class="headerlink" href="#pros-cons-when-to-use" title="Permanent link">⚓︎</a></h3>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>
+<p>The most "natural" way to install programs in the openSUSE ecosystem.</p>
+</li>
+<li>
+<p>Has the best performance (startup time and execution speed) of all solutions.</p>
+</li>
+<li>
+<p>Uses the lowest amount of RAM and hard drive capacity.</p>
+</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>
+<p>Heavily depends upon the libraries and other dependencies provided by your operating system.
+    You may not be able to install the latest versions of some programs, because the supporting libraries provided by your distro are too old.
+    Conversely, it can also mean that drastic changes in your system-wide dependencies might prevent the program from running at all.</p>
+</li>
+<li>
+<p>Depends on the availability of the distribution packagers and maintainers
+    Other solutions are more developer-driven or benefit from cross-distribution maintainership (<em>Flatpaks</em>, <em>Snaps</em> and <em>AppImages</em>).</p>
+</li>
+<li>
+<p>You depend on the maintainers and software-packagers of your distribution.
+    Other solutions are more developer-driven or benefit from cross-distribution maintenance (<em>Flatpaks</em>, <em>Snaps</em> and <em>AppImages</em>).</p>
+</li>
+</ul>
+<p><strong>Best used when:</strong></p>
+<ul>
+<li>
+<p>The software you are installing is a core utility or library (e.g. <code>curl</code>, <code>gcc</code>, <code>python-devel</code>).</p>
+</li>
+<li>
+<p>You know that you won't need several versions of the software installed at the same time.</p>
+</li>
+<li>
+<p>You need stability and minimal resource usage.</p>
+</li>
+<li>
+<p>You can afford a marginally slower update pace than with other solutions.</p>
+</li>
+</ul>
+<h2 id="third-party-remote-providers">Third-party remote providers<a class="headerlink" href="#third-party-remote-providers" title="Permanent link">⚓︎</a></h2>
+<p>We use "third-party remote providers" to mean websites, services or remote machines offering automatic installation using scripts provided along with the desired application.</p>
+<p>Since the details of the installation depend on custom-made installation scripts, your experience with this method can vary significantly from one provider to another.
+Thoroughly follow the instructions mentioned by the provider.
+For example, installing the Rust developer stack is a simple as copying and pasting this command into a terminal window:</p>
+<div class="highlight"><pre><span></span><code>$   curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre></div>
+<p>Then follow the interactive instructions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Installation scripts might require <code>sudo</code> rights.
+Be mindful about what you are installing, and from whom and where you obtained it.</p>
+</div>
+<h3 id="pros-cons-when">Pros, cons, when<a class="headerlink" href="#pros-cons-when" title="Permanent link">⚓︎</a></h3>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>
+<p>Has the best performance (startup time and execution speed) of all solutions.</p>
+</li>
+<li>
+<p>Uses the lowest amount of RAM and hard drive capacity.</p>
+</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>
+<p>No control over the behaviour of the script, especially if the script asks to be run as <code>sudo</code>.
+    This can incur some risk.</p>
+</li>
+<li>
+<p>Heavily depends upon libraries and other dependencies provided by your operating system.
+    This means that drastic changes in your system-wide dependencies might prevent the program from running at all.</p>
+</li>
+</ul>
+<p><strong>Best used when:</strong></p>
+<ul>
+<li>
+<p>You are 100% sure you can trust the provider.</p>
+</li>
+<li>
+<p>The software you are installing is a command-line tool that is not integral to the system.</p>
+</li>
+<li>
+<p>You know that you won't need several versions of the software installed at the same time.</p>
+</li>
+<li>
+<p>You need maximal performance and minimal resource usage.</p>
+</li>
+</ul>
+<h2 id="flatpaks">Flatpaks<a class="headerlink" href="#flatpaks" title="Permanent link">⚓︎</a></h2>
+<p><em>Flatpak</em> is a complete solution for installing, updating and running desktop applications from a containerized environment (see <a href="https://docs.flatpak.org/en/latest/introduction.html">flatpak official documentation</a> for more information).
+It makes use of the following components:</p>
+<ul>
+<li>
+<p>The <code>flatpak</code> command line utility</p>
+</li>
+<li>
+<p>A remote application store at <a href="https://flathub.org/">flathub.org</a></p>
+</li>
+<li>
+<p>Application references, such as <code>com.spotify.Client</code>, organized by the Flathub store</p>
+</li>
+<li>
+<p>A local repository used to store applications along with their dependencies (by default, <code>/var/lib/flatpak</code>)</p>
+</li>
+</ul>
+<p>On openSUSE distributions, you can install support for Flatpak as follows:</p>
+<ol>
+<li>
+<p>Install the command line utility (not required if it's installed already; to double-check, see if <code>flatpak --version</code> returns something):
+    <div class="highlight"><pre><span></span><code>$   sudo zypper in flatpak
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the Flathub store as an external flatpak repository:
+    <div class="highlight"><pre><span></span><code>$   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</code></pre></div></p>
+</li>
+<li>
+<p>Restart your system.
+    From now on you will be able to install any of the numerous apps provided from <em>Flathub</em>, as in:
+    <div class="highlight"><pre><span></span><code>$   flatpak install --user flathub com.spotify.Client
+</code></pre></div></p>
+</li>
+</ol>
+<p>Bear in mind:</p>
+<ul>
+<li>
+<p>We recommend using the <code>--user</code> flag during the installation of Flatpaks.
+    With the <code>--user</code> flag, applications are installed in your home directory.
+    In combination with a separate <code>/home</code> partition, this means that applications will remain installed even when the root file system (<code>/</code>) is deleted during a new installation.</p>
+</li>
+<li>
+<p>Installing applications (with or without <code>--user</code>) should automatically export a <code>.desktop</code> file to <code>/var/lib/flatpak/exports/share/applications</code> and add the corresponding symlinks to your system.
+    This means applications will show up in your desktop environment's application launchers and other menus right after you have installed them (no reboot required).</p>
+</li>
+</ul>
+<p>To update Flatpaks, use:
+<div class="highlight"><pre><span></span><code>$   flatpak update
+</code></pre></div></p>
+<p>To update a single Flatpak application, instead do:
+<div class="highlight"><pre><span></span><code>$   flatpak update &lt;the.application.name&gt;
+</code></pre></div></p>
+<h3 id="additional-details">Additional details<a class="headerlink" href="#additional-details" title="Permanent link">⚓︎</a></h3>
+<h4 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">⚓︎</a></h4>
+<p>The two main themes behind Flatpaks are <em>binary versioning control</em> and <em>containerization</em>.</p>
+<p>Binary versioning control (BVC) ensures that the system sees Flatpak applications not as files with a given name.
+It also that tracks them against the context of a full versioning control system, such as Git.
+Flatpak applications are thus much like Git branches, in that they "wear their origin upon their sleeves".
+For example, for the Spotify application, the <code>flatpak</code> command has the following tracking information:
+<div class="highlight"><pre><span></span><code>$   flatpak list
+Spotify com.spotify.Client      1.1.55.498.gf9a83c60    stable  system
+</code></pre></div>
+This amounts to, in this order:</p>
+<ul>
+<li>
+<p>A human-friendly name</p>
+</li>
+<li>
+<p>The exact name as defined by the provider</p>
+</li>
+<li>
+<p>The (Git) snapshot it is built from</p>
+</li>
+<li>
+<p>The (Git) branch hosting the snapshot (here, <em>stable</em>)</p>
+</li>
+<li>
+<p>The installation site (here, it is installed for the <em>system</em>, which means it can be run by any other user of the machine).</p>
+</li>
+</ul>
+<p>Under this constraint, any difference in the name or snapshot or branch or installation site will determine a different Flatpak application reference.
+Two applications that are byte-for-byte identical will not collide with one another if they are different in other aspects of their reference.
+This means that, at any point, you can identify the portion of the codebase from which the application stems and that is relevant to the binary you are running.
+This also means you can install multiple variants of one application through multiple application references side by side.</p>
+<p>The other main theme behind Flatpaks is containerization.
+Here, that means that Flatpak applications run in isolation from one another.
+This is made possible by taking advantage of the binary versioning control system mentioned above.
+Flatpak allows developers to specify a particular <em>runtime</em> for their app, which is the context against which their applications is to run, and that serves as a proxy for the full operating system.
+Because of BVC, developers are free to specify different runtimes for the same byte-to-byte identical binaries, or conversely, the same runtime for widely different binaries, should they happen to have similar requirements.
+The Flatpak system then makes sure that runtimes meet the requirements of the applications they are associated with by their developers, and are executing in mutually inaccessible memory spaces.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>While Flatpak applications share some dependencies if they share the same runtime, users can't ensure that <em>all</em> dependencies are shared between different applications.
+ For users, there is also no way to ensure that different Flatpak applications use the same runtime, as dependencies on runtimes are specified by developers.
+This means that some duplication is to be expected, wasting some disk space.</p>
+</div>
+<h4 id="improving-desktop-integration-kde-plasma">Improving desktop integration (KDE Plasma)<a class="headerlink" href="#improving-desktop-integration-kde-plasma" title="Permanent link">⚓︎</a></h4>
+<p>The degree of independence that Flatpaks enjoy with respect to the host operating system means that some frictions may occur now and then.
+This is particularly true for applications (and runtimes) which do not play nice with recent rendering and compositing frameworks.
+For example, dragging and dropping a file for sending via a messaging application running as a Flatpak might not work as seamlessly as expected.
+For these corner cases, you can tinker with the runtime's parameters.</p>
+<p>Consider for example <code>org.telegram.desktop</code>.
+Should your version of this app seem to be affected by the above bug, you can try to run the application as:
+<div class="highlight"><pre><span></span><code>$   flatpak run --env=QT_QPA_PLATFORM=xcb org.telegram.desktop
+</code></pre></div></p>
+<p>This instructs the runtime to use X11 instead of Wayland as the compositing client.
+There are many other environment parameters.
+To learn which to apply to a particular application, read the documentation and GitHub Issues for the Flatpak wrapper of the application.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All Flatpak applications hosted on Flathub have a public repository (often on GitHub) where you can read GitHub Issues and participate in the conversation.
+Do not hesitate to go there now and then, as the tips you might learn are likely to serve you for many other Flatpak applications.</p>
+</div>
+<p>When you are satisfied with the results, you can attach a runtime setting to an application permanently to the current user as in:
+<div class="highlight"><pre><span></span><code>$   flatpak override --user --env=QT_QPA_PLATFORM=xcb org.telegram.desktop
+</code></pre></div></p>
+<p>(Remove the <code>--user</code> flag to apply the override system-wide.)</p>
+<p>This will ensure that the application is always run with the corresponding environment parameter.
+More on the override option in the <a href="https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=override#flatpak-override">official Flatpak documentation</a>.</p>
+<h4 id="flatseal">Flatseal<a class="headerlink" href="#flatseal" title="Permanent link">⚓︎</a></h4>
+<p>Flatseal allows changing Flatpak isolation parameters for applications.
+Please refer to Flatseal's <a href="https://github.com/tchx84/Flatseal/blob/master/DOCUMENTATION.md">official documentation</a>.</p>
+<h3 id="pros-cons-when-to-use_1">Pros, cons, when to use<a class="headerlink" href="#pros-cons-when-to-use_1" title="Permanent link">⚓︎</a></h3>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>
+<p>Decent performance (it runs as fast as "bare" binaries and launches almost as fast)</p>
+</li>
+<li>
+<p>Excellent safety for your operating system (because most dependencies are not shared with the host operating system and because Flatpaks installed with <code>--user</code> survive system reinstallations/restorations)</p>
+</li>
+<li>
+<p>Easy to update (<code>flatpak update</code>)</p>
+</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>
+<p>Eats up significantly more hard drive space than the alternative methods and formats (because not all dependencies can be shared between Flatpaks)</p>
+</li>
+<li>
+<p>Sometimes rough around the edges in terms of integration with the desktop environment</p>
+</li>
+</ul>
+<p><strong>Best used when:</strong></p>
+<ul>
+<li>
+<p>You are using many applications with a graphical interface and you don't want to expose them or your system to conflicts of dependencies (useful for Tumbleweed and MicroOS, whose core packages change frequently).</p>
+</li>
+<li>
+<p>You want to have freshly updated and widely tested applications (the same as most other Linux distributions).</p>
+</li>
+<li>
+<p>You plan on using many user applications (the more Flatpaks you have, the more dependencies they can share).</p>
+</li>
+</ul>
+<h2 id="appimage">AppImage<a class="headerlink" href="#appimage" title="Permanent link">⚓︎</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>AppImages are executable, file-like application bundles which are somewhat controversial in the Linux community for their lack of UI consistency with the host system and for the security risks they might incur. Furthermore they are <a href="https://bugzilla.opensuse.org/show_bug.cgi?id=1198653">not supported on MicroOS</a>. For these reasons we recommend preferring other software procurement methods when possible. </p>
+</div>
+<p>AppImage is the simplest cross-platform application package format.
+However, you need to do a little manual work.</p>
+<p>To install an AppImage, download it and marking it <em>executable</em> with:</p>
+<div class="highlight"><pre><span></span><code>chmod +x &lt;application_name&gt;.AppImage
+</code></pre></div>
+<p>To run the app, double-click it in your file manager, or run it from your terminal:
+<div class="highlight"><pre><span></span><code>./&lt;application_name&gt;.AppImage
+</code></pre></div></p>
+<p>To improve organization of your AppImages, create a dedicated directory for them in your home directory and move each file.
+The authors of AppImage recommend <code>~/Applications</code> for this purpose.</p>
+<p>With AppImages, it is your responsibility to keep the app up-to-date.
+While some apps notify you when a new version becomes available, you will usually have to perform the following manually:</p>
+<ul>
+<li>Download the new version, move it into your desired folder and mark it executable</li>
+<li>If you have created any shortcuts or launchers, you will have to edit their settings to point to the new version.</li>
+<li>When everything works, delete the <code>.AppImage</code> file of the old version.</li>
+</ul>
+<h3 id="pros-cons-when_1">Pros, cons, when<a class="headerlink" href="#pros-cons-when_1" title="Permanent link">⚓︎</a></h3>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>
+<p>AppImages need no supporting libraries, tooling, or commands.</p>
+</li>
+<li>
+<p>You can install, update, and remove them even without admin privileges on the computer.</p>
+</li>
+<li>
+<p>You can easily run multiple versions side-by-side, as version numbers are typically embedded in the filename.</p>
+</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>
+<p>Maintenance is your responsibility:
+    You have to update your apps yourself, manually.</p>
+</li>
+<li>
+<p>Some apps integrate well with the system, but this is not guaranteed.
+    Launchers, file associations, etc. may have to be created by hand.</p>
+</li>
+<li>
+<p>Updating the app means manually changing launcher properties, creating new shortcuts, and so on.</p>
+</li>
+<li>
+<p>Making AppImages available to all users on a computer may take extra work.</p>
+</li>
+<li>
+<p>The AppImage format does not offer any kind of isolation or separation between apps.</p>
+</li>
+</ul>
+<p><strong>Best used when:</strong></p>
+<ul>
+<li>
+<p>The app is not available in RPM form, or the RPM assumes a different OS (such as Fedora) and will not install correctly.</p>
+</li>
+<li>
+<p>There is no Flatpak or Snap, or you don't have or don't want, the extra plumbing of Flatpak or Snap.</p>
+</li>
+<li>
+<p>You don't have privileges to install new software system-wide.</p>
+</li>
+</ul>
+<h2 id="summary-and-conclusion">Summary and conclusion<a class="headerlink" href="#summary-and-conclusion" title="Permanent link">⚓︎</a></h2>
+<p>Even though Leap and Tumbleweed's official repositories are numerous, you will find yourself in search of alternatives at times.
+Here are some simple rules of thumbs that emerge from the pros and cons discussed above.</p>
+<p>Installing Snaps, Flatpaks, or AppImages is a serious alternative to installing from official repositories if you are looking for a program which:</p>
+<ul>
+<li>
+<p>Has a graphical interface</p>
+</li>
+<li>
+<p>Updates often</p>
+</li>
+<li>
+<p>Relies on dependencies that are not provided in official repositories</p>
+</li>
+<li>
+<p>Relies on dependencies that are more recent than those in official repositories</p>
+</li>
+</ul>
+<p>This applies to both Leap and Tumbleweed's official repositories.</p>
+<p>When wondering which to use, between Snaps, Flatpaks and AppImages:</p>
+<ul>
+<li>
+<p>Favour <strong>Flatpaks</strong> if you:</p>
+<ul>
+<li>
+<p>Want a streamlined experience or precise maintenance options via the command line</p>
+</li>
+<li>
+<p>If you plan on using several other Flatpaks.
+    The more Flatpaks using the same dependencies there are on your system, the more storage-efficient the format becomes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Favour <strong>AppImages</strong> if you need a handful of "fire-and-forget" or "portable" (no installation needed) applications.</p>
+</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h2>
+<p>For a comparison between AppImage, Flatpak and Snap, see <a href="https://github.com/AppImage/AppImageKit/wiki/Similar-projects#comparison">the AppImageKit wiki</a>.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2022-07-15
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../kde/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                KDE Plasma basics
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../codecs/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Codecs
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made by openSUSE volunteers, using <a href="https://www.mkdocs.org/">MkDocs</a> 
+        and the <a href="https://squidfunk.github.io/mkdocs-material/">Material theme</a>.
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://www.opensuse.org" target="_blank" rel="noopener" title="openSUSE Main Website" class="md-footer-social__link">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256.00001" version="1.1" id="svg8">
+  <defs id="defs2"/>
+  <metadata id="metadata5">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <circle r="98" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.96168292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path907" cx="128" cy="127.99999"/>
+  <path style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:13.84463978;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 128,16 A 112,112 0 0 0 16,128 112,112 0 0 0 128,240 112,112 0 0 0 240,128 112,112 0 0 0 128,16 Z m 0,14 a 97.998915,97.999659 0 0 1 98,98 97.998915,97.999659 0 0 1 -98,98 97.998915,97.999659 0 0 1 -73.763183,-33.66528 c 7.061098,-5.10706 18.640211,-3.80284 32.872314,-2.19605 6.934989,0.81013 14.833329,1.71669 23.008059,1.89869 22.82389,0.14504 47.40688,-4.07013 62.55908,-10.69825 9.80273,-4.26047 16.0584,-7.09653 19.97802,-10.66064 1.40972,-1.16811 2.14191,-3.06412 2.90357,-5.10474 l 0.53491,-1.34839 c 0.63379,-1.65411 1.56454,-5.13956 1.97388,-7.04956 0.16481,-0.8414 0.35765,-1.66518 -0.33838,-2.20288 -0.6363,-0.49168 -2.09863,0.38964 -2.09863,0.38964 -6.65366,4.00476 -23.28584,11.58939 -38.83667,11.91334 -19.30731,0.38942 -58.425755,-19.5443 -62.478764,-21.64942 -2.71264,-6.45909 -5.424076,-12.92177 -8.175778,-19.3645 27.986982,18.44043 51.201812,28.63435 68.971192,30.20631 19.78212,1.76219 35.20114,-9.03277 41.89404,-13.5232 0.87612,-0.58244 1.75161,-1.23425 2.55493,-1.86109 h 0.004 c 0.14375,-0.11214 0.47936,-0.40775 0.43579,-0.68017 -1.10961,-6.93392 -11.43969,-40.557897 -19.25854,-48.644534 -2.15437,-2.202672 -3.87946,-4.375411 -7.37256,-6.418947 -28.28567,-16.482787 -95.389828,-26.430355 -98.533705,-26.88574 0,0 -0.316184,-0.06492 -0.534912,0.14868 -0.169835,0.165952 -0.20337,0.485353 -0.20337,0.485353 0,0 -0.257656,13.903155 -0.297362,15.457768 -2.533803,-0.851287 -10.99503,-3.594596 -22.948243,-6.788093 A 97.998915,97.999659 0 0 1 128,30 Z m 20.42578,56.851078 c 0.4763,-0.0079 0.95442,-0.0035 1.43384,0.01199 15.81694,0.565582 28.24724,13.917972 27.70434,29.717522 -0.29835,7.66562 -3.50617,14.77959 -9.09692,19.98145 -5.60761,5.26668 -12.90665,7.97471 -20.61206,7.71607 -15.79992,-0.5826 -28.21547,-13.9073 -27.68555,-29.72095 0.28408,-7.66561 3.49191,-14.778768 9.09693,-19.996831 5.25711,-4.90819 12.01497,-7.59416 19.15942,-7.709222 z m 0.1897,8.457758 c -4.99469,0.0623 -9.69358,1.940689 -13.33862,5.359374 -3.88819,3.64661 -6.17999,8.5876 -6.34204,13.93677 -0.37225,11.05356 8.28161,20.35056 19.30981,20.75732 5.36323,0.16206 10.47533,-1.73499 14.38622,-5.38159 3.90522,-3.66361 6.15261,-8.6024 6.32325,-13.93163 0.37225,-11.05065 -8.28164,-20.337805 -19.33545,-20.729989 -0.33538,-0.01207 -0.6702,-0.01444 -1.00317,-0.01024 z m 4.27929,10.060794 c 4.91126,0 8.89014,2.64343 8.89014,5.93189 0,3.25718 -3.98164,5.91479 -8.89014,5.91479 -4.91139,0 -8.87817,-2.65746 -8.87817,-5.91479 0,-3.28846 3.96678,-5.93189 8.87817,-5.93189 z" id="path820-3-6"/>
+  <circle style="opacity:0.3;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.088377;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path872" cx="787.51135" cy="-1078.8389" r="0"/>
+</svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/openSUSE" target="_blank" rel="noopener" title="openSUSE GitHub" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.tracking", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+      
+    
+  </body>
+</html>
